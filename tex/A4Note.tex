@@ -1,0 +1,508 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{doi}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\JPi}{J_{\Pi}}
+\newcommand{\Jtwo}{J_{\Pi}^{(2)}}
+\newcommand{\Jthree}{J_{3}}
+\newcommand{\Fchi}{\mathcal{F}}
+\newcommand{\Pchi}{\mathcal{P}}
+\newcommand{\Bsat}{\mathcal{B}}
+\newcommand{\Dchi}{\Delta_{\chi}}
+\newcommand{\Cgen}{\mathbb{C}^{3}_{\mathrm{gen}}}
+\newcommand{\Epi}{E_{\Pi}}
+\newcommand{\muchi}{\mu_{\chi}^{2}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Mp}{\mathrm{Mp}}
+
+\title{The Born--Infeld Saturation Margin of the Chiral Modulus:\\
+Antisymmetric Structure and the Reduction of the Generation Split to a Lorentzian Genus}
+
+\author{J. Beau\\
+Independent Researcher, France\\
+\texttt{jerome.beau@cosmochrony.org}}
+
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    This note is the companion of the Projective Residue Schur reduction~\cite{Beau2026prs} and takes up the first of its
+    open deliverables: the definition of the Lorentzian saturation functional $\Bsat(s)$ along the $\JPi$-odd modulus that
+    controls the three-generation split coefficient $u$.
+    We establish three results.
+    First, a structural antisymmetry lemma: the generation modulus is $\JPi$-odd, and the symmetric square
+    $M = \Fchi \Fchi$ is $\JPi$-even from birth, so it cannot carry the oriented modulus or the spontaneous $V-A$ branch
+    choice; the primary modulus variable must be an antisymmetric chiral two-form $\Fchi_{\mu\nu}(s)$.
+    Second, we define $\Bsat(s)$ as the Born--Infeld determinantal saturation margin of this two-form, with the overall sign
+    fixed by the admissibility role of $\Bsat$ (projection locking, axiom A4 selects saturated minima), not by matching a
+    Maxwell weak-field expansion; this neutralises the convention sign-trap that would otherwise make the split sign a free
+    choice.
+    Third, the second variation reduces to $\muchi := \partial_s^2 \Bsat(0) = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$, so
+    the
+    existence and stability of the split are governed entirely by the Lorentzian genus of the chiral polarisation $\Pchi$ in
+    the effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$.
+    The identification of the Schur projector tilt with the Born--Infeld saturation modulus on the A4 locus is discharged to
+    a
+    tangential coincidence, conditional only on Schur transversality; the Lorentzian genus computation is deliberately
+    deferred.
+  \end{abstract}
+
+  \noindent\textbf{Keywords:}
+  Born--Infeld saturation margin; chiral modulus; antisymmetric two-form; $\JPi$-equivariance; Schur complement;
+  projection locking; generation split; Lorentzian genus; spontaneous $V-A$ selection.
+
+  \newpage
+
+  \tableofcontents
+
+  \newpage
+
+  \section{Position and purpose}
+    \label{sec:position}
+
+    The fermionic sub-programme locates the three-generation mass split in the $\Jthree$-odd part of the squared projective
+    endomorphism $\Epi^2$ restricted to the gauge-singlet generation triplet $\Cgen$, parametrised by a single real number
+    $u$ through $\Epi^2|_{\Cgen} = \diag(1, \tfrac12 + u, \tfrac12 - u)$, with the even sector
+    $\diag(1, \tfrac12, \tfrac12)$ already closed by Born--Infeld parity~\cite{Beau2026a34}.
+    The Schur reduction~\cite{Beau2026prs} fixed the structural status of $u$: it is controlled by the
+    $D_{\pm}$-transported,
+    generation-projected component of the antiunitary chiral equivariance defect
+    $\Delta_\chi(P) = \pi_{LL} - \tau \pi_{RR} \tau^{-1}$ of the eliminated block $1 - P$, it vanishes for the chirally
+    symmetric minimal non-injectivity, and a non-zero value requires a chiral symmetry-breaking carried by the
+    projection-locking axiom A4.
+    The finite sector was excluded as a source: finite projection locking is $\JPi$-equivariant, so $u_{\mathrm{fin}} = 0$
+    for
+    $q$ an odd prime, and the remaining obstruction is entirely Lorentzian~\cite{Beau2026prs}.
+    The split is then governed by the chiral curvature $\muchi := \partial_s^2 \Bsat(0)$ of a saturation functional $\Bsat$
+    along the $\JPi$-odd modulus $s$ opened by Lorentzian complexification, with the trichotomy: $\muchi > 0$ gives a
+    $\JPi$-equivariant stable point and $u = 0$; $\muchi < 0$ gives a $\JPi$-conjugate saturated pair $\pm s_*$ and a
+    spontaneous split $u \neq 0$; $\muchi = 0$ is marginal.
+
+    This note settles the structural prerequisites that must precede any computation of $\muchi$.
+    Section~\ref{sec:oriented} records that the modulus is $\JPi$-odd and oriented, and recalls its discrete avatar.
+    Section~\ref{sec:antisymmetry} proves the antisymmetry lemma: the $\JPi$-odd modulus cannot be represented by the
+    symmetric square $M = \Fchi \Fchi$, and the primary variable is the antisymmetric two-form $\Fchi_{\mu\nu}(s)$.
+    Section~\ref{sec:margin} defines $\Bsat(s)$ as the Born--Infeld determinantal saturation margin of $\Fchi$, fixes the
+    sign
+    convention by its admissibility role, and isolates the convention trap explicitly.
+    Section~\ref{sec:reduction} reduces the second variation to a Lorentzian norm.
+    Section~\ref{sec:coincidence} discharges the coincidence lock to tangential coincidence on the A4 locus, conditional
+    only
+    on Schur transversality, and isolates the Lorentzian genus as the next computation.
+    Section~\ref{sec:status} records the epistemic strata.
+
+    We work throughout on the flat effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ fixed by the Lorentzian metric
+    closure~\cite{Beau2026q11}, on which the operator-level and spectral-level definitions of $u$
+    coincide~\cite{Beau2026prs}.
+
+  \section{The chiral modulus is $\JPi$-odd and oriented}
+    \label{sec:oriented}
+
+    The spinorial Born--Infeld parity lift is the antiunitary structure $\JPi = \epsilon \circ \mathrm{conj}$ with
+    $\epsilon = i\sigma_y$, giving $\JPi^2 = -1$ on the fundamental doublet~\cite{Beau2026q14, Beau2026prs}.
+    On the generation triplet $\Cgen = \mathrm{span}(e_0, e_+, e_-)$ the induced involution $\Jtwo$ satisfies
+    $(\Jtwo)^2 = +1$, with $\Jtwo e_0 = -e_0$ and $\Jtwo e_\pm = e_\mp$, and consequently
+    \begin{equation}
+      \label{eq:Jtwo-Jthree}
+      \Jtwo \, \Jthree \, (\Jtwo)^{-1} = -\Jthree ,
+    \end{equation}
+    so that the Born--Infeld conjugation exchanges the two outer generation weights~\cite{Beau2026prs}.
+
+    \begin{lemma}[Oddness of the split]
+      \label{lem:u-odd}
+      Under $\Jtwo$ the split coefficient transforms as $u \mapsto -u$.
+      If $s$ denotes the $\JPi$-odd modulus, with $\JPi : s \mapsto -s$, then $u = u(s)$ is an odd function,
+      $u(-s) = -u(s)$, and in particular $u(0) = 0$.
+    \end{lemma}
+
+    \begin{proof}
+      The triplet endomorphism $\Epi^2|_{\Cgen} = \diag(1, \tfrac12 + u, \tfrac12 - u)$ is written in the weight basis
+      $(e_0, e_+, e_-)$.
+      Since $\Jtwo$ swaps $e_+ \leftrightarrow e_-$ by~\eqref{eq:Jtwo-Jthree}, conjugation by $\Jtwo$ sends this endomorphism
+      to
+      $\diag(1, \tfrac12 - u, \tfrac12 + u)$, i.e.\ $u \mapsto -u$.
+      The defect $\Delta_\chi(P)$ and hence $u$ are odd in the modulus $s$ opened by Lorentzian
+      complexification~\cite{Beau2026prs}, with $\JPi$ acting as $s \mapsto -s$; oddness of $u(s)$ and $u(0) = 0$ follow.
+    \end{proof}
+
+    The orientation carried by the modulus is not an artefact of the chiral frame.
+    Its discrete avatar is the oriented frontier observable of~\cite{Beau2026q11of}: on the directed outgoing edges
+    $g \to gs$ of the cascade the central increment is the Heisenberg cocycle
+    $\Delta A_c(g, s) = c\,(z(s) + a(g) s_b)$, reduced to $c\,a(g) s_b$ on admissible generators, which measures the dynamic
+    $\Jthree$ rather than a free shear.
+    This increment is linear in the orientation datum $s_b$ and therefore odd under orientation reversal.
+    Its symmetric average vanishes identically, $\Theta_{\mathrm{raw}} = 0$ on symmetric shells~\cite{Beau2026aar},
+    which is exactly the statement that a symmetrisation annihilates an orientation-odd signal.
+
+  \section{Antisymmetric structure of the chiral modulus}
+    \label{sec:antisymmetry}
+
+    We now show that the carrier of the $\JPi$-odd modulus must be an antisymmetric two-form, not a symmetric square.
+    Let $\Fchi_{\mu\nu}(s)$ be a candidate two-form built from the chiral-odd deformation, with the linear expansion
+    \begin{equation}
+      \label{eq:Fchi-linear}
+      \Fchi_{\mu\nu}(s) = s\,\Pchi_{\mu\nu} + O(s^2), \qquad \Pchi := \partial_s \Fchi |_{s=0} ,
+    \end{equation}
+    and let
+    \begin{equation}
+      \label{eq:Mdef}
+      M^{\mu}{}_{\nu}(s) := \Fchi^{\mu\rho}(s)\, \Fchi_{\rho\nu}(s)
+    \end{equation}
+    be the symmetric positive combination obtained by squaring it.
+    The antiunitary lift acts on the two-form by $\JPi : \Fchi(s) \mapsto \Fchi(-s)$, that is by $\Fchi \mapsto -\Fchi$ at
+    linear order in $s$, consistently with Lemma~\ref{lem:u-odd}.
+
+    \begin{lemma}[Antisymmetric carrier]
+      \label{lem:antisymmetry}
+      The symmetric square $M(s)$ is $\JPi$-even and stationary at the symmetric point:
+      \begin{equation}
+        \label{eq:M-even}
+        M(-s) = M(s), \qquad M(0) = 0, \qquad \partial_s M(0) = 0 .
+      \end{equation}
+      Consequently every scalar functional $\Phi[M]$ is even in $s$ to the order at which $M$ is even and obeys
+      $\partial_s \Phi[M]|_{s=0} = 0$; it assigns the same value to the two $\JPi$-conjugate branches $\pm s_*$ and is
+      therefore
+      blind to the spontaneous $V-A$ sign of $u$.
+      The split modulus cannot be carried by $M$.
+      A primary variable that resolves the two branches must change sign under $s \mapsto -s$, hence must be the antisymmetric
+      two-form $\Fchi_{\mu\nu}(s)$.
+    \end{lemma}
+
+    \begin{proof}
+      Under $\JPi$ one has $\Fchi \mapsto -\Fchi$ at linear order, so by~\eqref{eq:Mdef}
+      $M = \Fchi \Fchi \mapsto (-\Fchi)(-\Fchi) = M$: the square is $\JPi$-invariant.
+      Substituting~\eqref{eq:Fchi-linear} gives $M(s) = s^2\, \Pchi^{\mu\rho} \Pchi_{\rho\nu} + O(s^3)$, whence
+      $M(0) = 0$ and $\partial_s M(0) = 0$, which is~\eqref{eq:M-even}.
+      For any functional $\Phi[M]$ the chain rule gives
+      $\partial_s \Phi[M]|_{0} = (\delta\Phi/\delta M) : \partial_s M|_{0} = 0$, so $\Phi$ has no linear response to the
+      modulus.
+      The spontaneous $V-A$ choice is the sign of $u(s_*) = -u(-s_*)$ by Lemma~\ref{lem:u-odd}; distinguishing $+s_*$ from
+      $-s_*$ requires a quantity odd in $s$, which $\Phi[M]$ is not.
+      Therefore $M$ cannot be the primary modulus variable.
+      A two-form $\Fchi_{\mu\nu}(s)$ satisfying $\Fchi(-s) = -\Fchi(s)$ at linear order does change sign and reproduces the
+      orientation-odd increment of the discrete frontier observable~\cite{Beau2026q11of, Beau2026aar}; it is the minimal
+      carrier
+      compatible with both the $\JPi$-oddness of $u$ and the oriented cascade datum.
+    \end{proof}
+
+    \begin{corollary}[Role of the symmetric square]
+      \label{cor:M-backreaction}
+      The symmetric combination $M = \Fchi \Fchi$ enters the saturation functional only at second order in $s$, as a
+      $\JPi$-even saturating backreaction or higher-order term.
+      It is excluded as the primary modulus variable but admissible as a subleading contribution.
+    \end{corollary}
+
+    \begin{proof}
+      By~\eqref{eq:M-even} the leading occurrence of $M$ is $O(s^2)$ and $\JPi$-even, which is the order and parity of a
+      backreaction term rather than of the linear modulus carrier of Lemma~\ref{lem:antisymmetry}.
+    \end{proof}
+
+    The lemma resolves the antisymmetric/symmetric fork left open in~\cite{Beau2026prs}: the chiral modulus is read off an
+    antisymmetric two-form, and the non-abelian symmetric replacement $M^{\mu}{}_{\nu} = \Fchi^{\mu\rho} \Fchi_{\rho\nu}$
+    used
+    elsewhere to remove a Pfaffian sign ambiguity is precisely what must be avoided at the level of the primary variable,
+    because removing the sign ambiguity removes the orientation that carries the split.
+
+  \section{The Born--Infeld saturation margin}
+    \label{sec:margin}
+
+    We now define the functional whose chiral curvature governs the split.
+    Let $g_{\mu\nu}$ be the effective metric with $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11} and let $\beta$ be the
+    universal Born--Infeld saturation scale of the bounded-flux completion~\cite{Beau2026c}.
+    Born--Infeld is the unique local completion compatible with a finite transport capacity, and its determinantal action is
+    carried by an antisymmetric field strength~\cite{Beau2026c}; this is the structure into which the antisymmetric two-form
+    $\Fchi_{\mu\nu}(s)$ of Section~\ref{sec:antisymmetry} enters.
+
+    \begin{definition}[Chiral admissibility radicand and saturation margin]
+      \label{def:B}
+      Let
+      \begin{equation}
+        \label{eq:Dchi}
+        \Dchi(s) := \frac{-\det\!\big(g_{\mu\nu} + \beta^{-1} \Fchi_{\mu\nu}(s)\big)}{-\det g_{\mu\nu}} ,
+      \end{equation}
+      the dimensionless ratio in which the metric determinant cancels.
+      Admissibility of the chiral-odd deformation is the reality and non-negativity of the radicand, $\Dchi(s) \geq 0$, and
+      saturation is its approach to the bound $\Dchi(s) \to 0$.
+      The Born--Infeld saturation margin along the modulus is
+      \begin{equation}
+        \label{eq:B}
+        \Bsat(s) := \beta^2 \left( \sqrt{\Dchi(s)} - 1 \right) .
+      \end{equation}
+    \end{definition}
+
+    The functional $\Bsat$ is fixed in its role, not merely in its formula.
+    By the projection-locking theorem~\cite{Beau2026a26} and axiom A4~\cite{Beau2026m}, resolution occurs only where the
+    continuous Born--Infeld saturation meets the discrete shell support; the physically locked chiral configuration is the
+    saturated admissible extremum selected on that support.
+    We adopt the variational reading in which $\Bsat$ is minimised at locking, so that the symmetric point $s = 0$ is the
+    selected configuration exactly when it is a stable minimum of $\Bsat$.
+
+    \begin{remark}[The convention sign-trap]
+      \label{rem:trap}
+      The determinantal scalar~\eqref{eq:B} admits an overall sign ambiguity according to the object it names.
+      Read as the Born--Infeld action density, it is extremised by the equations of motion and recovers a Maxwell-type
+      weak-field expansion; read as the saturation margin, it is minimised at the locking event of A4.
+      The two readings differ by an overall sign, and that sign propagates directly into $\partial_s^2 \Bsat(0)$.
+      Choosing the sign so as to obtain a desired trichotomy would make the conclusion an artefact of convention rather than a
+      derived result.
+      We therefore fix the sign once, by the admissibility role of $\Bsat$ (Definition~\ref{def:B}, anchored
+      in~\cite{Beau2026a26, Beau2026m}), independently of and prior to any knowledge of the sign of the second variation.
+      With this fixing, the sign of the split is never inferred from the convention: it is carried solely by the Lorentzian
+      genus of $\Pchi$ computed in Section~\ref{sec:reduction}.
+    \end{remark}
+
+    \begin{proposition}[Parity of the margin]
+      \label{prop:parity}
+      $\Bsat(s) = \Bsat(-s)$, so $s = 0$ is automatically a stationary point of $\Bsat$.
+    \end{proposition}
+
+    \begin{proof}
+      Under $\JPi$ the two-form obeys $\Fchi(s) \mapsto \Fchi(-s) = -\Fchi(s) + O(s^2)$, and the determinant
+      in~\eqref{eq:Dchi}
+      depends on $\Fchi$ only through even powers, since for an antisymmetric argument the odd elementary symmetric functions
+      of
+      $g^{-1}\Fchi$ vanish.
+      Hence $\Dchi(s) = \Dchi(-s)$ and $\Bsat(s) = \Bsat(-s)$ by~\eqref{eq:B}.
+      Evenness gives $\partial_s \Bsat(0) = 0$.
+      This is the saturation-functional avatar of the Born--Infeld parity involution~\cite{Beau2026a34} and the structural
+      origin of the closed even sector $\diag(1, \tfrac12, \tfrac12)$.
+    \end{proof}
+
+  \section{Second variation and the Lorentzian reduction}
+    \label{sec:reduction}
+
+    We expand the radicand to the order needed for the chiral curvature.
+    The standard four-dimensional Born--Infeld determinant identity for an antisymmetric two-form gives
+    \begin{equation}
+      \label{eq:det-expansion}
+      \Dchi(s) = 1 + \frac{1}{2\beta^2}\, \Fchi_{\mu\nu} \Fchi^{\mu\nu}
+      - \frac{1}{16\beta^4}\, \big(\Fchi_{\mu\nu} \widetilde{\Fchi}^{\mu\nu}\big)^2 ,
+    \end{equation}
+    where indices are raised with $g^{\mu\nu} = 2\eta^{\mu\nu}$ and $\widetilde{\Fchi}$ is the Hodge dual.
+    Substituting the linear expansion~\eqref{eq:Fchi-linear}, the pseudoscalar term is $O(s^4)$ and does not contribute to
+    the
+    second variation, so
+    \begin{equation}
+      \label{eq:Dchi-quadratic}
+      \Dchi(s) = 1 + \frac{s^2}{2\beta^2}\, \Pchi_{\mu\nu} \Pchi^{\mu\nu} + O(s^4) .
+    \end{equation}
+
+    \begin{theorem}[Lorentzian reduction of the chiral curvature]
+      \label{thm:reduction}
+      With $\Bsat$ as in Definition~\ref{def:B},
+      \begin{equation}
+        \label{eq:muchi}
+        \muchi := \partial_s^2 \Bsat(0) = \tfrac12\, \Pchi_{\mu\nu} \Pchi^{\mu\nu} ,
+      \end{equation}
+      so that $\operatorname{sign}(\muchi) = \operatorname{sign}\!\big(\Pchi_{\mu\nu} \Pchi^{\mu\nu}\big)$, the Lorentzian
+      genus
+      of the chiral polarisation $\Pchi$ in $g^{\mu\nu} = 2\eta^{\mu\nu}$.
+      A spacelike (magnetic-type) $\Pchi$ gives $\muchi > 0$, a stable symmetric point, and $u = 0$; a timelike
+      (electric-type) $\Pchi$ gives $\muchi < 0$, an unstable symmetric point, a $\JPi$-conjugate saturated pair $\pm s_*$,
+      and a
+      spontaneous split $u \neq 0$ whose sign is the $V-A$ choice; a null $\Pchi$ gives $\muchi = 0$, the marginal case.
+    \end{theorem}
+
+    \begin{proof}
+      From~\eqref{eq:B} and~\eqref{eq:Dchi-quadratic},
+      $\Bsat(s) = \beta^2 \big( \sqrt{1 + \tfrac{s^2}{2\beta^2} \Pchi_{\mu\nu} \Pchi^{\mu\nu}} - 1 \big)
+      = \tfrac{s^2}{4}\, \Pchi_{\mu\nu} \Pchi^{\mu\nu} + O(s^4)$, giving~\eqref{eq:muchi}.
+      Because $g^{\mu\nu} = 2\eta^{\mu\nu}$, the contraction
+      $\Pchi_{\mu\nu} \Pchi^{\mu\nu} = 4\, \eta^{\mu\alpha} \eta^{\nu\beta} \Pchi_{\mu\nu} \Pchi_{\alpha\beta}$ has the same
+      sign as
+      the Minkowski contraction, and the positive overall factor does not affect $\operatorname{sign}(\muchi)$.
+      For an antisymmetric two-form the Minkowski contraction is $2(|\mathbf{B}_{\mathcal P}|^2 - |\mathbf{E}_{\mathcal
+      P}|^2)$,
+      positive for a magnetic-type (spacelike-dominated) polarisation and negative for an electric-type (timelike-dominated)
+      one.
+      The mapping to the trichotomy then follows from the variational reading of Definition~\ref{def:B}: at $\muchi > 0$ the
+      symmetric point is a stable minimum and is selected ($u = 0$); at $\muchi < 0$ it is a local maximum, and the
+      deformation
+      flows to the saturated admissible pair $\pm s_*$ where, by Lemma~\ref{lem:u-odd}, $u(\pm s_*) = \mp u(s_*) \neq 0$, the
+      overall sign being the spontaneous $V-A$ selection; at $\muchi = 0$ the second variation is degenerate and the locking
+      character is decided by the leading non-vanishing even coefficient $\lambda_{2k}$ of
+      $\Bsat(s) = \Bsat(0) + \lambda_{2k} s^{2k} + O(s^{2k+2})$.
+    \end{proof}
+
+    The reduction has a transparent Born--Infeld meaning.
+    A timelike chiral polarisation drives the radicand $\Dchi$ toward zero, so the chiral-odd deformation reaches saturation
+    at
+    finite $|s|$ and A4 can lock a non-trivial pair; a spacelike polarisation increases the radicand, never saturates, and
+    leaves the symmetric point as the only locked configuration.
+    This is the chiral instance of the canonical Born--Infeld feature that electric-type invariants saturate the bound while
+    magnetic-type invariants do not.
+
+  \section{Discharge of the coincidence lock}
+    \label{sec:coincidence}
+
+    The reduction of Section~\ref{sec:reduction} presupposes that the modulus entering the saturation
+    margin~\eqref{eq:B} is tied to the $\JPi$-odd tilt of the eliminated Schur block.
+    A priori these are two distinct quantities: the projector tilt $s_{\mathrm{proj}}$, defined at the level of the
+    projection algebra through the deformation $1 - P(s)$ of the admissible projector $P = \Pi_S^* \Pi_S$, and the
+    saturation
+    modulus $s_{\mathrm{BI}}$, the chiral-odd companion of the Higgs amplitude mode of the saturated condensate.
+    We discharge the lock by transposing the projection-locking theorem to the $\JPi$-odd sector.
+
+    The axiom A4 is an intersection scheme, not a saturation criterion~\cite{Beau2026m, Beau2026a26}:
+    resolution occurs where the continuous Born--Infeld saturation meets the available discrete support of the projection,
+    and the transition becomes structurally discrete.
+    Transposed to the $\JPi$-odd sector, a continuous chiral-odd modulus is observable only if it is encoded by the
+    projection.
+    Since the observable space is $\mathcal{O} = \mathrm{Im}\,\Pi$ and the Schur complement
+    $\Epi = -\Pi_S D (1 - P) D \Pi_S^*$ sources the chiral structure through the eliminated block $1 - P$, a chiral-odd
+    Born--Infeld deformation is realisable only as a tilt of the complexified block $1 - P^{\mathbb{C}}$, and conversely a
+    tilt of $1 - P^{\mathbb{C}}$ is dynamically present only on the saturation locus.
+    The two moduli are therefore not independent on the locus.
+    At the finite level this tilt vanishes, $\partial_s ( 1 - P_{\mathrm{fin}}(s) )|_{0} = 0$ by the $\JPi$-equivariance of
+    finite locking~\cite{Beau2026prs}, so the modulus is carried entirely by the Lorentzian completion.
+
+    \begin{lemma}[Tangential coincidence on the A4 locus]
+      \label{lem:coincidence}
+      On the chiral-odd A4 locking locus the Born--Infeld modulus and the Schur tilt are related by a non-degenerate
+      reparametrisation,
+      \begin{equation}
+        \label{eq:coincidence}
+        s_{\mathrm{BI}} = \phi(s_{\mathrm{proj}}), \qquad \phi(0) = 0, \qquad \phi'(0) \neq 0 ,
+      \end{equation}
+      so that A4 identifies their first-order transverse direction up to non-degenerate reparametrisation.
+      This is a tangential identification of the $\JPi$-odd direction, not a strict identification of the parameters.
+    \end{lemma}
+
+    \begin{corollary}[Reparametrisation-invariance of the genus]
+      \label{cor:reparam}
+      The sign of the chiral curvature is invariant under the locking reparametrisation:
+      \begin{equation}
+        \label{eq:reparam}
+        \partial_{s_{\mathrm{proj}}}^2 \Bsat(0) = \phi'(0)^2 \, \partial_{s_{\mathrm{BI}}}^2 \Bsat(0) ,
+      \end{equation}
+      so $\operatorname{sign}(\muchi)$ is independent of which modulus parametrises $\Bsat$, and the genus reduction of
+      Theorem~\ref{thm:reduction} is well-posed.
+    \end{corollary}
+
+    \begin{proof}
+      Equation~\eqref{eq:reparam} is the chain rule for $\Bsat \circ \phi$ at $\phi(0) = 0$, using $\partial_s \Bsat(0) = 0$
+      from Proposition~\ref{prop:parity}; the leading term is $\phi'(0)^2 \, \partial_{s_{\mathrm{BI}}}^2 \Bsat(0)$, and the
+      positive factor $\phi'(0)^2$ leaves the sign unchanged.
+    \end{proof}
+
+    The first-order projector variation supplies the chiral polarisation explicitly.
+    Differentiating $\Epi(s) = -\Pi_S D (1 - P(s)) D \Pi_S^*$ at $s = 0$, and using
+    $\partial_s [-(1 - P(s))] = \partial_s P(s)$,
+    \begin{equation}
+      \label{eq:Pchi-schur}
+      \partial_s \Epi|_{0} = \Pi_S D (\partial_s P|_{0}) D \Pi_S^* ,
+      \qquad
+      \Pchi = \Pi_S D (\partial_s P|_{0}) D \Pi_S^* \big|_{\mathrm{gen},\,\JPi\text{-odd}} .
+    \end{equation}
+    The positive sign is the derivative of $-(1 - P)$, not a hidden conventional choice; it is fixed by the Schur form, in
+    keeping with the convention discipline of Section~\ref{sec:margin}.
+
+    \begin{definition}[Schur transversality on the $\JPi$-odd eliminated sector]
+      \label{def:transversality}
+      The locking is Schur-transverse if the direction opened by $\partial_s P|_{0}$ does not lie in the kernel of the Schur
+      transport, that is
+      \begin{equation}
+        \label{eq:transversality}
+        \Pi_S D (\partial_s P|_{0}) D \Pi_S^* \big|_{\mathrm{gen},\,\JPi\text{-odd}} \neq 0 ,
+      \end{equation}
+      equivalently the non-vanishing of $X \mapsto \Pi_S D X D \Pi_S^* |_{\mathrm{gen},\,\JPi\text{-odd}}$ on the direction
+      $\partial_s P|_{0}$.
+      Injectivity of this transport on the whole $\JPi$-odd eliminated subspace is sufficient but stronger than required; the
+      lemma depends only on transversality of the opened direction.
+    \end{definition}
+
+    The discharge is then a dichotomy.
+
+    \begin{proposition}[Discharge dichotomy]
+      \label{prop:dichotomy}
+      On the chiral-odd A4 locus:
+      \begin{itemize}
+        \item if the locking is Schur-transverse, the Born--Infeld modulus and the Schur tilt define the same $\JPi$-odd
+        tangent direction, Lemma~\ref{lem:coincidence} holds with $\phi'(0) \neq 0$, and the reduction
+        $\muchi = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$ of Theorem~\ref{thm:reduction} is the genus computation;
+        \item if the locking is Schur-null, then $\Pchi = 0$ and $\muchi = 0$ at quadratic order, which is the marginal branch
+        of the trichotomy of Theorem~\ref{thm:reduction}: the locking character is then decided by the first non-vanishing
+        even
+        coefficient $\lambda_{2k}$, not directly by $u = 0$.
+      \end{itemize}
+    \end{proposition}
+
+    The coincidence lock is thereby discharged to structural status, conditional only on Schur transversality
+    (Definition~\ref{def:transversality}); by Corollary~\ref{cor:reparam} the eventual genus does not depend on the positive
+    Jacobian $\phi'(0)$.
+
+  \section{Status of results}
+    \label{sec:status}
+
+    \paragraph{Anchored upstream (proved/structural).}
+      The Born--Infeld determinantal action carried by an antisymmetric field strength~\cite{Beau2026c}; the even-sector
+      closure
+      and the Born--Infeld parity involution~\cite{Beau2026a34}; the finite $\JPi$-equivariance and $u_{\mathrm{fin}} = 0$ for
+      $q$ an odd prime~\cite{Beau2026prs}; the oriented frontier cocycle on directed edges~\cite{Beau2026q11of} and the
+      symmetric-shell cancellation $\Theta_{\mathrm{raw}} = 0$~\cite{Beau2026aar}; the effective Lorentzian metric
+      $g^{\mu\nu} = 2\eta^{\mu\nu}$~\cite{Beau2026q11}; the projection-locking theorem and axiom A4~\cite{Beau2026a26,
+    Beau2026m}.
+
+    \paragraph{Proved (this note).}
+      The chiral modulus is $\JPi$-odd and the split coefficient $u(s)$ is odd with $u(0) = 0$ (Lemma~\ref{lem:u-odd}).
+      The symmetric square $M = \Fchi \Fchi$ is $\JPi$-even and cannot carry the modulus or the spontaneous $V-A$ sign; the
+      primary variable is the antisymmetric two-form $\Fchi_{\mu\nu}(s)$ (Lemma~\ref{lem:antisymmetry},
+      Corollary~\ref{cor:M-backreaction}).
+      This resolves the antisymmetric/symmetric fork of~\cite{Beau2026prs}.
+
+    \paragraph{Structural (this note).}
+      The definition of $\Bsat(s)$ as the Born--Infeld determinantal saturation margin of $\Fchi$, with the sign fixed by its
+      admissibility role and the convention trap neutralised (Definition~\ref{def:B}, Remark~\ref{rem:trap}); the parity
+      $\Bsat(s) = \Bsat(-s)$ (Proposition~\ref{prop:parity}); the reduction
+      $\muchi = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$ and the identification of the trichotomy with the Lorentzian genus of
+      $\Pchi$ (Theorem~\ref{thm:reduction}).
+      The discharge of the coincidence lock to structural status: the tangential coincidence of the Born--Infeld modulus and
+      the Schur tilt up to non-degenerate reparametrisation (Lemma~\ref{lem:coincidence}), the reparametrisation-invariance of
+      the genus (Corollary~\ref{cor:reparam}), and the explicit chiral polarisation
+      $\Pchi = \Pi_S D (\partial_s P|_{0}) D \Pi_S^*|_{\mathrm{gen},\,\JPi\text{-odd}}$ with its sign fixed by the Schur
+      form~\eqref{eq:Pchi-schur}.
+
+    \paragraph{Conditional (sole residual).}
+      Schur transversality on the $\JPi$-odd eliminated sector (Definition~\ref{def:transversality}): the non-vanishing of the
+      Schur transport on the direction opened by $\partial_s P|_{0}$.
+      If it holds, the coincidence lock is discharged and the genus computation is the next step; if it fails, the quadratic
+      term vanishes and the locking character falls to the marginal branch of Theorem~\ref{thm:reduction}
+      (Proposition~\ref{prop:dichotomy}).
+
+    \paragraph{Open.}
+      The Lorentzian genus of the chiral polarisation $\Pchi$, that is the sign of $\Pchi_{\mu\nu} \Pchi^{\mu\nu}$ in
+      $g^{\mu\nu} = 2\eta^{\mu\nu}$.
+      This single datum decides $\muchi$ and hence $u = 0$ versus $u \neq 0$, and it is well-posed: by
+      Corollary~\ref{cor:reparam} the genus is invariant under the locking reparametrisation, independent of the positive
+      Jacobian $\phi'(0)$.
+      It is not computed here, by design: the sign follows the genus, which is the next text to settle now that the
+      coincidence lock is discharged modulo Schur transversality.
+
+      \newpage
+
+      \bibliographystyle{plain}
+      \bibliography{cosmochrony-bibliography}
+
+\end{document}
