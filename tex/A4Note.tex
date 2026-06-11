@@ -63,10 +63,9 @@ Independent Researcher, France\\
     the
     existence and stability of the split are governed entirely by the Lorentzian genus of the chiral polarisation $\Pchi$ in
     the effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$.
-    The identification of the Schur projector tilt with the Born--Infeld saturation modulus on the A4 locus is discharged to
-    a
-    tangential coincidence, conditional only on Schur transversality; the Lorentzian genus computation is deliberately
-    deferred.
+    The coincidence lock is discharged to a tangential coincidence; the Schur transversality on which it
+    rests is reduced in the Schur reduction to a projected commutator with an exhaustive
+    transverse/null dichotomy, and the Lorentzian genus computation is deliberately deferred.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
@@ -108,9 +107,9 @@ Independent Researcher, France\\
     sign
     convention by its admissibility role, and isolates the convention trap explicitly.
     Section~\ref{sec:reduction} reduces the second variation to a Lorentzian norm.
-    Section~\ref{sec:coincidence} discharges the coincidence lock to tangential coincidence on the A4 locus, conditional
-    only
-    on Schur transversality, and isolates the Lorentzian genus as the next computation.
+    Section~\ref{sec:coincidence} discharges the coincidence lock to tangential coincidence on the A4
+    locus and imports the Schur-transversality reduction of~\cite{Beau2026prs}, isolating the
+    Lorentzian genus as the next computation.
     Section~\ref{sec:status} records the epistemic strata.
 
     We work throughout on the flat effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ fixed by the Lorentzian metric
@@ -435,23 +434,26 @@ Independent Researcher, France\\
 
     The discharge is then a dichotomy.
 
-    \begin{proposition}[Discharge dichotomy]
+    \begin{proposition}[Discharge dichotomy (after the Schur reduction)]
       \label{prop:dichotomy}
+      The transverse/null dichotomy is established at operator level in the Schur reduction~\cite{Beau2026prs};
+      transposed to the A4 locus through Lemma~\ref{lem:coincidence} it reads as follows.
       On the chiral-odd A4 locus:
       \begin{itemize}
         \item if the locking is Schur-transverse, the Born--Infeld modulus and the Schur tilt define the same $\JPi$-odd
         tangent direction, Lemma~\ref{lem:coincidence} holds with $\phi'(0) \neq 0$, and the reduction
         $\muchi = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$ of Theorem~\ref{thm:reduction} is the genus computation;
-        \item if the locking is Schur-null, then $\Pchi = 0$ and $\muchi = 0$ at quadratic order, which is the marginal branch
-        of the trichotomy of Theorem~\ref{thm:reduction}: the locking character is then decided by the first non-vanishing
-        even
-        coefficient $\lambda_{2k}$, not directly by $u = 0$.
+        \item if the locking is Schur-null, then $\Pchi = 0$ and $\muchi = 0$ at quadratic order, the marginal branch
+        of the trichotomy of Theorem~\ref{thm:reduction}, decided by the first non-vanishing even coefficient
+        $\lambda_{2k}$ rather than directly by $u = 0$.
       \end{itemize}
     \end{proposition}
 
-    The coincidence lock is thereby discharged to structural status, conditional only on Schur transversality
-    (Definition~\ref{def:transversality}); by Corollary~\ref{cor:reparam} the eventual genus does not depend on the positive
-    Jacobian $\phi'(0)$.
+    The coincidence lock is thereby discharged to structural status; the Schur transversality it was conditional on
+    is itself reduced, in the Schur reduction~\cite{Beau2026prs}, to the non-vanishing of the projected commutator
+    $[\partial_s P|_{0}, \JPi]\big|_{\mathrm{span}(e_+, e_-)}$ with an exhaustive transverse/null dichotomy
+    (Proposition~\ref{prop:dichotomy}).
+    By Corollary~\ref{cor:reparam} the eventual genus does not depend on the positive Jacobian $\phi'(0)$.
 
   \section{Status of results}
     \label{sec:status}
@@ -484,12 +486,13 @@ Independent Researcher, France\\
       $\Pchi = \Pi_S D (\partial_s P|_{0}) D \Pi_S^*|_{\mathrm{gen},\,\JPi\text{-odd}}$ with its sign fixed by the Schur
       form~\eqref{eq:Pchi-schur}.
 
-    \paragraph{Conditional (sole residual).}
-      Schur transversality on the $\JPi$-odd eliminated sector (Definition~\ref{def:transversality}): the non-vanishing of the
-      Schur transport on the direction opened by $\partial_s P|_{0}$.
-      If it holds, the coincidence lock is discharged and the genus computation is the next step; if it fails, the quadratic
-      term vanishes and the locking character falls to the marginal branch of Theorem~\ref{thm:reduction}
-      (Proposition~\ref{prop:dichotomy}).
+    \paragraph{Reduced in the Schur reduction~\cite{Beau2026prs}.}
+      Schur transversality on the $\JPi$-odd eliminated sector (Definition~\ref{def:transversality}) is no longer an A4
+      residual: it is reduced, in the Schur reduction, to the non-vanishing of the projected commutator
+      $[\partial_s P|_{0}, \JPi]\big|_{\mathrm{span}(e_+, e_-)}$, with an exhaustive transverse/null dichotomy
+      including the zero-mode subcase (Proposition~\ref{prop:dichotomy}).
+      In the transverse branch the genus computation is the next step; in the Schur-null branch the quadratic term
+      vanishes and the locking character falls to the marginal branch of Theorem~\ref{thm:reduction}.
 
     \paragraph{Open.}
       The Lorentzian genus of the chiral polarisation $\Pchi$, that is the sign of $\Pchi_{\mu\nu} \Pchi^{\mu\nu}$ in
@@ -498,7 +501,8 @@ Independent Researcher, France\\
       Corollary~\ref{cor:reparam} the genus is invariant under the locking reparametrisation, independent of the positive
       Jacobian $\phi'(0)$.
       It is not computed here, by design: the sign follows the genus, which is the next text to settle now that the
-      coincidence lock is discharged modulo Schur transversality.
+      coincidence lock is discharged and Schur transversality is reduced to the projected commutator
+      in~\cite{Beau2026prs}.
 
       \newpage
 
