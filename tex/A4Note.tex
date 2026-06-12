@@ -34,8 +34,11 @@
 \newcommand{\Spin}{\mathrm{Spin}}
 \newcommand{\Mp}{\mathrm{Mp}}
 
-\title{The Born--Infeld Saturation Margin of the Chiral Modulus:\\
-Antisymmetric Structure and the Reduction of the Generation Split to a Lorentzian Genus}
+\title{
+  The Born--Infeld Saturation Margin of the Chiral Modulus:\\
+  Antisymmetric Structure, Lorentzian Genus, and Electric Determination
+  of the Generation Split
+}
 
 \author{J. Beau\\
 Independent Researcher, France\\
@@ -651,9 +654,11 @@ Independent Researcher, France\\
       \label{prop:amplitude-dichotomy}
       On the electric branch the locked amplitude is governed by the sign of $\Pchi \cdot \mathcal{R}_{\chi}$ through an
       exhaustive dichotomy.
-      If $\Pchi \cdot \mathcal{R}_{\chi} > 0$ the radicand~\eqref{eq:Dchi-electric} has an interior turning point at
-      $s_*^2 = |\mathbf{E}_{\mathcal P}|^2 / \big(2\, \Pchi \cdot \mathcal{R}_{\chi}\big)$, a candidate interior lock,
-      admissible only if it lies before the first saturation contact, $\Dchi(s_*) > 0$.
+      If $\Pchi \cdot \mathcal{R}_{\chi} > 0$ the radicand~\eqref{eq:Dchi-electric} has an interior minimum candidate at
+      \[
+        s_*^2 = \frac{|\mathbf{E}_{\mathcal P}|^2}{2\, \Pchi \cdot \mathcal{R}_{\chi}} ,
+      \]
+      which defines an interior lock only if it lies before the first saturation contact, $\Dchi(s_*) > 0$.
       If $\Pchi \cdot \mathcal{R}_{\chi} \leq 0$ there is no quartic stabilisation, the radicand decreases
       monotonically at this order, and the amplitude is fixed by the first contact with the saturation bound,
       $\Dchi(s_*) = 0$.
@@ -663,17 +668,24 @@ Independent Researcher, France\\
       Stationarity of~\eqref{eq:Dchi-electric} at $s > 0$ requires
       $-2 |\mathbf{E}_{\mathcal P}|^2 \beta^{-2} s + 4\, (\Pchi \cdot \mathcal{R}_{\chi}) \beta^{-2} s^3 = 0$, with the
       non-trivial root $s_*^2 = |\mathbf{E}_{\mathcal P}|^2 / (2\, \Pchi \cdot \mathcal{R}_{\chi})$, real and positive
-      exactly when $\Pchi \cdot \mathcal{R}_{\chi} > 0$; there the second derivative is
-      $-4 |\mathbf{E}_{\mathcal P}|^2 \beta^{-2} \cdot (-1) = 4 |\mathbf{E}_{\mathcal P}|^2 \beta^{-2} > 0$, a minimum.
-      For $\Pchi \cdot \mathcal{R}_{\chi} \leq 0$ both the quadratic and quartic coefficients are non-positive and
-      $\Dchi(s)$ has no interior minimum at this order, so the admissible region terminates at the saturation locus
-      $\Dchi(s) = 0$, where $\Bsat$ attains its floor $-\beta^2$ and A4 locks.
+      exactly when $\Pchi \cdot \mathcal{R}_{\chi} > 0$.
+      At this root one has
+      \[
+        \partial_s^2 \Dchi(s_*) = -\frac{2|\mathbf{E}_{\mathcal P}|^2}{\beta^2}
+        + \frac{12\,(\Pchi \cdot \mathcal{R}_{\chi})}{\beta^2}\, s_*^2
+        = \frac{4|\mathbf{E}_{\mathcal P}|^2}{\beta^2} > 0 ,
+      \]
+      so the root is an interior minimum of the quartic radicand.
+      For $\Pchi \cdot \mathcal{R}_{\chi} \leq 0$, both the quadratic and quartic coefficients
+      in~\eqref{eq:Dchi-electric} are non-positive, so no positive interior minimum is created at this order.
+      The admissible region is then terminated by the first contact with the saturation locus $\Dchi(s) = 0$,
+      where $\Bsat$ reaches its lower bound $-\beta^2$ and A4 locks.
     \end{proof}
 
     \begin{remark}[Not a Landau closure]
       \label{rem:not-landau}
       The interior branch $\Pchi \cdot \mathcal{R}_{\chi} > 0$ has the local form of a quartic double well, but the
-      stabilisation is not a Landau mechanism: it is conditional on the interior turning point preceding the
+      stabilisation is not a Landau mechanism: it is conditional on the interior minimum candidate preceding the
       Born--Infeld saturation wall.
       The natural locking mechanism remains saturation at $\Dchi = 0$, recovered whenever the backreaction fails to turn
       the radicand before that contact.
