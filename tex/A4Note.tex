@@ -65,7 +65,12 @@ Independent Researcher, France\\
     the effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$.
     The coincidence lock is discharged to a tangential coincidence; the Schur transversality on which it
     rests is reduced in the Schur reduction to a projected commutator with an exhaustive
-    transverse/null dichotomy, and the Lorentzian genus computation is deliberately deferred.
+    transverse/null dichotomy.
+    Assembling the projector-completion grading, the oriented-cascade lift, and the symbol-compatible spin frame, we
+    then
+    determine the genus: in the Schur-transverse branch the chiral polarisation is electric, so $\muchi < 0$ and the
+    split
+    opens spontaneously, leaving only the amplitude $|u|$ open.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
@@ -99,7 +104,7 @@ Independent Researcher, France\\
     $\JPi$-equivariant stable point and $u = 0$; $\muchi < 0$ gives a $\JPi$-conjugate saturated pair $\pm s_*$ and a
     spontaneous split $u \neq 0$; $\muchi = 0$ is marginal.
 
-    This note settles the structural prerequisites that must precede any computation of $\muchi$.
+    This note settles the structural prerequisites for $\muchi$ and, assembling published results, determines its sign.
     Section~\ref{sec:oriented} records that the modulus is $\JPi$-odd and oriented, and recalls its discrete avatar.
     Section~\ref{sec:antisymmetry} proves the antisymmetry lemma: the $\JPi$-odd modulus cannot be represented by the
     symmetric square $M = \Fchi \Fchi$, and the primary variable is the antisymmetric two-form $\Fchi_{\mu\nu}(s)$.
@@ -108,8 +113,11 @@ Independent Researcher, France\\
     convention by its admissibility role, and isolates the convention trap explicitly.
     Section~\ref{sec:reduction} reduces the second variation to a Lorentzian norm.
     Section~\ref{sec:coincidence} discharges the coincidence lock to tangential coincidence on the A4
-    locus and imports the Schur-transversality reduction of~\cite{Beau2026prs}, isolating the
-    Lorentzian genus as the next computation.
+    locus and imports the Schur-transversality reduction of~\cite{Beau2026prs}.
+    Section~\ref{sec:genus} determines the genus: assembling the projector-completion grading, the oriented-cascade
+    lift,
+    and the symbol-compatible spin frame, the chiral polarisation is electric in the Schur-transverse branch, so
+    $\muchi < 0$ and $u \neq 0$.
     Section~\ref{sec:status} records the epistemic strata.
 
     We work throughout on the flat effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ fixed by the Lorentzian metric
@@ -455,6 +463,117 @@ Independent Researcher, France\\
     (Proposition~\ref{prop:dichotomy}).
     By Corollary~\ref{cor:reparam} the eventual genus does not depend on the positive Jacobian $\phi'(0)$.
 
+  \section{Determination of the genus: electric character of the chiral polarisation}
+    \label{sec:genus}
+
+    The genus deferred at the end of Section~\ref{sec:reduction} is fixed by the index structure of the chiral
+    polarisation~\eqref{eq:Pchi-schur} in the completed co-metric, once three published facts are assembled: the
+    spatial/temporal grading of the projector completion~\cite{Beau2026n, Beau2026tp}, the oriented-cascade lift of the
+    $\JPi$-odd modulus~\cite{Beau2026q14}, and the symbol-compatible spin frame~\cite{Beau2026q14}.
+
+    By the Lichnerowicz form of the projected Dirac square the antisymmetric sector of $\Epi$ enters through the
+    Clifford
+    bivector $\tfrac12 \gamma^\mu \gamma^\nu \Fchi_{\mu\nu}$~\cite{Beau2026q14}, so the
+    polarisation~\eqref{eq:Pchi-schur}
+    is carried by the Clifford two-form coefficients $\Pchi_{\mu\nu}$, with electric part
+    $\mathbf{E}_{\mathcal P, i} = \Pchi_{0i}$ in $\gamma^0 \gamma^i$ and magnetic part
+    $\mathbf{B}_{\mathcal P, i} = \tfrac12 \epsilon_{ijk} \Pchi_{jk}$ in $\gamma^i \gamma^j$, the decomposition already
+    used in Theorem~\ref{thm:reduction}.
+
+    \begin{lemma}[Index assignment of the central tilt after completion]
+      \label{lem:index-assignment}
+      In the completed co-metric $g^{\mu\nu} = 2\eta^{\mu\nu}$, with the symbol-compatible spin frame
+      of~\cite{Beau2026q14}, the $\JPi$-odd chiral polarisation~\eqref{eq:Pchi-schur} is purely electric.
+      The dynamic central cascade increment $[X, Y] = Z$ --- equivalently the $\Jthree$-odd direction of the oriented
+      cascade --- is represented in $\Pchi$ by the temporal-spatial component $\Pchi_{0i}$, while the spatial-spatial
+      component $\Pchi_{ij}$ is the finite static sector and vanishes by finite $\JPi$-equivariance:
+      \begin{equation}
+        \label{eq:index-claim}
+        \Pchi_{ij}\big|_{\JPi\text{-odd}} = 0,
+        \qquad
+        \text{(Schur-transverse)} \ \Longrightarrow \ \Pchi_{0i}\big|_{\JPi\text{-odd}} \neq 0 .
+      \end{equation}
+      Consequently, in the Schur-transverse branch of Proposition~\ref{prop:dichotomy},
+      \begin{equation}
+        \label{eq:electric-genus}
+        \Pchi_{\mu\nu} \Pchi^{\mu\nu} = -2 |\mathbf{E}_{\mathcal P}|^2 < 0, \qquad \muchi < 0, \qquad u \neq 0 .
+      \end{equation}
+    \end{lemma}
+
+    \begin{proof}
+      \emph{The temporal Clifford generator, as covector then vector.}
+      Symbol compatibility~\cite{Beau2026q14} fixes the principal symbol of the projected Dirac operator as
+      $\gamma^\mu \xi_\mu$, so the Clifford generators are dual to the cotangent directions: $\gamma^0$ is the generator
+      of the temporal covector $d\tau$.
+      The completed co-metric $g^{\mu\nu} = 2\eta^{\mu\nu}$, with $g_{\tau\tau} = -\tfrac12 < 0$~\cite{Beau2026q11,
+        Beau2026tp}, raises $d\tau$ to the timelike tangent vector $\partial_\tau$, and~\cite{Beau2026n} identifies
+      $\partial_\tau$ with the central Carnot direction $Z$, which becomes a metric temporal direction only after
+      co-metric completion.
+      Thus $\gamma^0 \leftrightarrow d\tau \xrightarrow{\,g\,} \partial_\tau \cong Z$, while the horizontal degree-one
+      generators $X, Y$ are spacelike and orthogonal to $Z$ in the completed co-metric~\cite{Beau2026n}, dual to the
+      $\gamma^i$.
+
+      \emph{The magnetic component vanishes.}
+      The spatial-spatial Clifford sector $\gamma^i \gamma^j$ pairs two spacelike horizontal directions.
+      The rank-three generation triplet $\Cgen$ is the spinorial reading of the same rank-three spatial invariant used
+      in
+      the geometric branch~\cite{Beau2026q14}; hence the static weight-preserving generation sector maps to the
+      spatial-spatial Clifford sector.
+      On that sector a static restriction $C$ of $\Epi^2$ with $\JPi$-reality and weight-sector preservation
+      $[C, \Jthree] = 0$ satisfies $C_{++} = C_{--}$ and carries no $\JPi$-odd modulus~\cite{Beau2026q14}; equivalently,
+      the finite tilt $\partial_s (1 - P_{\mathrm{fin}})_{ij}|_{0} = 0$ by the $\JPi$-equivariance of finite
+      locking~\cite{Beau2026prs}.
+      Therefore $\Pchi_{ij}|_{\JPi\text{-odd}} = 0$ and $\mathbf{B}_{\mathcal P} = 0$.
+
+      \emph{The electric component is non-zero on the Schur-transverse branch.}
+      The single $\JPi$-odd dynamically active direction is the cascade generator $\partial_\tau$.
+      Its $\JPi$-odd projection on $\Cgen$ is a non-zero multiple of $\Jthree$, the mixing component vanishing in the
+      real
+      symplectic model~\cite{Beau2026q14}, sourced by the non-commutativity $[X, Y] = Z$; the oriented cascade carries
+      this central degree-two increment as the dynamic $\Jthree$~\cite{Beau2026aar, Beau2026q11of}.
+      Since $\partial_\tau \leftrightarrow \gamma^0$, the signal couples $\gamma^0$ to the residual spatial structure
+      $\gamma^i$ and lies in the electric sector $\gamma^0 \gamma^i$.
+      It reaches $\Pchi$ only through the Schur transport of~\eqref{eq:Pchi-schur}: by the Schur transversality
+      (Definition~\ref{def:transversality}, reduced in~\cite{Beau2026prs}) the opened direction $\partial_s P|_{0}$ is
+      not in the kernel of the transport, so the transverse branch of Proposition~\ref{prop:dichotomy} gives
+      $\Pchi \neq 0$.
+      With $\mathbf{B}_{\mathcal P} = 0$ the non-vanishing is carried by the electric component, hence
+      $\Pchi_{0i}|_{\JPi\text{-odd}} \neq 0$ and $\mathbf{E}_{\mathcal P} \neq 0$.
+      In the Schur-null branch the transport annihilates the opened direction and $\Pchi = 0$, the marginal subcase
+      already isolated in Proposition~\ref{prop:dichotomy}.
+
+      \emph{The genus.}
+      With $\mathbf{B}_{\mathcal P} = 0$ and, on the Schur-transverse branch, $\mathbf{E}_{\mathcal P} \neq 0$, the
+      Minkowski contraction of Theorem~\ref{thm:reduction} is
+      $2(|\mathbf{B}_{\mathcal P}|^2 - |\mathbf{E}_{\mathcal P}|^2) = -2|\mathbf{E}_{\mathcal P}|^2 < 0$, the positive
+      factor from $g^{\mu\nu} = 2\eta^{\mu\nu}$ leaving the sign unchanged.
+      Hence $\muchi < 0$ by~\eqref{eq:muchi}, the symmetric point is unstable, A4 locks a $\JPi$-conjugate pair $\pm
+      s_*$,
+      and $u(\pm s_*) \neq 0$ by Lemma~\ref{lem:u-odd}.
+    \end{proof}
+
+    \begin{remark}[The bracket is an algebraic generation, not a metric index]
+      \label{rem:bracket}
+      The Lie bracket $[X, Y] = Z$ is the algebraic generation of the central direction from the horizontal plane, not
+      its
+      metric index.
+      Before completion the symplectic-area reading $X \wedge Y$ is the static finite sector, $\JPi$-protected, with
+      $u_{\mathrm{fin}} = 0$; the completion raises the bracket direction to the temporal axis
+      $\gamma^0 \leftrightarrow d\tau \to \partial_\tau \cong Z$, and the dynamic increment carried by $\Jthree$ rides
+      it
+      as the electric component.
+      The same central object changes index-role at completion: magnetic-protected before, electric-active after.
+      The assignment of Lemma~\ref{lem:index-assignment} is therefore a statement about the completed co-metric, not
+      about
+      the finite Carnot grading.
+    \end{remark}
+
+    The genus deferred in Theorem~\ref{thm:reduction} is thereby determined in the Schur-transverse branch: the chiral
+    polarisation is timelike, $\muchi < 0$, and the generation split opens spontaneously, $u \neq 0$.
+    What remains is the amplitude $|u|$, the A4 matching of the discrete chiral-frontier normalisation with $\muchi$,
+    which
+    is not a genus question and is left open.
+
   \section{Status of results}
     \label{sec:status}
 
@@ -494,15 +613,22 @@ Independent Researcher, France\\
       In the transverse branch the genus computation is the next step; in the Schur-null branch the quadratic term
       vanishes and the locking character falls to the marginal branch of Theorem~\ref{thm:reduction}.
 
+    \paragraph{Derived (this note, Schur-transverse branch).}
+      The Lorentzian genus is electric.
+      The index-assignment lemma fixes $\Pchi_{ij}|_{\JPi\text{-odd}} = 0$ and, on the Schur-transverse branch,
+      $\Pchi_{0i}|_{\JPi\text{-odd}} \neq 0$ (Lemma~\ref{lem:index-assignment}), assembling the projector-completion
+      grading~\cite{Beau2026n, Beau2026tp}, the oriented-cascade lift~\cite{Beau2026q14}, and the symbol-compatible spin
+      frame~\cite{Beau2026q14}.
+      Hence $\Pchi_{\mu\nu} \Pchi^{\mu\nu} < 0$, $\muchi < 0$, and the generation split opens spontaneously, $u \neq 0$
+      (Theorem~\ref{thm:reduction}).
+      By Corollary~\ref{cor:reparam} this is well-posed, independent of the positive Jacobian $\phi'(0)$.
+
     \paragraph{Open.}
-      The Lorentzian genus of the chiral polarisation $\Pchi$, that is the sign of $\Pchi_{\mu\nu} \Pchi^{\mu\nu}$ in
-      $g^{\mu\nu} = 2\eta^{\mu\nu}$.
-      This single datum decides $\muchi$ and hence $u = 0$ versus $u \neq 0$, and it is well-posed: by
-      Corollary~\ref{cor:reparam} the genus is invariant under the locking reparametrisation, independent of the positive
-      Jacobian $\phi'(0)$.
-      It is not computed here, by design: the sign follows the genus, which is the next text to settle now that the
-      coincidence lock is discharged and Schur transversality is reduced to the projected commutator
-      in~\cite{Beau2026prs}.
+      The amplitude $|u|$, the A4 matching of the discrete chiral-frontier normalisation with $\muchi$.
+      This is downstream of the genus and is not a genus question: the genus sign is determined in the Schur-transverse
+      branch (Lemma~\ref{lem:index-assignment}), while the magnitude requires the explicit normalisation.
+      In the Schur-null branch the quadratic term vanishes and the locking character falls to the marginal branch of
+      Theorem~\ref{thm:reduction}, decided by the leading even coefficient $\lambda_{2k}$ rather than by the genus.
 
       \newpage
 
