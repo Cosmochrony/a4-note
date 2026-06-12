@@ -14,6 +14,7 @@
 \newtheorem{corollary}{Corollary}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
+\newtheorem{hypothesis}{Hypothesis}
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 
@@ -34,8 +35,11 @@
 \newcommand{\Spin}{\mathrm{Spin}}
 \newcommand{\Mp}{\mathrm{Mp}}
 
-\title{The Born--Infeld Saturation Margin of the Chiral Modulus:\\
-Antisymmetric Structure and the Reduction of the Generation Split to a Lorentzian Genus}
+\title{
+  The Born--Infeld Saturation Margin of the Chiral Modulus:\\
+  Antisymmetric Structure, Lorentzian Genus, and Electric Determination
+  of the Generation Split
+}
 
 \author{J. Beau\\
 Independent Researcher, France\\
@@ -70,7 +74,10 @@ Independent Researcher, France\\
     then
     determine the genus: in the Schur-transverse branch the chiral polarisation is electric, so $\muchi < 0$ and the
     split
-    opens spontaneously, leaving only the amplitude $|u|$ open.
+    opens spontaneously.
+    We then extend the radicand to quartic order: the Born--Infeld pseudoscalar cancels on the electric locus, and the
+    amplitude $|u|$ is reduced to the transverse cubic backreaction of the two-form trajectory, modulo odd
+    reparametrisation, together with the boundary-versus-interior selection of the saturation problem.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
@@ -118,6 +125,9 @@ Independent Researcher, France\\
     lift,
     and the symbol-compatible spin frame, the chiral polarisation is electric in the Schur-transverse branch, so
     $\muchi < 0$ and $u \neq 0$.
+    Section~\ref{sec:amplitude} extends the radicand to quartic order and reduces the amplitude to the sign of the cubic
+    backreaction $\Pchi \cdot \mathcal{R}_{\chi}$ and to a boundary-versus-interior selection of the Born--Infeld
+    saturation problem.
     Section~\ref{sec:status} records the epistemic strata.
 
     We work throughout on the flat effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ fixed by the Lorentzian metric
@@ -572,7 +582,173 @@ Independent Researcher, France\\
     polarisation is timelike, $\muchi < 0$, and the generation split opens spontaneously, $u \neq 0$.
     What remains is the amplitude $|u|$, the A4 matching of the discrete chiral-frontier normalisation with $\muchi$,
     which
-    is not a genus question and is left open.
+    is not a genus question and is taken up in Section~\ref{sec:amplitude}.
+
+  \section{The amplitude frontier}
+    \label{sec:amplitude}
+
+    The genus fixes the sign of $\muchi$ and hence the existence of the split; it does not fix the magnitude $|u|$.
+    To locate the saturated pair $\pm s_*$ we extend the radicand beyond the second variation.
+    Because $\Bsat$ is a monotone function of $\Dchi$ through~\eqref{eq:B}, the interior stationary points of $\Bsat$
+    and of $\Dchi$ coincide, and the square-root concavity changes only the depth of the locked configuration, not its
+    position.
+    The operative object is therefore the quartic of $\Dchi$, not that of $\Bsat$.
+
+    By the parity of Proposition~\ref{prop:parity} the two-form is an odd function of the modulus, refining the linear
+    expansion~\eqref{eq:Fchi-linear} to
+    \begin{equation}
+      \label{eq:Fchi-cubic}
+      \Fchi_{\mu\nu}(s) = s\, \Pchi_{\mu\nu} + s^3\, \mathcal{R}_{\chi,\mu\nu} + O(s^5), \qquad
+      \mathcal{R}_{\chi,\mu\nu} := \tfrac{1}{3!}\, \partial_s^3 \Fchi_{\mu\nu}\big|_{s=0} ,
+    \end{equation}
+    where $\mathcal{R}_{\chi}$ is the cubic response of the chiral two-form, the leading bending of the modulus ray away
+    from its linear direction $\Pchi$.
+    We write $\Pchi \cdot \mathcal{R}_{\chi} := \Pchi_{\mu\nu} \mathcal{R}_{\chi}^{\,\mu\nu}$ for the contraction.
+
+    \begin{proposition}[Quartic of the chiral radicand]
+      \label{prop:quartic}
+      With the determinantal identity~\eqref{eq:det-expansion} and the odd expansion~\eqref{eq:Fchi-cubic},
+      \begin{equation}
+        \label{eq:Dchi-quartic}
+        \Dchi(s) = 1 + \frac{1}{2\beta^2}\, \Pchi_{\mu\nu} \Pchi^{\mu\nu}\, s^2
+        + \left( \frac{\Pchi \cdot \mathcal{R}_{\chi}}{\beta^2}
+            - \frac{\big(\Pchi_{\mu\nu} \widetilde{\Pchi}^{\mu\nu}\big)^2}{16\beta^4} \right) s^4 + O(s^6) .
+      \end{equation}
+      The quartic carries two contributions of distinct status: a Born--Infeld pseudoscalar term, manifestly
+      non-positive and fixed by $\Pchi$ alone, and a backreaction term $\Pchi \cdot \mathcal{R}_{\chi}$ whose sign
+      is not fixed by $\Pchi$.
+    \end{proposition}
+
+    \begin{proof}
+      The exact four-dimensional identity~\eqref{eq:det-expansion} is quadratic in the two invariants
+      $\Fchi_{\mu\nu} \Fchi^{\mu\nu}$ and $\Fchi_{\mu\nu} \widetilde{\Fchi}^{\mu\nu}$.
+      Substituting~\eqref{eq:Fchi-cubic}, the scalar invariant is
+      $\Fchi_{\mu\nu} \Fchi^{\mu\nu} = s^2\, \Pchi_{\mu\nu} \Pchi^{\mu\nu} + 2 s^4\, \Pchi \cdot \mathcal{R}_{\chi}
+      + O(s^6)$, and the pseudoscalar invariant is
+      $\Fchi_{\mu\nu} \widetilde{\Fchi}^{\mu\nu} = s^2\, \Pchi_{\mu\nu} \widetilde{\Pchi}^{\mu\nu} + O(s^4)$,
+      so its square is $O(s^4)$.
+      Collecting the $s^4$ coefficients gives~\eqref{eq:Dchi-quartic}.
+      The pseudoscalar term $-\big(\Pchi_{\mu\nu} \widetilde{\Pchi}^{\mu\nu}\big)^2 / 16\beta^4 \leq 0$ depends only on
+      $\Pchi$; the backreaction term is linear in $\mathcal{R}_{\chi}$, an independent datum of the chiral two-form.
+    \end{proof}
+
+    Born--Infeld therefore supplies no quartic stabiliser of its own: the square root is concave and the pseudoscalar
+    contribution is non-positive.
+    Any interior stabilisation must come from the backreaction $\mathcal{R}_{\chi}$, and in its absence the modulus runs
+    toward the saturation bound $\Dchi \to 0$.
+
+    On the genus locus the pseudoscalar term vanishes.
+    The index-assignment Lemma~\ref{lem:index-assignment} gives $\mathbf{B}_{\mathcal P} = 0$, and the pseudoscalar
+    invariant is
+    $\Pchi_{\mu\nu} \widetilde{\Pchi}^{\mu\nu} \propto \mathbf{E}_{\mathcal P} \cdot \mathbf{B}_{\mathcal P} = 0$, so
+    the destabilising contribution of Proposition~\ref{prop:quartic} is absent.
+    Writing $\Pchi_{\mu\nu} \Pchi^{\mu\nu} = 2(|\mathbf{B}_{\mathcal P}|^2 - |\mathbf{E}_{\mathcal P}|^2)
+  = -2|\mathbf{E}_{\mathcal P}|^2$ on the electric branch, the radicand reduces to
+    \begin{equation}
+      \label{eq:Dchi-electric}
+      \Dchi(s) = 1 - \frac{|\mathbf{E}_{\mathcal P}|^2}{\beta^2}\, s^2
+      + \frac{\Pchi \cdot \mathcal{R}_{\chi}}{\beta^2}\, s^4 + O(s^6) ,
+    \end{equation}
+    so the quartic of the chiral radicand is carried entirely by the backreaction $\Pchi \cdot \mathcal{R}_{\chi}$.
+
+    \begin{proposition}[Coordinate-level boundary-versus-interior selection]
+      \label{prop:amplitude-dichotomy}
+      Fix an odd local modulus $s$ for the chiral two-form trajectory.
+      On the electric branch the quartic radicand in that parametrisation is governed by the coefficient
+      $\Pchi \cdot \mathcal{R}_{\chi}$ through the following coordinate-level dichotomy.
+      If $\Pchi \cdot \mathcal{R}_{\chi} > 0$ the radicand~\eqref{eq:Dchi-electric} has an interior minimum candidate at
+      \[
+        s_*^2 = \frac{|\mathbf{E}_{\mathcal P}|^2}{2\, \Pchi \cdot \mathcal{R}_{\chi}} ,
+      \]
+      which defines a physical interior lock only if this minimum survives modulo odd reparametrisation and lies
+      before the first saturation contact, $\Dchi(s_*) > 0$.
+      If $\Pchi \cdot \mathcal{R}_{\chi} \leq 0$ no quartic minimum is created in this parametrisation, and the
+      amplitude is fixed by the first contact with the saturation bound, $\Dchi(s_*) = 0$.
+    \end{proposition}
+
+    \begin{proof}
+      Stationarity of~\eqref{eq:Dchi-electric} at $s > 0$ requires
+      $-2 |\mathbf{E}_{\mathcal P}|^2 \beta^{-2} s + 4\, (\Pchi \cdot \mathcal{R}_{\chi}) \beta^{-2} s^3 = 0$, with the
+      non-trivial root $s_*^2 = |\mathbf{E}_{\mathcal P}|^2 / (2\, \Pchi \cdot \mathcal{R}_{\chi})$, real and positive
+      exactly when $\Pchi \cdot \mathcal{R}_{\chi} > 0$.
+      At this root one has
+      \[
+        \partial_s^2 \Dchi(s_*) = -\frac{2|\mathbf{E}_{\mathcal P}|^2}{\beta^2}
+        + \frac{12\,(\Pchi \cdot \mathcal{R}_{\chi})}{\beta^2}\, s_*^2
+        = \frac{4|\mathbf{E}_{\mathcal P}|^2}{\beta^2} > 0 ,
+      \]
+      so the root is an interior minimum of the quartic radicand.
+      For $\Pchi \cdot \mathcal{R}_{\chi} \leq 0$, both the quadratic and quartic coefficients
+      in~\eqref{eq:Dchi-electric} are non-positive, so no positive interior minimum is created at this order.
+      The admissible region is then terminated by the first contact with the saturation locus $\Dchi(s) = 0$,
+      where $\Bsat$ reaches its lower bound $-\beta^2$ and A4 locks.
+    \end{proof}
+
+    This proposition is a statement about the quartic expansion in a fixed odd modulus.
+    Its invariant content is supplied only after quotienting the $\Pchi$-parallel cubic response by odd
+    reparametrisation, as recorded in the Open paragraph of Section~\ref{sec:status}.
+
+    \begin{remark}[Not a Landau closure]
+      \label{rem:not-landau}
+      The interior branch $\Pchi \cdot \mathcal{R}_{\chi} > 0$ has the local form of a quartic double well, but the
+      stabilisation is not a Landau mechanism: it is conditional on the interior minimum candidate preceding the
+      Born--Infeld saturation wall.
+      The natural locking mechanism remains saturation at $\Dchi = 0$, recovered whenever the backreaction fails to turn
+      the radicand before that contact.
+      The amplitude is thus a bounded-flux selection problem, not a polynomial minimisation, and the magnitude $|u|$
+      follows from $s_*$ only after the discrete chiral-frontier normalisation $\mathcal{N}_A$ maps the modulus to the
+      split through the odd carrier $u(s)$ of Lemma~\ref{lem:u-odd}.
+    \end{remark}
+
+    The cubic response is itself a transported Schur datum.
+    Since the Schur form $\Epi = -\Pi_S D (1 - P) D \Pi_S^*$ is linear in $P$ at fixed $D, \Pi_S$~\cite{Beau2026prs},
+    the transport acts term by term on the modulus expansion, so
+    \begin{equation}
+      \label{eq:Rchi-transport}
+      \mathcal{R}_{\chi} = \tfrac{1}{3!}\, \Pi_S D \big(\partial_s^3 P|_{0}\big) D \Pi_S^*
+      \big|_{\mathrm{gen},\,\JPi\text{-odd}} ,
+    \end{equation}
+    the same transport as the polarisation~\eqref{eq:Pchi-schur} applied to the third-order tilt.
+    The projector constraint $P^2 = P$ fixes only the $P_0$-diagonal part of each derivative in terms of lower ones;
+    the off-diagonal cubic part that sources~\eqref{eq:Rchi-transport} is unconstrained.
+    Hence the sign of $\Pchi \cdot \mathcal{R}_{\chi}$ is not fixed by $P^2 = P$, nor by the Lorentzian
+    complexification, which supplies the admissible directions but not the curvature of the projector path; it is a
+    genuine open datum.
+
+    \begin{hypothesis}[Fixed-generator Lorentzian projector orbit]
+      \label{hyp:fixed-generator-orbit}
+      The Lorentzian complexification of the eliminated spinorial block is realised, to the order relevant for the
+      chiral amplitude, by a fixed generator $X$,
+      \[
+        P(s) = e^{sX} P_0 e^{-sX} .
+      \]
+      Equivalently, the projector path carries no torsion term in the opened $\JPi$-odd direction up to cubic order.
+    \end{hypothesis}
+
+    \begin{remark}[Conditional character of the backreaction]
+      \label{rem:conditional-sign}
+      Hypothesis~\ref{hyp:fixed-generator-orbit} is not derived from the present corpus: the complexification fixes
+      the tangent direction $X$, not the orbit.
+      Under it, $\partial_s^3 P|_{0} = \operatorname{ad}_X^2(\partial_s P|_{0})$, and on the rank-one $\JPi$-odd
+      outer-weight direction (the antisymmetric mode $e_+ - e_-$) this collapses to
+      \[
+        \partial_s^3 P|_{0} = -4|b|^2\, \partial_s P|_{0}, \qquad \mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2\, \Pchi ,
+      \]
+      with $b$ the amplitude of $X$ on that mode: the cubic response is parallel to the polarisation.
+      A $\Pchi$-parallel $\mathcal{R}_{\chi}$ is pure reparametrisation gauge, removable by the odd modulus
+      transformation $\mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha \Pchi$: the two-form trajectory is then the
+      straight ray $\Fchi(s) = (s - \tfrac{2}{3}|b|^2 s^3)\, \Pchi$, the quartic of $\Dchi$ is gaugeable to the marginal
+      value, and the apparent interior minimum is only the fold of the non-affine modulus.
+      A straight ray has no curvature, so $\Dchi$ decreases monotonically to the bound and the locked amplitude is the
+      first saturation contact $\Dchi(s_*) = 0$, the boundary branch of Proposition~\ref{prop:amplitude-dichotomy}, in
+      agreement with Remark~\ref{rem:not-landau}.
+      A genuine interior lock would require a $\Pchi$-transverse component of $\mathcal{R}_{\chi}$, absent on the
+      rank-one mode and not supplied by a fixed-generator orbit; it is part of the open path-curvature datum.
+    \end{remark}
+
+    What remains open is therefore narrow and explicit: the cubic response $\mathcal{R}_{\chi}$, hence the sign of
+    $\Pchi \cdot \mathcal{R}_{\chi}$; the boundary-versus-interior selection it controls; and the normalisation
+    $\mathcal{N}_A$ that converts $s_*$ into $|u|$.
 
   \section{Status of results}
     \label{sec:status}
@@ -604,6 +780,15 @@ Independent Researcher, France\\
       the genus (Corollary~\ref{cor:reparam}), and the explicit chiral polarisation
       $\Pchi = \Pi_S D (\partial_s P|_{0}) D \Pi_S^*|_{\mathrm{gen},\,\JPi\text{-odd}}$ with its sign fixed by the Schur
       form~\eqref{eq:Pchi-schur}.
+      The extension of the radicand to quartic order, the non-positivity of its Born--Infeld pseudoscalar contribution,
+      and the cancellation of that contribution on the electric locus (Proposition~\ref{prop:quartic},
+      equation~\eqref{eq:Dchi-electric}); the reduction of the locked amplitude to the sign of the cubic backreaction
+      $\Pchi \cdot \mathcal{R}_{\chi}$ through the boundary-versus-interior dichotomy
+      (Proposition~\ref{prop:amplitude-dichotomy}).
+      The cubic response $\mathcal{R}_{\chi}$ as the transported third-order Schur tilt
+      $\mathcal{R}_{\chi} = \tfrac{1}{3!}\Pi_S D (\partial_s^3 P|_{0}) D \Pi_S^*$ (equation~\eqref{eq:Rchi-transport}),
+      and the projector-constraint argument that its sign is a genuine open datum, left free by $P^2 = P$ and by the
+      Lorentzian complexification.
 
     \paragraph{Reduced in the Schur reduction~\cite{Beau2026prs}.}
       Schur transversality on the $\JPi$-odd eliminated sector (Definition~\ref{def:transversality}) is no longer an A4
@@ -623,10 +808,37 @@ Independent Researcher, France\\
       (Theorem~\ref{thm:reduction}).
       By Corollary~\ref{cor:reparam} this is well-posed, independent of the positive Jacobian $\phi'(0)$.
 
+    \paragraph{Conditional (this note).}
+      Under the fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit}, the cubic tilt collapses on the
+      rank-one $\JPi$-odd outer-weight mode to $\mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2 \Pchi$, parallel to the
+      polarisation, hence pure reparametrisation gauge (Remark~\ref{rem:conditional-sign}): the two-form trajectory is
+      a straight ray and the locked amplitude is the first saturation contact, the boundary branch of
+      Proposition~\ref{prop:amplitude-dichotomy}, not an interior lock.
+      The hypothesis is not derived from the present corpus, and a genuine interior branch would require a
+      $\Pchi$-transverse cubic response, part of the open path-curvature datum.
+
     \paragraph{Open.}
-      The amplitude $|u|$, the A4 matching of the discrete chiral-frontier normalisation with $\muchi$.
+      The amplitude $|u|$ is narrowed by Section~\ref{sec:amplitude} but not closed.
+      On the electric branch it reduces to the cubic response $\mathcal{R}_{\chi}$ of the chiral two-form, hence to the
+      sign of the backreaction $\Pchi \cdot \mathcal{R}_{\chi}$ and the boundary-versus-interior selection of the
+      Born--Infeld saturation problem (Proposition~\ref{prop:amplitude-dichotomy}), together with the discrete
+      chiral-frontier normalisation $\mathcal{N}_A$ that maps the locked modulus $s_*$ to $|u|$.
+      Equivalently, the open datum is the $\Pchi$-transverse curvature of the two-form trajectory $\{\Fchi(s)\}$, the
+      part of $\mathcal{R}_{\chi}$ that fixes the amplitude beyond the genus (informally the torsion of the projector
+      path; Hypothesis~\ref{hyp:fixed-generator-orbit} sets it to zero), together with the saturation-wall test
+      $\Dchi(s_*) > 0$ and $\mathcal{N}_A$.
+      The cubic response is understood modulo odd reparametrisation of the local modulus: under
+      $s = t + \alpha t^3 + O(t^5)$ one has
+      \[
+        \mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha\, \Pchi ,
+      \]
+      so the $\Pchi$-parallel component of $\mathcal{R}_{\chi}$ is a parametrisation gauge, while the physical datum is
+      the curvature of the two-form trajectory together with $\mathcal{N}_A$ mapping the locked modulus to $|u|$.
+      The residual amplitude problem is therefore not a parametrisation artefact: the genus is
+      reparametrisation-invariant, and the magnitude is fixed only by the invariant A4 matching of the saturated
+      two-form curve with $\mathcal{N}_A$.
       This is downstream of the genus and is not a genus question: the genus sign is determined in the Schur-transverse
-      branch (Lemma~\ref{lem:index-assignment}), while the magnitude requires the explicit normalisation.
+      branch (Lemma~\ref{lem:index-assignment}), while the magnitude requires the cubic datum and the normalisation.
       In the Schur-null branch the quadratic term vanishes and the locking character falls to the marginal branch of
       Theorem~\ref{thm:reduction}, decided by the leading even coefficient $\lambda_{2k}$ rather than by the genus.
 
