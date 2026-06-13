@@ -78,6 +78,12 @@ Independent Researcher, France\\
     We then extend the radicand to quartic order: the Born--Infeld pseudoscalar cancels on the electric locus, and the
     amplitude $|u|$ is reduced to the transverse cubic backreaction of the two-form trajectory, modulo odd
     reparametrisation, together with the boundary-versus-interior selection of the saturation problem.
+    On the corpus-derived real symplectic cascade the transverse (spin-two) channel of the cubic response vanishes at the
+    metaplectic phase $\gamma = 0$ for every ordering and reference, so the derived amplitude mechanism is Born--Infeld
+    saturation while the split persists, $u \neq 0$; the sixth-order interior lock is doubly conditional, on a non-derived
+    complex phase and on a non-prescribed ordering.
+    The magnitude $|u|$ itself is not predicted: it is fixed through the chiral-frontier normalisation $\mathcal{N}_A$, a
+    dictionary-bound quantity.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
@@ -126,8 +132,9 @@ Independent Researcher, France\\
     and the symbol-compatible spin frame, the chiral polarisation is electric in the Schur-transverse branch, so
     $\muchi < 0$ and $u \neq 0$.
     Section~\ref{sec:amplitude} extends the radicand to quartic order and reduces the amplitude to the sign of the cubic
-    backreaction $\Pchi \cdot \mathcal{R}_{\chi}$ and to a boundary-versus-interior selection of the Born--Infeld
-    saturation problem.
+    backreaction $\Pchi \cdot \mathcal{R}_{\chi}$; on the corpus-derived real cascade this transverse channel vanishes
+    path-invariantly, so the derived amplitude mechanism is Born--Infeld saturation and the interior lock is doubly
+    conditional.
     Section~\ref{sec:status} records the epistemic strata.
 
     We work throughout on the flat effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ fixed by the Lorentzian metric
@@ -746,9 +753,34 @@ Independent Researcher, France\\
       rank-one mode and not supplied by a fixed-generator orbit; it is part of the open path-curvature datum.
     \end{remark}
 
-    What remains open is therefore narrow and explicit: the cubic response $\mathcal{R}_{\chi}$, hence the sign of
-    $\Pchi \cdot \mathcal{R}_{\chi}$; the boundary-versus-interior selection it controls; and the normalisation
-    $\mathcal{N}_A$ that converts $s_*$ into $|u|$.
+    \begin{remark}[Path-invariant saturation and the spin obstruction to calibration]
+      \label{rem:path-invariant}
+      Under the adjoint action of the generation $\mathrm{su}(2)$ the endomorphism algebra decomposes into irreducibles,
+      $\mathrm{End}(\Cgen) = \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{5}$, with $\Jthree$ pure spin one and the
+      weight-two mixing direction that the transverse cubic response $\mathcal{R}_{\chi}$ must reach pure spin two, in
+      distinct irreducible components.
+      By Schur's lemma an $\mathrm{su}(2)$-equivariant transport acts on each component by an independent scalar, so
+      calibrating the spin-one (genus) channel of the transport to the electric polarisation does not fix the spin-two
+      (transverse) scalar: the sign of $\Pchi \cdot \mathcal{R}_{\chi}$ is not reachable by genus calibration, confirming
+      its open status.
+      The transverse cubic response is moreover sourced only by the complex metaplectic phase $\gamma$ of the Lorentzian
+      complexification, through the unique weight-balanced bracket combination; the real symplectic cascade derived
+      in~\cite{Beau2026q14} carries $\gamma = 0$ and its $\Jthree$ enters only at second Baker--Campbell--Hausdorff order,
+      so its transverse cubic response vanishes.
+      This vanishing is path-invariant: for a weight-preserving reference $P_0$ the phase generator commutes with $P_0$,
+      so a phase adjacent to $P_0$ is a no-op and every ordering of the real cascade gives the same vanishing transverse
+      component, for every reference $P_0 = \diag(p_0, p_1, p_2)$.
+      Hence the saturation branch does not rest on Hypothesis~\ref{hyp:fixed-generator-orbit}: on the corpus-derived real
+      cascade the transverse channel is empty independently of the single-generator model, and the interior lock requires
+      both a complex phase $\gamma \neq 0$, absent from the derived cascade, and a placement of that phase in the cascade,
+      since the transverse cubic datum vanishes when the phase follows the real cascade and is non-zero otherwise, with no
+      placement prescribed.
+    \end{remark}
+
+    On the corpus-derived real cascade the boundary-versus-interior selection is therefore resolved in favour of
+    saturation (Remark~\ref{rem:path-invariant}); what remains is the doubly conditional interior lock and the magnitude
+    $|u|$, fixed by the chiral-frontier normalisation $\mathcal{N}_A$, whose dictionary status is recorded in
+    Section~\ref{sec:status}.
 
   \section{Status of results}
     \label{sec:status}
@@ -807,22 +839,31 @@ Independent Researcher, France\\
       Hence $\Pchi_{\mu\nu} \Pchi^{\mu\nu} < 0$, $\muchi < 0$, and the generation split opens spontaneously, $u \neq 0$
       (Theorem~\ref{thm:reduction}).
       By Corollary~\ref{cor:reparam} this is well-posed, independent of the positive Jacobian $\phi'(0)$.
+      On the corpus-derived real symplectic cascade the transverse (spin-two) cubic response vanishes path-invariantly at
+      the metaplectic phase $\gamma = 0$ --- for every ordering and every reference, by the weight-preserving no-op
+      (Remark~\ref{rem:path-invariant}) --- so the derived amplitude mechanism is Born--Infeld saturation: the radicand
+      meets the bound at first contact, with no interior lock, and the split persists, $u \neq 0$.
+      What is settled here is the amplitude mechanism, not the magnitude $|u|$, which remains dictionary-bound (Open).
 
     \paragraph{Conditional (this note).}
-      Under the fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit}, the cubic tilt collapses on the
-      rank-one $\JPi$-odd outer-weight mode to $\mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2 \Pchi$, parallel to the
-      polarisation, hence pure reparametrisation gauge (Remark~\ref{rem:conditional-sign}): the two-form trajectory is
-      a straight ray and the locked amplitude is the first saturation contact, the boundary branch of
-      Proposition~\ref{prop:amplitude-dichotomy}, not an interior lock.
-      The hypothesis is not derived from the present corpus, and a genuine interior branch would require a
-      $\Pchi$-transverse cubic response, part of the open path-curvature datum.
+      The sixth-order magnetic interior lock --- a $\Pchi$-transverse cubic response, equivalently a non-empty spin-two
+      channel --- is doubly conditional on two independent inputs the corpus does not fix.
+      It requires a complex metaplectic phase $\gamma \neq 0$, absent from the derived real cascade; and, even granting
+      the phase, a placement of it in the cascade, since the transverse cubic datum vanishes when the phase follows the
+      real cascade and is non-zero otherwise, with no placement prescribed (Remark~\ref{rem:path-invariant}).
+      The fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit} is one special case, on which the cubic tilt
+      collapses on the rank-one $\JPi$-odd outer-weight mode to $\mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2 \Pchi$, parallel
+      to the polarisation, hence pure reparametrisation gauge (Remark~\ref{rem:conditional-sign}).
+      In all cases the interior lock is a candidate, not a computed datum: its specific value is an artefact of a
+      non-prescribed ordering, and the phase produces at most a transverse candidate, never the lock itself.
+      Not concluded.
 
     \paragraph{Open.}
-      The amplitude $|u|$ is narrowed by Section~\ref{sec:amplitude} but not closed.
-      On the electric branch it reduces to the cubic response $\mathcal{R}_{\chi}$ of the chiral two-form, hence to the
-      sign of the backreaction $\Pchi \cdot \mathcal{R}_{\chi}$ and the boundary-versus-interior selection of the
-      Born--Infeld saturation problem (Proposition~\ref{prop:amplitude-dichotomy}), together with the discrete
-      chiral-frontier normalisation $\mathcal{N}_A$ that maps the locked modulus $s_*$ to $|u|$.
+      The amplitude mechanism is settled (saturation, Derived above); the magnitude $|u|$ is narrowed by
+      Section~\ref{sec:amplitude} but not closed.
+      On the derived real cascade the boundary-versus-interior selection is resolved in favour of saturation, so the
+      remaining magnitude datum is the discrete chiral-frontier normalisation $\mathcal{N}_A$ that maps the locked
+      modulus $s_*$ to $|u|$, the cubic response $\mathcal{R}_{\chi}$ surviving only modulo odd reparametrisation.
       Equivalently, the open datum is the $\Pchi$-transverse curvature of the two-form trajectory $\{\Fchi(s)\}$, the
       part of $\mathcal{R}_{\chi}$ that fixes the amplitude beyond the genus (informally the torsion of the projector
       path; Hypothesis~\ref{hyp:fixed-generator-orbit} sets it to zero), together with the saturation-wall test
@@ -841,6 +882,22 @@ Independent Researcher, France\\
       branch (Lemma~\ref{lem:index-assignment}), while the magnitude requires the cubic datum and the normalisation.
       In the Schur-null branch the quadratic term vanishes and the locking character falls to the marginal branch of
       Theorem~\ref{thm:reduction}, decided by the leading even coefficient $\lambda_{2k}$ rather than by the genus.
+
+      The normalisation $\mathcal{N}_A$ is itself dictionary-bound, not a parameter-free prediction.
+      It is the angular analogue of the radial scale $\kappa = 5/12$ of the exit-deficit dictionary~\cite{Beau2026aar,
+    Beau2026q14}, which fixes the split value $\varepsilon = 1/10$ by matching the derived three-level deficit structure
+      to the external ADE ratio $3{:}2$ of a selected case, one of four three-level cases of differing
+      ratios~\cite{Beau2026a4}.
+      The chiral oriented signal that would carry $\mathcal{N}_A$ is well defined --- the residual frequency reflection
+      $R_b = W(-I)$ is the central Weil lift, scalar on the chiral carrier, so $[\gamma_5, R_b] = 0$ and the chiral
+      integrand survives the symmetric-frontier cancellation that annihilates the bare cocycle~\cite{Beau2026q11of,
+    Beau2026aar} --- but evaluating it and comparing to $\varepsilon = 1/10$ would be a dictionary matching, not a test,
+      since $1/10$ is a dictionary value and $\mathcal{N}_A$ its conversion factor.
+      The genuine first-principles front is therefore upstream and structural, not a numerical amplitude: the ADE case
+      selection and the level-to-generation map, the derivation of the projective-resolution growth
+      $\Lambda_{\mathrm{proj}}(n)$ and of the cascade exponent $\beta$ (only $\beta \le 1$
+      established~\cite{Beau2026a4, Beau2026a8}), and the derivation of the transfer constant $N_{\mathrm{casc}}$ that
+      fixes $\mathcal{N}_A$~\cite{Beau2026q14}.
 
       \newpage
 
