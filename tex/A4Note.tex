@@ -701,6 +701,48 @@ Independent Researcher, France\\
     Its invariant content is supplied only after quotienting the $\Pchi$-parallel cubic response by odd
     reparametrisation, as recorded in the Open paragraph of Section~\ref{sec:status}.
 
+    \begin{corollary}[Radial contact in the affine electric gauge]
+      \label{cor:radial-contact}
+      In the electric Schur-transverse branch, and after quotienting the $\Pchi$-parallel cubic response by odd
+      reparametrisation, the affine radial contact of the Born--Infeld radicand is fixed by $\Dchi(s_*) = 0$.
+      Writing $a := |\mathbf{E}_{\mathcal P}|^2 / \beta^2$ and $b := \Pchi \cdot \mathcal{R}_{\chi} / \beta^2$, the
+      boundary branch of $\Dchi(s) = 1 - a s^2 + b s^4 + O(s^6)$ has the positive contact
+      \begin{equation}
+        \label{eq:s-star-contact}
+        s_*^2 = \frac{1 - \sqrt{1 - 4b/a^2}}{2b/a}
+        = \frac{1}{a}\left( 1 + \frac{b}{a^2} + O(b^2/a^4) \right) ,
+      \end{equation}
+      whenever the quartic truncation is used away from an interior lock.
+      Equivalently,
+      \begin{equation}
+        \label{eq:s-star-value}
+        s_* = \frac{\beta}{|\mathbf{E}_{\mathcal P}|}
+        \left( 1 + \frac{\Pchi \cdot \mathcal{R}_{\chi}\, \beta^2}{2 |\mathbf{E}_{\mathcal P}|^4}
+        + O\!\left( \frac{(\Pchi \cdot \mathcal{R}_{\chi})^2 \beta^4}{|\mathbf{E}_{\mathcal P}|^8} \right) \right) .
+      \end{equation}
+      In the affine electric gauge in which the transverse cubic backreaction vanishes, this reduces to the radial
+      contact
+      \begin{equation}
+        \label{eq:s-star-affine}
+        s_* = \frac{\beta}{|\mathbf{E}_{\mathcal P}|} .
+      \end{equation}
+      This fixes the radial factor in the contact split.
+      It does not fix the absolute magnitude of the generation split, because $\beta$, $|\mathbf{E}_{\mathcal P}|$, and
+      the chiral-frontier normalisation $\mathcal{N}_A$ remain upstream normalisation data.
+    \end{corollary}
+
+    \begin{proof}
+      The contact condition in the quartic truncation is $1 - a s^2 + b s^4 = 0$.
+      With $x = s^2$, the boundary root is the branch continuously connected to $x = 1/a$ as $b \to 0$,
+      \[
+        x = \frac{a - \sqrt{a^2 - 4b}}{2b} = \frac{1 - \sqrt{1 - 4b/a^2}}{2b/a} .
+      \]
+      Expanding the square root gives $x = a^{-1}\,( 1 + b/a^2 + O(b^2/a^4) )$, and taking the positive square root gives
+      the stated expression for $s_*$.
+      When the transverse cubic response vanishes in the affine electric gauge, $b = 0$ in the physical quotient and the
+      first contact is exactly $s_* = \beta/|\mathbf{E}_{\mathcal P}|$.
+    \end{proof}
+
     \begin{remark}[Not a Landau closure]
       \label{rem:not-landau}
       The interior branch $\Pchi \cdot \mathcal{R}_{\chi} > 0$ has the local form of a quartic double well, but the
@@ -951,6 +993,14 @@ Independent Researcher, France\\
       The remaining magnitude data are exactly the two upstream quantities already isolated --- the radial contact $s_*$
       through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through $\mathcal{N}_A$ --- so the
       numerical magnitude remains upstream and dictionary-bound.
+
+    \paragraph{Radial contact (Front 1).}
+      The radial contact factor is now fixed in closed form by Corollary~\ref{cor:radial-contact}: in the affine
+      electric gauge $s_* = \beta/|\mathbf{E}_{\mathcal P}|$.
+      The quartic correction is entirely the transverse Schur backreaction $\Pchi \cdot \mathcal{R}_{\chi}$, whose
+      $\Pchi$-parallel part is removed by odd reparametrisation (Remark~\ref{rem:conditional-sign}).
+      The radial factor of the contact split is thereby settled as a form result, while its numerical magnitude still
+      routes through the upstream normalisations $\beta$, $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
 
     \paragraph{Open.}
       The amplitude mechanism is settled (saturation, Derived above); the magnitude $|u|$ is narrowed by
