@@ -82,6 +82,11 @@ Independent Researcher, France\\
     metaplectic phase $\gamma = 0$ for every ordering and reference, so the derived amplitude mechanism is Born--Infeld
     saturation while the split persists, $u \neq 0$; the sixth-order interior lock is doubly conditional, on a non-derived
     complex phase and on a non-prescribed ordering.
+    Using the companion eliminated-block note, which reduces the split to the normalisation of the single carrier
+    $\partial_s \Delta_\chi(P)|_0$, we then close the boundary-versus-interior selection by admissibility: the saturation
+    contact $\Delta_\chi(s_*) = 0$ is the unique chart-independent A4 lock, the carrier rate being
+    reparametrisation-covariant so that the invariant magnitude is $u(s_*)$, with the interior competitor requiring the
+    non-derived phase and ordering.
     The magnitude $|u|$ itself is not predicted: it is fixed through the chiral-frontier normalisation $\mathcal{N}_A$, a
     dictionary-bound quantity.
   \end{abstract}
@@ -783,6 +788,66 @@ Independent Researcher, France\\
     $|u|$, fixed by the chiral-frontier normalisation $\mathcal{N}_A$, whose dictionary status is recorded in
     Section~\ref{sec:status}.
 
+  \section{Boundary contact as the admissible A4 lock}
+    \label{sec:boundary}
+
+    The companion eliminated-block note~\cite{Beau2026ebj} reduces the generation split to the normalisation of a single
+    carrier, the transported equivariance defect rate $\partial_s \Dchi(P)|_0$ of the eliminated block, with
+    $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$.
+    Throughout this section $\Dchi(P)$ is this equivariance defect (the split carrier), while $\Dchi(s)$ is the
+    admissibility radicand of Definition~\ref{def:B}: the two share the chiral subscript but are distinct objects,
+    distinguished by their argument.
+    Proposition~\ref{prop:amplitude-dichotomy} stated the boundary-versus-interior dichotomy at coordinate level and
+    deferred its invariant content; we supply that content here and select the boundary by admissibility.
+
+    \begin{proposition}[The defect rate is reparametrisation-covariant]
+      \label{prop:rate-covariant}
+      Under an odd reparametrisation of the modulus $s \mapsto \phi(s)$, $\phi(0) = 0$, $\phi'(0) \neq 0$, the carrier rate
+      is covariant, not invariant: it rescales by the Jacobian $\phi'(0)$.
+      Hence the rate alone carries no chart-independent magnitude; the invariant datum is the split $u(s_*)$ evaluated at a
+      geometrically-defined modulus point $s_*$.
+    \end{proposition}
+
+    \begin{proof}
+      $\Dchi(P)$ is a function on the modulus line; the chain rule at $s = 0$, using $u(0) = 0$ (Lemma~\ref{lem:u-odd}),
+      makes the first-order coefficient scale by $\phi'(0)$ between charts, while the value of $u$ at any fixed modulus
+      point is unchanged.
+      This is the first-order companion of the genus covariance of Corollary~\ref{cor:reparam}; both are verified by exact
+      computation in~\cite{Beau2026ebj}.
+    \end{proof}
+
+    \begin{proposition}[Chart-independence of the saturation contact]
+      \label{prop:contact-invariant}
+      The first saturation contact $\Dchi(s_*) = 0$ of Proposition~\ref{prop:amplitude-dichotomy} is a geometric condition
+      on the radicand: its solution is independent of the chart and of the coefficients of $\Bsat$ beyond the radicand
+      itself.
+      The locked split $u(s_*)$ is therefore reparametrisation-invariant.
+    \end{proposition}
+
+    \begin{proof}
+      The contact is the level condition $\Dchi(s_*) = 0$; a level set of a function on the modulus line is a point of the
+      manifold, carried covariantly by any reparametrisation, hence the same physical configuration in every chart.
+      Evaluating the odd carrier $u$ there yields a chart-independent value, verified together with
+      Proposition~\ref{prop:rate-covariant} in~\cite{Beau2026ebj}.
+    \end{proof}
+
+    \begin{corollary}[Boundary contact is the unique admissible lock]
+      \label{cor:boundary-admissible}
+      Within the no-circularity discipline --- only data derived in the present corpus may enter, with no non-derived
+      complex phase or cascade ordering --- the saturation contact $\Dchi(s_*) = 0$ is the unique chart-independent A4 lock.
+      The interior candidate of Proposition~\ref{prop:amplitude-dichotomy} is located by the sixth-order coefficient of the
+      radicand, equivalently by the complex metaplectic phase and the cascade ordering left non-derived in the Conditional
+      paragraph of Section~\ref{sec:status}; a finite truncation of the radicand has, moreover, a chart-dependent extremum.
+      The interior lock is therefore inadmissible unless that phase and ordering are supplied.
+    \end{corollary}
+
+    This upgrades the coordinate-level dichotomy of Proposition~\ref{prop:amplitude-dichotomy} to an admissibility-level
+    selection: the boundary contact is selected not only on the derived real cascade (path-invariance,
+    Remark~\ref{rem:path-invariant}) but as the unique fence-admissible lock, independent of any chart.
+    The remaining magnitude $|u| = |u(s_*)|$ is thereby reduced, within the fence, to the structural carrier rate
+    of~\cite{Beau2026ebj} dressed by the contact displacement $s_*$, with the single honest caveat that a future
+    first-principles derivation of the complex phase and the ordering could reopen an interior competitor.
+
   \section{Status of results}
     \label{sec:status}
 
@@ -859,6 +924,14 @@ Independent Researcher, France\\
       In all cases the interior lock is a candidate, not a computed datum: its specific value is an artefact of a
       non-prescribed ordering, and the phase produces at most a transverse candidate, never the lock itself.
       Not concluded.
+
+    \paragraph{Selection (this note, Section~\ref{sec:boundary}).}
+      Within the no-circularity fence the boundary-versus-interior selection is closed by admissibility: the saturation
+      contact $\Dchi(s_*) = 0$ is the unique chart-independent A4 lock (Corollary~\ref{cor:boundary-admissible}), the
+      interior candidate requiring the non-derived complex phase and ordering of the Conditional paragraph.
+      Equivalently, the split carrier $\partial_s \Dchi(P)|_0$ of~\cite{Beau2026ebj} is reparametrisation-covariant, so the
+      invariant magnitude is $u(s_*)$ at the contact.
+      A future first-principles derivation of that phase and ordering could reopen an interior competitor.
 
     \paragraph{Open.}
       The amplitude mechanism is settled (saturation, Derived above); the magnitude $|u|$ is narrowed by
