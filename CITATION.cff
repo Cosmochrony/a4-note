@@ -7,7 +7,7 @@ authors:
     given-names: "Jérôme"
 repository-code: "https://github.com/Cosmochrony/a4-note"
 url: "https://cosmochrony.org/science/fermionic-matter/a4-note/"
-version: "1.10"
+version: "1.11"
 doi: "10.5281/zenodo.20633931"
 license: "CC-BY-4.0"
 preferred-citation:
