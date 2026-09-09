@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
 title: "The Born–Infeld Saturation Margin of the Chiral Modulus: Antisymmetric Structure, Lorentzian Genus, and Electric Determination of the Generation Split"
-type: software
+type: article
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
 repository-code: "https://github.com/Cosmochrony/a4-note"
 url: "https://cosmochrony.org/science/fermionic-matter/a4-note/"
-version: "1.11"
+version: "2.0"
 doi: "10.5281/zenodo.20633931"
 license: "CC-BY-4.0"
 preferred-citation:

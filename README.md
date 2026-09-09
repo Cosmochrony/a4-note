@@ -1,17 +1,17 @@
 # A4-Note — The Born–Infeld Saturation Margin of the Chiral Modulus
 
-*Antisymmetric Structure and the Reduction of the Generation Split to a Lorentzian Genus*
+*Antisymmetric Structure, Lorentzian Genus, and Electric Determination of the Generation Split*
 
 J. Beau, Independent Researcher, France
 
 ## Status
 
-Preprint, v1.0. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
+Working paper, v2.0. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
 
 ## Abstract
 
-This note is the companion of the **Projective Residue Schur reduction** (PRS) and takes up the
-first of its open deliverables: the definition of the Lorentzian saturation functional
+This note is the companion of the **Projective Residue Schur reduction** (PRS) and takes up its
+open deliverable on the Lorentzian saturation functional: the definition of
 $\mathcal{B}_{\mathrm{sat}}(s)$ along the $J_\Pi$-odd modulus that controls the three-generation
 split coefficient $u$.
 
@@ -33,19 +33,40 @@ Three results are established.
    so the existence and stability of the split are governed entirely by the Lorentzian genus of
    the chiral polarisation $P_\chi$ in the effective metric $g^{\mu\nu} = 2\eta^{\mu\nu}$.
 
-The identification of the Schur projector tilt with the Born–Infeld saturation modulus on the A4
-locus is discharged to a tangential coincidence, conditional only on Schur transversality; the
-Lorentzian genus computation is deliberately deferred.
+The coincidence lock is discharged to a tangential coincidence; the Schur transversality on which
+it rests is closed in PRS in the present Lorentzian spin stratum, selecting the Schur-transverse
+branch. Assembling the projector-completion grading, the oriented-cascade lift, and the
+symbol-compatible spin frame, the genus is determined: in the Schur-transverse branch the chiral
+polarisation is electric, so $\mu_\chi < 0$ and the split opens spontaneously, $u \neq 0$.
+
+The radicand is then extended to quartic order: the Born–Infeld pseudoscalar cancels on the
+electric locus, and the amplitude $|u|$ is reduced to the transverse cubic backreaction of the
+two-form trajectory, modulo odd reparametrisation, together with the boundary-versus-interior
+selection of the saturation problem. On the corpus-derived real symplectic cascade the transverse
+(spin-two) channel of the cubic response vanishes at the metaplectic phase $\gamma = 0$ for every
+ordering and reference, so the derived amplitude mechanism is Born–Infeld saturation while the
+split persists, $u \neq 0$; the sixth-order interior lock is doubly conditional, on a non-derived
+complex phase and on a non-prescribed ordering. Using the companion eliminated-block note, the
+boundary-versus-interior selection is closed by admissibility: the saturation contact
+$\Delta_\chi(s_*) = 0$ is the unique chart-independent A4 lock, with invariant magnitude $u(s_*)$.
+The magnitude $|u|$ itself is not predicted: it is fixed through the chiral-frontier normalisation
+$\mathcal{N}_A$, a dictionary-bound quantity.
+
+The even sector $\mathrm{diag}(1, \tfrac{1}{2}, \tfrac{1}{2})$ of $E_\Pi^2$ is the algebraic value of
+$(C_2 - J_3^2)/C_2$ at $C_2 = 2$; reading it as the Born–Infeld even sector would require an
+identification with the conditional $3 \times 3$ model of O30 on $\mathrm{Sym}^2(V_\rho)$ that is
+not available and is not used.
 
 ## Position in the programme
 
 This note belongs to the **fermionic matter sub-programme** (Presentation Note 6). It is the
-companion to **PRS** (Schur form of $E_\Pi$, A4 stratification, finite/Lorentzian separation)
-and discharges its first open deliverable: the definition of the saturated Born–Infeld
-functional along the $J_\Pi$-odd modulus, with the sign convention locked by the admissibility
-role of the functional. The remaining open deliverable — the computation of the chiral curvature
-$\mu_\chi^2$ — is thereby reduced to a single Lorentzian genus question on the chiral
-polarisation two-form.
+companion to **PRS** (Schur form of $E_\Pi$, A4 stratification, finite/Lorentzian separation,
+Schur transversality) and discharges its open deliverable on the saturated Born–Infeld functional
+along the $J_\Pi$-odd modulus, with the sign convention locked by the admissibility role of the
+functional. The Lorentzian genus is determined electric in the Schur-transverse branch, so the
+split exists; what remains is the magnitude $|u|$, dictionary-bound through $\mathcal{N}_A$, and
+the upstream structural fronts (ADE case selection, level-to-generation map, cascade exponent
+$\beta$, transfer constant $N_{\mathrm{casc}}$).
 
 ## Compilation
 
