@@ -3,8 +3,9 @@
 Bias-independent, exact symbolic verification (no sampling) that the Front C/D0 carrier rate
     u_1 = <J_3, {E_0, E_1}> / <J_3, J_3>,    E_1 = -Pi_S D \\dot Q(0) D Pi_S^*,
 is NOT a free scalar but a constrained bilinear between the even residue block E_0 and the D^pm-transported
-chiral defect carried by E_1. Using the even-sector closure (Born--Infeld parity, O30/Beau2026a34)
-E_0^2|_{C^3_gen} = diag(1, 1/2, 1/2), the E_0-dependence collapses to a single Born--Infeld factor.
+chiral defect carried by E_1. Using the algebraic even sector E_0^2|_{C^3_gen} = (C_2 - J_3^2)/C_2 =
+diag(1, 1/2, 1/2) at C_2 = 2 (its Born--Infeld reading is not used), the E_0-dependence collapses to a
+single scalar factor.
 
 Three results.
   (A) Block transport (chiral frame, tau = Pi_S = I): with the eliminated-block velocity
@@ -12,7 +13,7 @@ Three results.
       diagonal blocks E_{1,LL} = -Pi_S D_- pi_RR' D_+ Pi_S^*, E_{1,RR} = -Pi_S D_+ pi_LL' D_- Pi_S^*
       (PRS transport), and the J_Pi-odd diagonal of \\dot Q(0) is the transported defect rate
       pi_LL' - pi_RR'(bar) = d/ds Delta_chi(P)|_0 (D0).
-  (B) Even-sector reduction (the new content): on C^3_gen the even sector closes to E_0^2 = diag(1,1/2,1/2),
+  (B) Even-sector reduction (the new content): on C^3_gen the algebraic even sector is E_0^2 = diag(1,1/2,1/2),
       so E_0 acts as sigma/sqrt(2) on the J_3-carrying outer block (e_+, e_-), sigma = +-1 the V-A sign.
       Then {E_0, E_1}|_{e_pm} = sqrt(2) sigma E_1|_{e_pm}, hence
           u_1 = sqrt(2) sigma <J_3, E_1> / <J_3, J_3> .
@@ -75,8 +76,8 @@ def part_B_even_sector_reduction():
     extras = {}
 
     for sigma in (sp.Integer(1), sp.Integer(-1)):
-        E0 = sigma * sp.diag(1, r2, r2)                 # even-sector root (Born--Infeld closure, O30)
-        # Check the even-sector closure E_0^2 = diag(1,1/2,1/2).
+        E0 = sigma * sp.diag(1, r2, r2)                 # even-sector root (algebraic value (C_2 - J_3^2)/C_2)
+        # Check the even-sector identity E_0^2 = diag(1,1/2,1/2).
         checks[f"E0_sq_closure_s{sigma}"] = is_zero(E0 * E0 - sp.diag(1, sp.Rational(1, 2), sp.Rational(1, 2)))
 
         # Generic J_Pi-odd Hermitian E_1 on C^3_gen (J_Pi^(2): e0->-e0, e+ <-> e-).
