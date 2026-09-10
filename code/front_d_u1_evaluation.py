@@ -119,7 +119,7 @@ def main():
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
     print("CLOSURE:  u_partial = sqrt(2) sigma s_* T_J3(d_s Delta_chi) / <J3,J3>,")
-    print("  factors: sqrt(2) sigma (Born-Infeld even block, V-A) x s_* (radial saturation, A4 R_chi open)")
+    print("  factors: sqrt(2) sigma (even block, algebraic (C_2 - J_3^2)/C_2; V-A) x s_* (radial saturation, A4 R_chi open)")
     print("           x T_J3 (angular oriented area = N_A, dictionary-bound). No new selector.")
     print("ALL EXACT CHECKS PASSED")
 

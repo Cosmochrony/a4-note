@@ -78,7 +78,7 @@ def part_B_even_sector_reduction():
     for sigma in (sp.Integer(1), sp.Integer(-1)):
         E0 = sigma * sp.diag(1, r2, r2)                 # even-sector root (algebraic value (C_2 - J_3^2)/C_2)
         # Check the even-sector identity E_0^2 = diag(1,1/2,1/2).
-        checks[f"E0_sq_closure_s{sigma}"] = is_zero(E0 * E0 - sp.diag(1, sp.Rational(1, 2), sp.Rational(1, 2)))
+        checks[f"E0_sq_identity_s{sigma}"] = is_zero(E0 * E0 - sp.diag(1, sp.Rational(1, 2), sp.Rational(1, 2)))
 
         # Generic J_Pi-odd Hermitian E_1 on C^3_gen (J_Pi^(2): e0->-e0, e+ <-> e-).
         Jpi = sp.Matrix([[-1, 0, 0], [0, 0, 1], [0, 1, 0]])
@@ -112,7 +112,7 @@ def main():
 
     print()
     print("Even-sector reduction:  u_1 = sqrt(2) * sigma * <J_3, E_1> / <J_3, J_3>   (sigma = +-1, V-A sign)")
-    print("  -> the E_0-dependence collapses to the Born--Infeld factor sqrt(2) sigma;")
+    print("  -> the E_0-dependence collapses to the even-block factor sqrt(2) sigma;")
     print("     u_1 is the generation-J_3 projection of E_1 = -Pi_S D dotQ(0) D Pi_S^*, a constrained")
     print("     bilinear, NOT a free scalar.")
     print("Assembly:  u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)> / <J_3, J_3>.")
