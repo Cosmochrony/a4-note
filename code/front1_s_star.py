@@ -1,7 +1,8 @@
 """Front 1: the radial saturation contact s_*, solved exactly from the electric chiral radicand.
 
-Bias-independent, exact symbolic verification (no sampling) of the first of the three upstream factors of
-the generation split u_partial = sqrt(2) sigma s_* T_{J3}(...) / <J3,J3>. We compute the radial factor
+Bias-independent, exact symbolic verification (no sampling) of the radial contact s_*, the first of the three factors of
+the generation split u_partial = sqrt(2) sigma s_* T_{J3}(...) / <J3,J3> under the localisation hypothesis
+of the A4-Note paragraph 'Front D factorisation (conditional)'. We compute the radial factor
 s_*, the A4 saturation contact Delta_chi(s_*) = 0 on the electric branch (A4-note Beau2026bim,
 eq:Dchi-electric, prop:amplitude-dichotomy, rem:conditional-sign).
 
@@ -32,7 +33,7 @@ Five results are verified.
       already isolated by the A4-note, not a new unknown.
 
 Conclusion (printed): the radial factor is s_* = beta/|E_P| in the affine gauge, with the only correction
-being the open P-transverse curvature. One of the three upstream factors of u thus has a derived value
+being the open P-transverse curvature. One of the three factors of u under that hypothesis thus has a derived value
 modulo that pre-existing open datum. No number is produced for |E_P| or beta themselves (dictionary scales);
 the result is the closed FORM of s_* and the proof that its parallel correction is gauge. No figures. English.
 """
@@ -133,8 +134,8 @@ def main():
         print(f"  [{'PASS' if ok else 'FAIL'}]  {k}")
     print("=" * 78)
     print("RESULT: s_* = beta/|E_P| in the affine gauge; the only correction is the open P-transverse")
-    print("        curvature (metaplectic phase gamma), not a new unknown. One of the three factors of u")
-    print("        thus has a derived closed form modulo a pre-existing open datum.")
+    print("        curvature (metaplectic phase gamma), not a new unknown. One of the three factors of u under")
+    print("        that hypothesis thus has a derived closed form modulo a pre-existing open datum.")
     print("ALL CHECKS PASS" if allok else "SOME CHECKS FAILED")
     return allok
 

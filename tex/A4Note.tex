@@ -854,8 +854,9 @@ Independent Researcher, France\\
     \label{sec:boundary}
 
     The companion eliminated-block note~\cite{Beau2026ebj} proves, in the chiral frame with
-    $\JPi = \Sigma_\tau \circ \mathrm{conj}$ and $\Sigma_\tau = \bigl(\begin{smallmatrix} 0 & \tau \\ \tau^{-1} & 0
-    \end{smallmatrix}\bigr)$, that the left-handed block of the $\JPi$-odd tangent
+    $\JPi = \Sigma_\tau \circ \mathrm{conj}$, $\Sigma_\tau = \bigl(\begin{smallmatrix} 0 & \tau \\ \tau^{-1} & 0
+    \end{smallmatrix}\bigr)$, $\tau : \mathcal{S}_R \to \mathcal{S}_L$ the unitary intertwiner of~\cite{Beau2026prs}
+    with $\tau\,\overline{\tau}^{-1} = \pm 1$, that the left-handed block of the $\JPi$-odd tangent
     of the eliminated block is half the transported equivariance defect rate $\partial_s \Dchi(P)|_0$, with
     $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$; this determines one block of the split-sourcing
     tangent, not a unique carrier, the selection of the family and the localisation of the odd tangent onto that block
@@ -895,7 +896,9 @@ Independent Researcher, France\\
     \begin{proof}
       The contact is the level condition $\Dchi(s_*) = 0$; a level set of a function on the modulus line is a point of the
       manifold, carried covariantly by any reparametrisation, hence the same physical configuration in every chart.
-      Evaluating the odd carrier $u$ there yields a chart-independent value.
+      Evaluating the odd carrier $u$ there yields a chart-independent value; an orientation-reversing chart exchanges
+      the two members $\pm s_*$ of the level set and, by Lemma~\ref{lem:u-odd}, flips the sign of $u$ while preserving
+      $|u(s_*)|$.
     \end{proof}
 
     \begin{corollary}[Boundary contact is the unique admissible lock]
@@ -1005,11 +1008,12 @@ Independent Researcher, France\\
 
     \paragraph{Front D factorisation (conditional).}
       Under the localisation hypothesis that the first-order source of the split is exhausted by the transported
-      left-handed block $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent, that is, that in the auxiliary
-      compression $E_1^{\mathrm{aux}} = -G_0\,\dot Q(0)\,G_0^{*}$ of~\cite{Beau2026ebj}, with $G_0$ the finite
-      embedding composed with the Dirac operator, the two embedding-motion terms of the first-order residue and the
-      chirally off-diagonal part of the odd tangent contribute nothing to the $J_3$ component, the contact split
-      $u_\partial = u(s_*)$ factorises into three separated normalisations:
+      left-handed block $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent, that is, that the $J_3$ component
+      of the first-order residue $E_1$ of~\cite{Beau2026ebj} coincides with that of the auxiliary compression
+      $E_1^{\mathrm{aux}} = -G_0\,\dot Q(0)\,G_0^{*}$, $G_0 = \Pi_S(0)\,D$ the finite embedding composed with the Dirac
+      operator, the two embedding-motion terms contributing nothing to it, and that within the compression the
+      chirally off-diagonal part of the odd tangent contributes nothing either, the contact split
+      $u_\partial = u(s_*)$ of a covariant family factorises into three separated normalisations:
       \[
         u_\partial = \sqrt{2}\,\sigma\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
       \]
@@ -1023,14 +1027,15 @@ Independent Researcher, France\\
       governed by the dictionary-bound frontier normalisation $\mathcal{N}_A$.
       The hypothesis is not established in~\cite{Beau2026ebj}, which determines one block of the odd tangent, not a
       unique carrier, and whose covariant realisation has a split rate sourced also by the first-order motion of the
-      embedding and different from the rate of the auxiliary compression, which is not the residue; the selection of the
-      family and the localisation of the odd tangent onto its left-handed block remain open there.
+      embedding and different from the rate of the auxiliary compression, which is not the residue, so that the
+      hypothesis fails in that family and can hold only as a property of the family selected by the programme; the
+      selection of the family and the localisation of the odd tangent onto its left-handed block remain open there.
       Under the hypothesis the remaining magnitude data are the two upstream quantities already isolated --- the radial
       contact $s_*$ through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
 
     \paragraph{Radial contact (Front 1).}
-      The radial contact factor is now fixed in closed form by Corollary~\ref{cor:radial-contact}: in the affine
+      The radial contact $s_*$ is fixed in closed form by Corollary~\ref{cor:radial-contact}: in the affine
       electric gauge $s_* = \beta/|\mathbf{E}_{\mathcal P}|$.
       The quartic correction is entirely the transverse Schur backreaction $\Pchi \cdot \mathcal{R}_{\chi}$, whose
       $\Pchi$-parallel part is removed by odd reparametrisation (Remark~\ref{rem:conditional-sign}).

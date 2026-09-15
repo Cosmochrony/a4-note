@@ -120,9 +120,8 @@ def main():
     print("     u_1 is the generation-J_3 projection of E_1 = -Pi_S D dotQ(0) D Pi_S^*, a constrained")
     print("     bilinear, NOT a free scalar.")
     print("Assembly:  u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)> / <J_3, J_3>.")
-    print("Under the localisation hypothesis the residual unknown is carried by <J_3, E_1> = generation-J_3")
-    print("projection of the D^pm-transported")
-    print("defect rate d_s Delta_chi(P)|_0 -- not a free scalar, not in s_*.")
+    print("Under the localisation hypothesis the residual unknown is carried by <J_3, E_1>, the generation-J_3")
+    print("projection of the D^pm-transported defect rate d_s Delta_chi(P)|_0 -- not a free scalar, not in s_*.")
     print("ALL EXACT CHECKS PASSED")
 
 
