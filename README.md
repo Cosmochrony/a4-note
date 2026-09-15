@@ -6,7 +6,7 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Working paper, v2.0. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
+Working paper, v2.1. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
 
 ## Abstract
 
@@ -46,8 +46,9 @@ selection of the saturation problem. On the corpus-derived real symplectic casca
 (spin-two) channel of the cubic response vanishes at the metaplectic phase $\gamma = 0$ for every
 ordering and reference, so the derived amplitude mechanism is Born–Infeld saturation while the
 split persists, $u \neq 0$; the sixth-order interior lock is doubly conditional, on a non-derived
-complex phase and on a non-prescribed ordering. Using the companion eliminated-block note, the
-boundary-versus-interior selection is closed by admissibility: the saturation contact
+complex phase and on a non-prescribed ordering. With the companion eliminated-block note, which
+fixes one block of the $J_\Pi$-odd tangent as half the defect rate $\partial_s \Delta_\chi(P)|_0$
+rather than a unique carrier, the boundary-versus-interior selection is closed by admissibility: the saturation contact
 $\Delta_\chi(s_*) = 0$ is the unique chart-independent A4 lock, with invariant magnitude $u(s_*)$.
 The magnitude $|u|$ itself is not predicted: it is fixed through the chiral-frontier normalisation
 $\mathcal{N}_A$, a dictionary-bound quantity.

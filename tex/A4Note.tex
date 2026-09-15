@@ -90,7 +90,7 @@ Independent Researcher, France\\
     metaplectic phase $\gamma = 0$ for every ordering and reference, so the derived amplitude mechanism is Born--Infeld
     saturation while the split persists, $u \neq 0$; the sixth-order interior lock is doubly conditional, on a non-derived
     complex phase and on a non-prescribed ordering.
-    Using the companion eliminated-block note, in which the left-handed block of the $\JPi$-odd tangent of the
+    With the companion eliminated-block note, in which the left-handed block of the $\JPi$-odd tangent of the
     eliminated block is half the transported defect rate $\partial_s \Delta_\chi(P)|_0$, one block of the split-sourcing
     tangent rather than a unique carrier, we then close the boundary-versus-interior selection by admissibility: the
     saturation contact $\Delta_\chi(s_*) = 0$ is the unique chart-independent A4 lock, the defect rate being
@@ -746,7 +746,7 @@ Independent Researcher, France\\
         \label{eq:s-star-affine}
         s_* = \frac{\beta}{|\mathbf{E}_{\mathcal P}|} .
       \end{equation}
-      This fixes the radial factor in the contact split.
+      This fixes the radial contact $s_*$ entering the contact split.
       It does not fix the absolute magnitude of the generation split, because $\beta$, $|\mathbf{E}_{\mathcal P}|$, and
       the chiral-frontier normalisation $\mathcal{N}_A$ remain upstream normalisation data.
     \end{corollary}
@@ -853,7 +853,9 @@ Independent Researcher, France\\
   \section{Boundary contact as the admissible A4 lock}
     \label{sec:boundary}
 
-    The companion eliminated-block note~\cite{Beau2026ebj} proves that the left-handed block of the $\JPi$-odd tangent
+    The companion eliminated-block note~\cite{Beau2026ebj} proves, in the chiral frame with
+    $\JPi = \Sigma_\tau \circ \mathrm{conj}$ and $\Sigma_\tau = \bigl(\begin{smallmatrix} 0 & \tau \\ \tau^{-1} & 0
+    \end{smallmatrix}\bigr)$, that the left-handed block of the $\JPi$-odd tangent
     of the eliminated block is half the transported equivariance defect rate $\partial_s \Dchi(P)|_0$, with
     $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$; this determines one block of the split-sourcing
     tangent, not a unique carrier, the selection of the family and the localisation of the odd tangent onto that block
@@ -874,9 +876,10 @@ Independent Researcher, France\\
     \end{proposition}
 
     \begin{proof}
-      $\Dchi(P)$ is a function on the modulus line; the chain rule at $s = 0$, using $u(0) = 0$ (Lemma~\ref{lem:u-odd}),
-      makes the first-order coefficient scale by $\phi'(0)$ between charts, while the value of $u$ at any fixed modulus
-      point is unchanged.
+      $\Dchi(P)$ is a function on the modulus line; the chain rule at $s = 0$, with $\phi(0) = 0$ and
+      $\Dchi(P(0)) = 0$ by the finite-locking equivariance~\cite{Beau2026prs}, so that the first-order coefficient is
+      the leading term, makes that coefficient scale by $\phi'(0)$ between charts, while the value of $u$ at any fixed
+      modulus point is unchanged.
       This is the first-order companion of the genus covariance of Corollary~\ref{cor:reparam}.
     \end{proof}
 
@@ -885,7 +888,8 @@ Independent Researcher, France\\
       The first saturation contact $\Dchi(s_*) = 0$ of Proposition~\ref{prop:amplitude-dichotomy} is a geometric condition
       on the radicand: its solution is independent of the chart and of the coefficients of $\Bsat$ beyond the radicand
       itself.
-      The locked split $u(s_*)$ is therefore reparametrisation-invariant.
+      The locked split $u(s_*)$ is therefore invariant under orientation-preserving reparametrisation, and $|u(s_*)|$
+      under every odd reparametrisation, the sign being the spontaneous branch.
     \end{proposition}
 
     \begin{proof}
@@ -908,10 +912,10 @@ Independent Researcher, France\\
     selection: the boundary contact is selected not only on the derived real cascade (path-invariance,
     Remark~\ref{rem:path-invariant}) but as the unique fence-admissible lock, independent of any chart.
     The remaining magnitude $|u| = |u(s_*)|$ is thereby reduced, within the fence, to the value of the split at the
-    contact, sourced at first order by the $\JPi$-odd tangent of the eliminated block together with the first-order
-    motion of the spinorial embedding~\cite{Beau2026ebj} and dressed by the contact displacement $s_*$, with the single
-    honest caveat that a future first-principles derivation of the complex phase and the ordering could reopen an
-    interior competitor.
+    contact, sourced at first order, in a covariant family, by the $\JPi$-odd tangent of the eliminated block together
+    with the first-order motion of the spinorial embedding~\cite{Beau2026ebj} and dressed by the contact displacement
+    $s_*$, with the single honest caveat that a future first-principles derivation of the complex phase and the
+    ordering could reopen an interior competitor.
 
   \section{Status of results}
     \label{sec:status}
@@ -994,13 +998,17 @@ Independent Researcher, France\\
       Within the no-circularity fence the boundary-versus-interior selection is closed by admissibility: the saturation
       contact $\Dchi(s_*) = 0$ is the unique chart-independent A4 lock (Corollary~\ref{cor:boundary-admissible}), the
       interior candidate requiring the non-derived complex phase and ordering of the Conditional paragraph.
-      Equivalently, the defect rate $\partial_s \Dchi(P)|_0$, the left-handed block of the $\JPi$-odd tangent
-      in~\cite{Beau2026ebj}, is reparametrisation-covariant, so the invariant magnitude is $u(s_*)$ at the contact.
+      Correspondingly, the defect rate $\partial_s \Dchi(P)|_0$, twice the left-handed block of the $\JPi$-odd
+      tangent in~\cite{Beau2026ebj}, is reparametrisation-covariant, so the invariant magnitude is $u(s_*)$ at the
+      contact.
       A future first-principles derivation of that phase and ordering could reopen an interior competitor.
 
     \paragraph{Front D factorisation (conditional).}
-      Under the localisation hypothesis that the first-order source of the split is carried by the left-handed block
-      $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent with the spinorial embedding frozen, the contact split
+      Under the localisation hypothesis that the first-order source of the split is exhausted by the transported
+      left-handed block $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent, that is, that in the auxiliary
+      compression $E_1^{\mathrm{aux}} = -G_0\,\dot Q(0)\,G_0^{*}$ of~\cite{Beau2026ebj}, with $G_0$ the finite
+      embedding composed with the Dirac operator, the two embedding-motion terms of the first-order residue and the
+      chirally off-diagonal part of the odd tangent contribute nothing to the $J_3$ component, the contact split
       $u_\partial = u(s_*)$ factorises into three separated normalisations:
       \[
         u_\partial = \sqrt{2}\,\sigma\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
@@ -1010,12 +1018,13 @@ Independent Researcher, France\\
       $s_*$ is the radial A4 contact fixed by $\Dchi(s_*) = 0$, carrying the dependence on the
       $\mathcal{R}_\chi$-transverse curvature of the two-form trajectory; and $T_{J_3}$ is the oriented Cartan projection
       of the $\mathcal{D}^{\pm}$-transported chiral defect rate, the angular symplectic-area observable of the
-      oriented-frontier thread --- a closed linear functional, not a positive norm --- whose normalised evaluation is
+      oriented-frontier thread --- a closed linear functional evaluated on the defect rate, the factor one half of the
+      block identity being absorbed in its normalisation, not a positive norm --- whose normalised evaluation is
       governed by the dictionary-bound frontier normalisation $\mathcal{N}_A$.
       The hypothesis is not established in~\cite{Beau2026ebj}, which determines one block of the odd tangent, not a
       unique carrier, and whose covariant realisation has a split rate sourced also by the first-order motion of the
-      embedding, different from the frozen-embedding rate; the selection of the family and the localisation of the odd
-      tangent onto its left-handed block remain open there.
+      embedding and different from the rate of the auxiliary compression, which is not the residue; the selection of the
+      family and the localisation of the odd tangent onto its left-handed block remain open there.
       Under the hypothesis the remaining magnitude data are the two upstream quantities already isolated --- the radial
       contact $s_*$ through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
@@ -1025,7 +1034,8 @@ Independent Researcher, France\\
       electric gauge $s_* = \beta/|\mathbf{E}_{\mathcal P}|$.
       The quartic correction is entirely the transverse Schur backreaction $\Pchi \cdot \mathcal{R}_{\chi}$, whose
       $\Pchi$-parallel part is removed by odd reparametrisation (Remark~\ref{rem:conditional-sign}).
-      The radial factor of the contact split is thereby settled as a form result, while its numerical magnitude still
+      The radial contact $s_*$ is thereby settled as a form result, the radial factor of the contact split under the
+      conditional factorisation above, while its numerical magnitude still
       routes through the upstream normalisations $\beta$, $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
 
     \paragraph{Open.}

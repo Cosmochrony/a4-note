@@ -1,6 +1,10 @@
 """Front D: evaluation of <J_3, E_1>, the J_3-projection of the D^pm-transported chiral defect rate.
 
-Bias-independent, exact symbolic verification (no sampling). The carrier rate reduced (front_d3_u1_reduction)
+All statements below hold in the auxiliary compression E_1 = -Pi_S D dotQ(0) D Pi_S^* under the localisation
+hypothesis of the A4-Note paragraph 'Front D factorisation (conditional)'; the embedding-motion terms of the
+eliminated-block note (Beau2026ebj, moving-embedding product rule) are not included, and the hypothesis is open.
+
+Bias-independent, exact symbolic verification (no sampling). The split rate reduced (front_d3_u1_reduction)
 to u_1 = sqrt(2) sigma <J_3, E_1>/<J_3, J_3>, concentrating all non-trivial dependence in <J_3, E_1>. This
 script evaluates that projection via the Sym^2 lift (the locked spin/chiral frame, modulo symbol
 compatibility Q14: the principal symbol equals the Clifford symbol, so the D^pm transport acts as the
@@ -20,10 +24,10 @@ Tests.
       alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence the spontaneous
       V-A sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
-Conclusion (printed): closed factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>,
+Conclusion (printed): conditional factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>,
 with T_{J_3} the angular oriented area (= N_A, dictionary-bound) and s_* the radial saturation contact
-(A4-note open R_chi curvature). The only open pieces are the already-known radial s_* and angular N_A;
-no new selector. No figures. English.
+(A4-note open R_chi curvature). Under the hypothesis the open pieces are the radial s_* and the angular
+N_A, with no selector beyond them; the localisation hypothesis itself is open. No figures. English.
 """
 
 import sympy as sp
@@ -118,9 +122,10 @@ def main():
     print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> spontaneous V-A sign, NOT a positive norm.")
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
-    print("CLOSURE:  u_partial = sqrt(2) sigma s_* T_J3(d_s Delta_chi) / <J3,J3>,")
+    print("CONDITIONAL FACTORISATION (localisation hypothesis, auxiliary compression):")
+    print("  u_partial = sqrt(2) sigma s_* T_J3(d_s Delta_chi) / <J3,J3>,")
     print("  factors: sqrt(2) sigma (even block, algebraic (C_2 - J_3^2)/C_2; V-A) x s_* (radial saturation, A4 R_chi open)")
-    print("           x T_J3 (angular oriented area = N_A, dictionary-bound). No new selector.")
+    print("           x T_J3 (angular oriented area = N_A, dictionary-bound). Under the hypothesis, no selector beyond s_* and N_A.")
     print("ALL EXACT CHECKS PASSED")
 
 

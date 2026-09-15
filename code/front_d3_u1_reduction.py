@@ -1,6 +1,10 @@
-"""Front D2 (operator step): reduction of the carrier rate u_1 to a constrained bilinear.
+"""Front D2 (operator step): reduction of the split rate u_1 to a constrained bilinear.
 
-Bias-independent, exact symbolic verification (no sampling) that the Front C/D0 carrier rate
+All statements below hold in the auxiliary compression E_1 = -Pi_S D dotQ(0) D Pi_S^* under the localisation
+hypothesis of the A4-Note paragraph 'Front D factorisation (conditional)'; the embedding-motion terms of the
+eliminated-block note (Beau2026ebj, moving-embedding product rule) are not included, and the hypothesis is open.
+
+Bias-independent, exact symbolic verification (no sampling) that the split rate u_1 = u'(0)
     u_1 = <J_3, {E_0, E_1}> / <J_3, J_3>,    E_1 = -Pi_S D \\dot Q(0) D Pi_S^*,
 is NOT a free scalar but a constrained bilinear between the even residue block E_0 and the D^pm-transported
 chiral defect carried by E_1. Using the algebraic even sector E_0^2|_{C^3_gen} = (C_2 - J_3^2)/C_2 =
@@ -12,7 +16,7 @@ Three results.
       \\dot Q(0) = [[pi_LL', pi_LR'], [pi_RL', pi_RR']], the residue first-order coefficient has chiral
       diagonal blocks E_{1,LL} = -Pi_S D_- pi_RR' D_+ Pi_S^*, E_{1,RR} = -Pi_S D_+ pi_LL' D_- Pi_S^*
       (PRS transport), and the J_Pi-odd diagonal of \\dot Q(0) is the transported defect rate
-      pi_LL' - pi_RR'(bar) = d/ds Delta_chi(P)|_0 (D0).
+      pi_LL' - pi_RR'(bar) = d/ds Delta_chi(P)|_0 (the LL-block defect-rate identity of Beau2026ebj).
   (B) Even-sector reduction (the new content): on C^3_gen the algebraic even sector is E_0^2 = diag(1,1/2,1/2),
       so E_0 acts as sigma/sqrt(2) on the J_3-carrying outer block (e_+, e_-), sigma = +-1 the V-A sign.
       Then {E_0, E_1}|_{e_pm} = sqrt(2) sigma E_1|_{e_pm}, hence
@@ -20,8 +24,8 @@ Three results.
       The E_0-dependence has collapsed to the scalar sqrt(2) sigma (the even-block eigenvalue 1/sqrt(2)
       times the spontaneous V-A sign); u_1 is the generation-J_3 projection of E_1, not a free scalar.
   (C) Assembly: u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)>/<J_3, J_3>. The residual
-      unknown is exactly <J_3, E_1>, the generation-J_3 projection of the D^pm-transported defect rate; it
-      is localised there (not a free scalar and not in s_*).
+      unknown is exactly <J_3, E_1>, the generation-J_3 projection of the D^pm-transported defect rate; under
+      the hypothesis it is carried there (not a free scalar and not in s_*).
 
 No figures. Code and comments in English.
 """
@@ -116,7 +120,8 @@ def main():
     print("     u_1 is the generation-J_3 projection of E_1 = -Pi_S D dotQ(0) D Pi_S^*, a constrained")
     print("     bilinear, NOT a free scalar.")
     print("Assembly:  u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)> / <J_3, J_3>.")
-    print("Residual unknown localised in <J_3, E_1> = generation-J_3 projection of the D^pm-transported")
+    print("Under the localisation hypothesis the residual unknown is carried by <J_3, E_1> = generation-J_3")
+    print("projection of the D^pm-transported")
     print("defect rate d_s Delta_chi(P)|_0 -- not a free scalar, not in s_*.")
     print("ALL EXACT CHECKS PASSED")
 

@@ -2,7 +2,7 @@
 
 Bias-independent, exact symbolic verification (no sampling) of the first Front D2 step: the
 "linear-exact vs transverse-curvature" test. It decides whether u(s_*) is exhausted by u_1 s_*, where
-u_1 is the Front C/D0 carrier rate, or whether a genuine transverse-curvature contribution survives.
+u_1 = u'(0) is the split rate, or whether a genuine transverse-curvature contribution survives.
 
 Setup (Front C): the split is the odd carrier
     u(s) = u_1 s + u_3 s^3 + ...,   u_1 = <J_3, {E_0, E_1}> / <J_3, J_3>,
@@ -112,7 +112,7 @@ def main():
 
     print()
     print("u(s) =", u_series)
-    print("u_1 =", u1_expected, " (Front C carrier rate <J3,{E0,E1}>/<J3,J3>)")
+    print("u_1 =", u1_expected, " (split rate <J3,{E0,E1}>/<J3,J3>)")
     print("scalar cubic gauge: new c3 = U3 + alpha*U1  -> removable by alpha = -U3/U1")
     print("contact w_* = s_*^2 =", w_star, "  (depends on curvature b = P.R_chi/beta^2; -> 1/a as b->0)")
     print()

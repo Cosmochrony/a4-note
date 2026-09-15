@@ -1,4 +1,4 @@
-"""Exact verification of the chiral-diagonal defect-rate identity (section 6 of the note).
+"""Exact verification of the chiral-diagonal defect-rate identity (Section 6 of the eliminated-block note, Beau2026ebj).
 
 Exact complex-rational / symbolic arithmetic, no floating-point sampling.
 
