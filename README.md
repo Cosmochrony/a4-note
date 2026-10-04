@@ -35,7 +35,8 @@ Premises that no source supplies are stated as hypotheses wherever a result uses
 co-metric, the construction of the two-form from the locking data, the coincidence of the Born–Infeld
 modulus with the Schur tilt, the non-degeneracy of the split at the locked pair, and, for the
 Schur-transverse branch, the hypotheses of PRS (chiral splitting, contraction, Lichnerowicz compression,
-symbol condition, transport of the metaplectic opening to the locking operator, non-annihilation). The genus is not determined: the
+symbol condition, transport of the metaplectic opening to the locking operator, non-annihilation). The genus is not
+determined: the
 central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry,
 conditional completion of Q8, free temporal coefficient in Q11) and because no map from the
