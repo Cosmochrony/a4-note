@@ -2,7 +2,7 @@
 
 Setting: a := |E_P|^2/beta^2 >= 0 for the electric part of the polarisation P, and b := P.R_chi/beta^2 the coefficient
 of s^4 in the radicand Delta_chi(s) = 1 - a s^2 + b s^4 + O(s^6). The coefficient b is parametrisation-dependent
-(A4-Note, Lemma on parametrisation dependence): under s = t + alpha t^3 it shifts by alpha P.P/beta^2 = -2 alpha a.
+(A4-Note, Lemma on parametrisation dependence): under s = t + omega t^3 it shifts by omega P.P/beta^2 = -2 omega a.
 
 Checks:
   (A) Exactly straight ray, Delta_chi(t) = 1 - a t^2: first contact t_* = beta/|E_P| (exact).

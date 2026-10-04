@@ -7,7 +7,7 @@ s_* is the first contact Delta_chi(s_*) = 0 of the radicand, when it exists.
 
 Checks:
   (A) u(s) has only odd powers, with u_1 as above and u_3 = <J_3, {E_0, E_3} + {E_1, E_2}>/<J_3, J_3>.
-  (B) Under s = t + alpha t^3 the cubic term transforms as u_3 -> u_3 + alpha u_1, so it is parametrisation gauge;
+  (B) Under s = t + omega t^3 the cubic term transforms as u_3 -> u_3 + omega u_1, so it is parametrisation gauge;
       the carrier-adapted modulus t = u(s)/u_1 makes u = u_1 t.
   (C) The position of the contact depends on the chart-dependent quartic coefficient of the radicand, while u_1
       does not.
@@ -21,7 +21,7 @@ def main():
     s = sp.symbols("s", real=True)
     checks = {}
 
-    # ---- C^3_gen convention frozen to schur_transversality_alpha.py ---------------------------------
+    # ---- C^3_gen convention frozen to schur_transversality_omega.py ---------------------------------
     J = sp.Matrix([[-1, 0, 0], [0, 0, 1], [0, 1, 0]])     # J_Pi^(2)
     J3 = sp.diag(0, 1, -1)
 
@@ -71,14 +71,14 @@ def main():
     # ---- (B) the scalar cubic is reparametrisation gauge --------------------------------------------
     t = sp.symbols("t", real=True)
     U1, U3, U5 = sp.symbols("U1 U3 U5", real=True)
-    alpha, beta = sp.symbols("alpha beta", real=True)
+    omega, beta = sp.symbols("omega beta", real=True)
     u_scalar = lambda x: U1 * x + U3 * x**3 + U5 * x**5
-    phi = t + alpha * t**3 + beta * t**5                   # odd reparametrisation, phi'(0)=1
+    phi = t + omega * t**3 + beta * t**5                   # odd reparametrisation, phi'(0)=1
     u_in_t = sp.expand(u_scalar(phi))
     c3 = u_in_t.coeff(t, 3)
-    checks["B_cubic_shifts_by_alpha_u1"] = sp.expand(c3 - (U3 + alpha * U1)) == 0
-    # choosing alpha = -U3/U1 removes the cubic
-    c3_gauged = sp.expand(c3.subs(alpha, -U3 / U1))
+    checks["B_cubic_shifts_by_omega_u1"] = sp.expand(c3 - (U3 + omega * U1)) == 0
+    # choosing omega = -U3/U1 removes the cubic
+    c3_gauged = sp.expand(c3.subs(omega, -U3 / U1))
     checks["B_cubic_removable"] = sp.simplify(c3_gauged) == 0
     # carrier-adapted modulus t = u(s)/U1 linearises u identically: U1 * (u(s)/U1) == u(s)
     checks["B_carrier_adapted_linear"] = sp.expand(U1 * (u_scalar(s) / U1) - u_scalar(s)) == 0
@@ -102,7 +102,7 @@ def main():
     print()
     print("u(s) =", u_series)
     print("u_1 =", u1_expected, " (split rate <J3,{E0,E1}>/<J3,J3>)")
-    print("scalar cubic gauge: new c3 = U3 + alpha*U1  -> removable by alpha = -U3/U1")
+    print("scalar cubic gauge: new c3 = U3 + omega*U1  -> removable by omega = -U3/U1")
     print("contact w_* = s_*^2 =", w_star, "  (depends on curvature b = P.R_chi/beta^2; -> 1/a as b->0)")
     print()
     print("RESULT (algebra): to first order in s_*, u(s_*) = u_1 * s_*, the carrier's higher odd terms being")

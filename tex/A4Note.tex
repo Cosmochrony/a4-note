@@ -164,6 +164,10 @@ Independent Researcher, France\\
     conditional on the hypotheses named in it.
     The note examines a saturation functional of a supplied two-form and derives no physical mechanism for a non-zero
     split.
+    Under that generation reading the reference residue, when non-zero, is not left-admissible in the sense
+    of~\cite{Beau2026q14} (the remark on compatibility with the left-admissible branch of~\cite{Beau2026prs}), so
+    the even normal form used below belongs to a $J_\Pi$-compatible family and not to the left-admissible branch of
+    Q14.
 
   \section{The chiral modulus is $\JPi$-odd and oriented}
     \label{sec:oriented}
@@ -214,7 +218,7 @@ Independent Researcher, France\\
   \section{Antisymmetric structure of the chiral modulus}
     \label{sec:antisymmetry}
 
-    We now show that the symmetric square of an odd two-form cannot carry the branch sign of the $\JPi$-odd modulus.
+    We now show that the symmetric square of an odd two-form cannot carry the orientation sign (the sign distinguishing the two $\JPi$-conjugate branches $\pm s$) of the $\JPi$-odd modulus.
     Let $\Fchi_{\mu\nu}(s)$ be a candidate two-form built from the chiral-odd deformation, with the linear expansion
     \begin{equation}
       \label{eq:Fchi-linear}
@@ -685,24 +689,24 @@ Independent Researcher, France\\
     \begin{lemma}[Parametrisation dependence of the quartic coefficient]
       \label{lem:gauge}
       Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}, and $\Pchi_{\mu\nu}\Pchi^{\mu\nu}\neq0$.
-      Under an odd reparametrisation $s=t+\alpha t^3+O(t^5)$, the two-form $\hat\Fchi(t)=\Fchi(s(t))$ has the same
-      $\Pchi$ and the cubic response $\hat{\mathcal R}_\chi=\mathcal R_\chi+\alpha\Pchi$, so that
-      $\Pchi\cdot\hat{\mathcal R}_\chi=\Pchi\cdot\mathcal R_\chi+\alpha\,\Pchi_{\mu\nu}\Pchi^{\mu\nu}$, and the
+      Under an odd reparametrisation $s=t+\omega t^3+O(t^5)$, the two-form $\hat\Fchi(t)=\Fchi(s(t))$ has the same
+      $\Pchi$ and the cubic response $\hat{\mathcal R}_\chi=\mathcal R_\chi+\omega\Pchi$, so that
+      $\Pchi\cdot\hat{\mathcal R}_\chi=\Pchi\cdot\mathcal R_\chi+\omega\,\Pchi_{\mu\nu}\Pchi^{\mu\nu}$, and the
       coefficient
-      of $t^4$ in $\Dchi$ shifts by $\alpha\,\Pchi_{\mu\nu}\Pchi^{\mu\nu}/\beta^2$, the pseudoscalar coefficient being
+      of $t^4$ in $\Dchi$ shifts by $\omega\,\Pchi_{\mu\nu}\Pchi^{\mu\nu}/\beta^2$, the pseudoscalar coefficient being
       unchanged.
       If $\Pchi_{\mu\nu}\Pchi^{\mu\nu}\neq0$, the coefficient of the quartic term can therefore be given any real value
       by
-      the choice of $\alpha$, and has no intrinsic meaning.
+      the choice of $\omega$, and has no intrinsic meaning.
       The component $\mathcal R_{\chi,\perp}:=\mathcal R_\chi-(\Pchi\cdot\mathcal R_\chi/\Pchi\cdot\Pchi)\,\Pchi$ is
       invariant: $\hat{\mathcal R}_{\chi,\perp}=\mathcal R_{\chi,\perp}$.
     \end{lemma}
 
     \begin{proof}
-      Substituting $s=t+\alpha t^3$ in~\eqref{eq:Fchi-cubic} gives $\hat\Fchi(t)=t\Pchi+t^3(\mathcal R_\chi+\alpha\Pchi)
+      Substituting $s=t+\omega t^3$ in~\eqref{eq:Fchi-cubic} gives $\hat\Fchi(t)=t\Pchi+t^3(\mathcal R_\chi+\omega\Pchi)
       +O(t^5)$.
-      The contraction shifts by $\alpha\Pchi\cdot\Pchi$, and~\eqref{eq:Dchi-quartic} then shifts as stated.
-      The projection orthogonal to $\Pchi$ for the Lorentzian pairing removes the $\alpha\Pchi$ term.
+      The contraction shifts by $\omega\Pchi\cdot\Pchi$, and~\eqref{eq:Dchi-quartic} then shifts as stated.
+      The projection orthogonal to $\Pchi$ for the Lorentzian pairing removes the $\omega\Pchi$ term.
     \end{proof}
 
     For a supplied purely electric two-form (Lemma~\ref{lem:index-assignment}) the pseudoscalar term vanishes:
@@ -730,7 +734,7 @@ Independent Researcher, France\\
 
     \begin{proof}
       By Lemma~\ref{lem:gauge} with $\Pchi\cdot\Pchi=-2|\mathbf E_{\mathcal P}|^2\neq0$, the shift
-      $\alpha\Pchi\cdot\Pchi/\beta^2$ takes every real value as $\alpha$ varies.
+      $\omega\Pchi\cdot\Pchi/\beta^2$ takes every real value as $\omega$ varies.
     \end{proof}
 
     \begin{corollary}[Collinear electric ray]
@@ -800,7 +804,7 @@ Independent Researcher, France\\
       the tangent direction $X$, not the orbit.
       Under it, $\partial_s^3 P|_{0} = \operatorname{ad}_X^2(\partial_s P|_{0})$.
       If $\mathcal{R}_{\chi}$ is parallel to $\Pchi$, it is pure reparametrisation gauge, removable by the odd modulus
-      transformation $\mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha \Pchi$, and the trajectory is straight to
+      transformation $\mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \omega \Pchi$, and the trajectory is straight to
       order $s^3$ in the corresponding chart, with no quartic term in $\Dchi$ for a purely electric two-form
       (Lemma~\ref{lem:gauge}).
       Under Hypothesis~\ref{hyp:chiral-two-form} the transverse component $\mathcal{R}_{\chi,\perp}$ vanishes in any
@@ -827,11 +831,11 @@ Independent Researcher, France\\
 
     The companion eliminated-block note~\cite{Beau2026ebj} proves, in the chiral frame with
     $\JPi = \Sigma_\tau \circ \mathrm{conj}$, $\Sigma_\tau = \bigl(\begin{smallmatrix} 0 & \tau \\ \tau^{-1} & 0
-    \end{smallmatrix}\bigr)$, $\tau : \mathcal{S}_R \to \mathcal{S}_L$ the unitary intertwiner of~\cite{Beau2026prs}
-    with $\tau\,\overline{\tau}^{-1} = \pm 1$, that the left-handed block of the $\JPi$-odd tangent
+    \end{smallmatrix}\bigr)$, $\tau : \mathcal{S}_R \to \mathcal{S}_L$ the unitary intertwiner realising the chirality exchange, under the
+    assumption $\tau\,\overline{\tau}^{-1} = \pm 1$ made there, that the left-handed block of the $\JPi$-odd tangent
     of the eliminated block is half the transported equivariance defect rate $\partial_s \Dchi(P)|_0$, with
-    $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$; this determines one block of the split-sourcing
-    tangent, not a unique carrier, the selection of the family and the localisation of the odd tangent onto that block
+    $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$; this determines one block of the odd tangent, a generator defined only up to the centraliser of the locked
+    projector, not a unique carrier, the selection of the family and the localisation of the odd tangent onto that block
     remaining open there.
     Throughout this section $\Dchi(P)$ is this equivariance defect, its first-order coefficient being the defect rate,
     while $\Dchi(s)$ is the admissibility radicand of Definition~\ref{def:B}: the two share the chiral subscript but
@@ -971,10 +975,14 @@ Independent Researcher, France\\
       $u_\partial = u(s_*)$ of a covariant family factorises, to first order in $s_*$ (the linear regime of the odd
       carrier, which is not controlled at the contact), into three separated normalisations:
       \[
-        u_\partial = \sqrt{2}\,\sigma\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
+        u_\partial = -\sqrt{2}\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
       \]
-      Here $\sqrt{2}\,\sigma$ is the even-block factor, from the algebraic value
-      $E_0^2|_{\Cgen} = \diag(1, \tfrac12, \tfrac12)$, with $\sigma = \pm1$ the branch sign;
+      Here $-\sqrt{2}$ is the even-block factor of the criterion $u'(0)=-\sqrt2\,(E_1)_{++}$
+      of~\cite{Beau2026ebj}, which holds in the normal form $E_0=-\diag(1,2^{-1/2},2^{-1/2})$, that is
+      $E_0^2|_{\Cgen} = \diag(1, \tfrac12, \tfrac12)$; this normal form is an initial condition of the realised
+      covariant family there, not a value derived for the family of the programme, and its sign is fixed by
+      $E_\Pi\preceq0$, so that no branch sign $\sigma$ is free (the orientation of $s$ is carried by $s_*$ and by the
+      oriented $T_{J_3}$);
       $s_*$ is the first contact $\Dchi(s_*) = 0$ when it exists, carrying the dependence on the trajectory of the
       two-form; and $T_{J_3}$ is the oriented Cartan projection
       of the $\mathcal{D}^{\pm}$-transported chiral defect rate, the angular symplectic-area observable of the
@@ -986,6 +994,8 @@ Independent Researcher, France\\
       embedding and different from the rate of the auxiliary compression, which is not the residue, so that the
       hypothesis fails in that family and can hold only as a property of the family selected by the programme; the
       selection of the family and the localisation of the odd tangent onto its left-handed block remain open there.
+      The normal form $E_0^2=\diag(1,\tfrac12,\tfrac12)$ is $J_\Pi$-even and non-zero, hence not left-admissible in
+      the sense of~\cite{Beau2026q14}; it cannot be combined with a non-zero left-admissible endomorphism of Q14.
       Under the hypothesis the remaining magnitude data are the two upstream quantities already isolated --- the radial
       contact $s_*$ through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
@@ -1006,9 +1016,9 @@ Independent Researcher, France\\
       boundary contact and an interior stationary point, and the function $\varphi$ that fixes the position of the
       contact.
       The cubic response is understood modulo odd reparametrisation of the local modulus: under
-      $s = t + \alpha t^3 + O(t^5)$ one has
+      $s = t + \omega t^3 + O(t^5)$ one has
       \[
-        \mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha\, \Pchi ,
+        \mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \omega\, \Pchi ,
       \]
       so the $\Pchi$-parallel component of $\mathcal{R}_{\chi}$ is a parametrisation gauge.
       This is downstream of the genus and is not a genus question: the genus is not determined here
