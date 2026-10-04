@@ -73,7 +73,8 @@ Independent Researcher, France\\
     of the chiral
     polarisation \texorpdfstring{$\Pchi$}{P}.
     Hypotheses that no source supplies are stated where used: a Lorentzian co-metric, the construction of the two-form,
-    a local-minimum reading of axiom A4, the existence and non-degeneracy of a locked pair, and the first-order transport
+    a local-minimum reading of axiom A4, the existence and non-degeneracy of a locked pair, and the first-order
+    transport
     hypothesis of PRS.
     The genus is not determined: the central commutator does not supply an electric assignment, since the central
     direction is not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is
@@ -171,8 +172,8 @@ Independent Researcher, France\\
     \begin{lemma}[Oddness of the split]
       \label{lem:u-odd}
       Let $s$ be the $\JPi$-odd modulus, with $\JPi : s \mapsto -s$.
-      Assume the generation-carrier hypothesis of~\cite{Beau2026prs} (its Hypothesis [H-Gen], with $J_\Pi$-compatible
-      $D$ and $\Pi_S$) and that the family $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is
+      Assume the generation-reading hypothesis of~\cite{Beau2026prs} (its Hypothesis [H-Gen], with $J_\Pi$-compatible
+      $D$ and $\Pi_S$ and a reading map to the generation space) and that the family $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is
       $\JPi$-covariant, $\Jtwo\,\Epi^2(s)\,(\Jtwo)^{-1}=\Epi^2(-s)$; this holds when moreover
       $P(-s)=\JPi P(s)\JPi^{-1}$, an assumption of this note that PRS does not supply.
       Then $u = u(s)$ is an odd function, $u(-s) = -u(s)$, and in particular $u(0) = 0$.
@@ -272,7 +273,8 @@ Independent Researcher, France\\
 
     \begin{hypothesis}[Construction of the chiral two-form, {[H-F]}]
       \label{hyp:chiral-two-form}
-      Let $\mathcal J$ be the real vector space of $\JPi$-odd Hermitian operators on $\mathrm{span}(e_+,e_-)$.
+      Let $\mathcal J$ be the real vector space of Hermitian operators $X$ on $\mathrm{span}(e_+,e_-)$.
+      with $\JPi X\JPi^{-1}=-X$, $\JPi$ being antiunitary and exchanging $e_+$ and $e_-$.
       Every such operator is a real multiple of $\Jthree|_{\mathrm{span}(e_+,e_-)}$, so $\mathcal J=\mathbb R\,\Jthree$
       (the off-diagonal Hermitian operators are $\JPi$-even).
       There is a real-linear map $\iota:\mathcal J\to\{\text{real two-forms of the effective spacetime}\}$, injective,
@@ -458,7 +460,8 @@ Independent Researcher, France\\
     The reduction of Section~\ref{sec:reduction} presupposes that the modulus entering the saturation
     margin~\eqref{eq:B} is tied to the $\JPi$-odd tilt of the eliminated Schur block.
     A priori these are two distinct quantities: the projector tilt $s_{\mathrm{proj}}$, defined at the level of the
-    projection algebra through the deformation $1 - P(s)$ of the locking operator $P(s)$ (a family with $0\preceq P(s)\preceq1$
+    projection algebra through the deformation $1 - P(s)$ of the locking operator $P(s)$ (a family with $0\preceq
+    P(s)\preceq1$
     and $P(0)=\Pi_S^*\Pi_S$, in general different from $\Pi_S^*\Pi_S$ for $s\neq0$), and the
     saturation
     modulus $s_{\mathrm{BI}}$, the chiral-odd companion of the Higgs amplitude mode of the saturated condensate.
@@ -519,9 +522,10 @@ Independent Researcher, France\\
       \label{eq:Pchi-schur}
       \partial_s \Epi|_{0} = \Pi_S D (\partial_s P|_{0}) D \Pi_S^* ,
       \qquad
-      \Pchi = \iota\Big(\Pi_S D (\partial_s P|_{0}) D \Pi_S^* \big|_{\mathrm{gen},\,\JPi\text{-odd}}\Big)
-      \quad\text{(Hypothesis~\ref{hyp:chiral-two-form}; the argument of $\iota$ is the $\JPi$-odd Hermitian part on the outer weights, an element of $\mathcal J$)} .
+      \Pchi = \iota\Big(\Pi_S D (\partial_s P|_{0}) D \Pi_S^* \big|_{\mathrm{out},\,\JPi\text{-odd}}\Big) .
     \end{equation}
+    Here the argument of $\iota$ is the $\JPi$-odd Hermitian part, on the outer weights $\mathrm{span}(e_+,e_-)$, of the
+    Schur transport (an element of $\mathcal J$ of Hypothesis~\ref{hyp:chiral-two-form}).
     The positive sign is the derivative of $-(1 - P)$, not a hidden conventional choice; it is fixed by the Schur form, in
     keeping with the convention discipline of Section~\ref{sec:margin}.
 
@@ -757,7 +761,7 @@ Independent Researcher, France\\
     \begin{equation}
       \label{eq:Rchi-transport}
       \mathcal{R}_{\chi} = \tfrac{1}{3!}\, \iota\Big(\Pi_S D \big(\partial_s^3 P|_{0}\big) D \Pi_S^*
-      \big|_{\mathrm{gen},\,\JPi\text{-odd}}\Big) ,
+      \big|_{\mathrm{out},\,\JPi\text{-odd}}\Big) ,
     \end{equation}
     the same transport as the polarisation~\eqref{eq:Pchi-schur} applied to the third-order tilt.
     If the locking operators $P(s)$ are projectors, $P(s)^2=P(s)$ (a stronger assumption than $0\preceq P(s)\preceq1$),
@@ -795,13 +799,15 @@ Independent Researcher, France\\
       \label{rem:path-invariant}
       The carrier of Hypothesis~\ref{hyp:chiral-two-form} sees only the $\JPi$-odd Hermitian part of the transported
       tilt
-      on the outer weights, which is a multiple of $\Jthree$; it does not see weight-two or anti-Hermitian components.
+      on the outer weights, which is a multiple of $\Jthree$; a real $\JPi$-odd off-diagonal block on the outer weights
+      is
+      anti-Hermitian and is not seen.
       For the real generator $X=\log g$, $g=\exp(E)\exp(2F)$, lifted to $\mathrm{Sym}^2$ in the basis $(e_0,e_+,e_-)$,
-      and the weight-diagonal reference $P_0=\diag(0.3,1,0.7)$, a direct evaluation of $\operatorname{ad}_X^3P_0$ gives
-      a
-      non-zero $\JPi$-odd weight-two entry, which is anti-Hermitian and therefore outside $\mathcal J$.
-      This evaluation concerns the cascade generator and not the carrier, and no conclusion is drawn about a cubic
-      transverse channel of the locking trajectory.
+      and the matrix $P_0=\diag(0.3,1,0.7)$, the outer block of $\operatorname{ad}_X^3P_0$ has a non-zero $\JPi$-odd
+      off-diagonal part.
+      This is a computation on matrices: $P_0$ is not $\JPi$-invariant and $e^{sX}P_0e^{-sX}$ is not self-adjoint, so
+      the example is not an instance of the premises of Hypothesis~\ref{hyp:chiral-two-form}.
+      No conclusion is drawn about a cubic transverse channel of the locking trajectory.
     \end{remark}
 
   \section{Chart covariance of the defect rate and of the first contact}
@@ -835,8 +841,9 @@ Independent Researcher, France\\
     \begin{proposition}[Chart-independence of the first contact]
       \label{prop:contact-invariant}
       Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{hyp:nondegenerate}.
-      The first contact $s_*:=\min\{s>0:\Dchi(s)=0\}$ is a point of the trajectory $\{\Fchi(s)\}$ and is independent of
-      the chart, for charts that are monotone on $[0,s_*]$.
+      The first contact, the first $s_*>0$ with $\Dchi(s_*)=0$, defines a point $\Fchi(s_*)$ of the trajectory
+      $\{\Fchi(s)\}$ that is independent of the chart, for charts that are monotone on $[0,s_*]$; the parameter value
+      $s_*$ itself transforms with the chart.
       The value $u(s_*)$ at that point is invariant under orientation-preserving reparametrisation, and $|u(s_*)|$
       under every odd reparametrisation, the sign labelling the branch.
     \end{proposition}
@@ -854,7 +861,7 @@ Independent Researcher, France\\
       lock.
       The quartic coefficient that could distinguish them is chart-dependent
       (Proposition~\ref{prop:amplitude-dichotomy}),
-      the cubic transverse channel of the cascade generator is not established (Remark~\ref{rem:path-invariant}), and
+      Remark~\ref{rem:collinear} makes the trajectory collinear under Hypothesis~\ref{hyp:chiral-two-form}, and
       Hypothesis~\ref{hyp:local-min} does not distinguish a boundary
       contact from an interior minimum.
       The existence of a locked pair is the content of Hypothesis~\ref{hyp:nondegenerate}.
@@ -896,7 +903,7 @@ Independent Researcher, France\\
       sign fixed by its admissibility role and the convention trap neutralised (Definition~\ref{def:B},
       Remark~\ref{rem:trap}); the reparametrisation-invariance of the genus (Corollary~\ref{cor:reparam}); the explicit
       chiral polarisation
-      $\Pchi = \iota\big(\Pi_S D (\partial_s P|_{0}) D \Pi_S^*|_{\mathrm{gen},\,\JPi\text{-odd}}\big)$
+      $\Pchi = \iota\big(\Pi_S D (\partial_s P|_{0}) D \Pi_S^*|_{\mathrm{out},\,\JPi\text{-odd}}\big)$
       (equation~\eqref{eq:Pchi-schur}); and the cubic response as the image under $\iota$ of the transported
       third-order Schur tilt (equation~\eqref{eq:Rchi-transport}).
 
@@ -923,7 +930,7 @@ Independent Researcher, France\\
       Hypothesis~\ref{lem:coincidence} (coincidence, only to read the lock along the Born--Infeld modulus),
       the $\JPi$-covariance of the family
       in Lemma~\ref{lem:u-odd}, and, from~\cite{Beau2026prs}, the chiral splitting, the contraction and symbol
-      hypotheses of its Schur form, the generation-carrier hypothesis [H-Gen] with the $\JPi$-compatibility, and the
+      hypotheses of its Schur form, the generation-reading hypothesis [H-Gen] with the $\JPi$-compatibility, and the
       first-order transport hypothesis [H-Tr].
       No source supplies any of them; each is a missing element, not an excluded one.
 
@@ -971,10 +978,11 @@ Independent Researcher, France\\
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
 
     \paragraph{Radial contact (Front 1).}
-      For a supplied purely electric two-form whose trajectory is exactly straight in some chart, the contact is
-      $t_* = \beta/|\mathbf{E}_{\mathcal P}|$ exactly (Corollary~\ref{cor:radial-contact}).
-      For other trajectories this value is an approximation on a domain that the corpus does not control, and the
-      quartic coefficient of the radicand does not enter it intrinsically (Lemma~\ref{lem:gauge}).
+      For a purely electric $F_0$, $\Dchi=1-a\varphi(s)^2$ exactly and the contact is $t_*=\beta/|\mathbf{E}_{F_0}|$ in
+      the
+      chart $t=\varphi(s)$ when $|\varphi|$ reaches that value (Corollary~\ref{cor:radial-contact}); its position in the
+      Schur modulus is not determined, and the quartic coefficient does not enter it intrinsically
+      (Lemma~\ref{lem:gauge}).
       The numerical magnitude of the split routes through the upstream normalisations $\beta$,
       $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
 

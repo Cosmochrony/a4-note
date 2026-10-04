@@ -1,6 +1,6 @@
 """Scope note (A4-Note 3.0): wording below about an 'admissible' or 'inadmissible' contact, about a derived closed form, or about
 an open metaplectic phase as the source of the transverse cubic response is exploratory and superseded. In A4-Note 3.0
-the quartic coefficient is chart-dependent, the cubic transverse channel of the cascade generator is not established, and
+the quartic coefficient is chart-dependent, the trajectory is collinear under the construction hypothesis, and
 no selection of the A4 lock is established; the checks below are exact algebra only.
 
 Front D normalisability test: does the BI/A4 saturation functional define s_* coordinate-independently?

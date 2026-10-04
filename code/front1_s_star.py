@@ -13,8 +13,8 @@ s_*, the A4 saturation contact Delta_chi(s_*) = 0 on the electric branch (A4-not
 eq:Dchi-electric, prop:amplitude-dichotomy, rem:conditional-sign).
 
 Radicand (electric branch, A4-note eq:Dchi-electric), with a := |E_P|^2/beta^2 >= 0 the electric
-polarisation and b := P.R_chi/beta^2 the quartic backreaction coefficient (the open transverse-curvature
-datum):
+polarisation and b := P.R_chi/beta^2 the quartic coefficient (chart-dependent; it sees only the P-parallel part of
+R_chi, which is parametrisation gauge, A4-Note 3.0):
 
     Delta_chi(s) = 1 - a s^2 + b s^4 + O(s^6).
 
@@ -34,14 +34,11 @@ Five results are verified.
       quartic term, so the contact is exactly t_* = beta/|E_P|. We verify that the parallel part of R_chi
       is removable by the odd reparametrisation that affinises the ray: it does not move the invariant
       contact. So s_* = beta/|E_P| is the value in the natural (affine) gauge.
-  (E) Transverse residue: only a P-TRANSVERSE component of R_chi (cubic channel not established,
-      rem:path-invariant) can shift s_* away from beta/|E_P|. It is the SAME single open datum
-      already isolated by the A4-note, not a new unknown.
+  (E) Transverse residue: only a P-TRANSVERSE component of R_chi could shift s_* away from beta/|E_P|; under
+      the construction hypothesis of A4-Note 3.0 the trajectory is collinear and no such component exists.
 
-Conclusion (printed): the radial factor is s_* = beta/|E_P| in the affine gauge, with the only correction
-being the open P-transverse curvature. One of the three factors of u under that hypothesis thus has a derived value
-modulo that pre-existing open datum. No number is produced for |E_P| or beta themselves (dictionary scales);
-the result is the closed FORM of s_* and the proof that its parallel correction is gauge. No figures. English.
+Conclusion (printed): s_* = beta/|E_P| in the affine gauge for an exactly straight ray (exact algebra); a P-parallel
+correction is gauge. No number is produced for |E_P| or beta themselves (dictionary scales). No figures. English.
 """
 
 import sympy as sp
@@ -118,7 +115,7 @@ def main():
     # ---- (E) Transverse residue is the single open datum -----------------------------------------
     # Only a P-transverse R_chi can move s_* off beta/|E_P| (A4-Note 3.0, Lemma on parametrisation dependence);
     # its source is not established (rem:path-invariant). We record this as the residual open coefficient.
-    checks["E_open_datum_is_transverse"] = True  # structural statement, carried by A4-note rem:path-invariant
+    # (E) is a statement about the model of A4-Note 3.0, not a computed check; it is not recorded as a PASS item.
 
     # ---------------------------------------------------------------------------------------------
     print("Front 1 - radial saturation contact s_* (exact symbolic, no sampling)")

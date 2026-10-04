@@ -123,7 +123,7 @@ def main():
     print()
     print("RESULT (modulo odd reparametrisation):  u_partial = u(s_*) = u_1 * s_* ,")
     print("the scalar carrier's higher odd terms being pure reparametrisation gauge; the transverse")
-    print("curvature enters ONLY through s_* (the radicand contact, A4-note open R_chi-transverse datum).")
+    print("curvature, if any, enters ONLY through s_* (the first contact of the radicand).")
     print("No number: u_1 awaits explicit locked-frame E0,E1; s_* awaits the radicand quartic.")
     print("ALL EXACT CHECKS PASSED")
 
