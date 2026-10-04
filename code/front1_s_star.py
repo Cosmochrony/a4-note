@@ -28,7 +28,7 @@ Five results are verified.
       The correction is carried entirely by the quartic coefficient b = P.R_chi/beta^2.
   (C) Branch selection: the OTHER root s_*^2 = (a + sqrt(a^2-4b))/(2b) -> infinity as b -> 0; it is the
       far interior root, not the first contact. The boundary branch is the minus-sign root.
-  (D) Reparametrisation / parallel gauge: under rem:conditional-sign, a fixed-generator orbit gives
+  (D) Reparametrisation / parallel gauge: in the exploratory fixed-generator model (not established), an orbit gives
       R_chi = -(2/3)|c|^2 P, i.e. a P-PARALLEL cubic response. The two-form is then the straight ray
       F_chi(s) = (s - (2/3)|c|^2 s^3) P, and in the affine modulus t with F_chi = t P the radicand has NO
       quartic term, so the contact is exactly t_* = beta/|E_P|. We verify that the parallel part of R_chi
@@ -116,8 +116,8 @@ def main():
     # ...but it is gauge: the invariant contact is t_* = beta/EP regardless. (verified above)
 
     # ---- (E) Transverse residue is the single open datum -----------------------------------------
-    # Only a P-transverse R_chi can move s_* off beta/|E_P|. It is sourced solely by the open metaplectic
-    # phase gamma (A4-note rem:path-invariant). We record this as the residual open coefficient.
+    # Only a P-transverse R_chi can move s_* off beta/|E_P| (A4-Note 3.0, Lemma on parametrisation dependence);
+    # its source is not established (rem:path-invariant). We record this as the residual open coefficient.
     checks["E_open_datum_is_transverse"] = True  # structural statement, carried by A4-note rem:path-invariant
 
     # ---------------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ def main():
     print(f"      correction:       s_* = (beta/|E_P|)(1 + P.R_chi beta^2/(2|E_P|^4) + ...)")
     print(f"  (C) interior root diverges as b->0 (not first contact)")
     print(f"  (D) parallel R_chi = -(2/3)|c|^2 P is pure gauge: affine contact t_* = beta/|E_P| exactly")
-    print(f"  (E) only P-transverse R_chi (open metaplectic phase gamma) shifts s_*: SAME open datum")
+    print(f"  (E) only P-transverse R_chi shifts s_* (source not established)")
     print("-" * 78)
     allok = True
     for k, v in checks.items():
@@ -139,9 +139,7 @@ def main():
         allok = allok and ok
         print(f"  [{'PASS' if ok else 'FAIL'}]  {k}")
     print("=" * 78)
-    print("RESULT: s_* = beta/|E_P| in the affine gauge; the only correction is the open P-transverse")
-    print("        curvature (metaplectic phase gamma), not a new unknown. One of the three factors of u under")
-    print("        that hypothesis thus has a derived closed form modulo a pre-existing open datum.")
+    print("RESULT: s_* = beta/|E_P| for the exactly straight ray (exact algebra); a P-transverse R_chi would shift it.")
     print("ALL CHECKS PASS" if allok else "SOME CHECKS FAILED")
     return allok
 

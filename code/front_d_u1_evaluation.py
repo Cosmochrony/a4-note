@@ -85,7 +85,7 @@ def main():
     # off-diagonal E,F content also drops from J_3 (only the Cartan H reaches J_3).
     checks["EminusF_not_on_J3"] = T_J3(E - F) == 0
     # With real (phase-free) data the R_mix (mixing) channel is empty, consistent with mu == 0 of the
-    # Schur audit: a complex metaplectic phase would be required to populate R_mix.
+    # Schur audit: within the sl_2 image no generator populates R_mix (Q14 Prop. 6.5, Rem. 6.4).
     checks["Rmix_empty_phasefree"] = sp.simplify(hs(jpi_odd(sym2_lift(a * E + b * F + c * H)), Rmix)) == 0
 
     # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (branch sign) ------

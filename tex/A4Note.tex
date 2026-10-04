@@ -122,7 +122,8 @@ Independent Researcher, France\\
     $\muchi = 0$ is marginal.
 
     This note states the structural prerequisites for $\muchi$ and states the premises under which its sign is read.
-    Section~\ref{sec:oriented} records that the modulus is $\JPi$-odd and oriented, and recalls its discrete avatar.
+    Section~\ref{sec:oriented} records that the modulus is $\JPi$-odd and oriented, and recalls the oriented frontier
+    observable.
     Section~\ref{sec:antisymmetry} proves that the symmetric square $M = \Fchi \Fchi$ cannot carry the sign of the
     $\JPi$-odd modulus, and takes an odd antisymmetric two-form $\Fchi_{\mu\nu}(s)$ as the carrier by hypothesis.
     Section~\ref{sec:margin} defines $\Bsat(s)$ as the Born--Infeld determinantal saturation margin of $\Fchi$, fixes the
@@ -170,9 +171,10 @@ Independent Researcher, France\\
     \begin{lemma}[Oddness of the split]
       \label{lem:u-odd}
       Let $s$ be the $\JPi$-odd modulus, with $\JPi : s \mapsto -s$.
-      Assume that the family $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is $\JPi$-covariant,
-      $\Jtwo\,\Epi^2(s)\,(\Jtwo)^{-1}=\Epi^2(-s)$, which holds when $D$ and $\Pi_S$ are $\JPi$-compatible and
-      $P(-s)=\JPi P(s)\JPi^{-1}$ (the $\JPi$-compatibility of~\cite{Beau2026prs}).
+      Assume the generation-carrier hypothesis of~\cite{Beau2026prs} (its Hypothesis [H-Gen], with $J_\Pi$-compatible
+      $D$ and $\Pi_S$) and that the family $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is
+      $\JPi$-covariant, $\Jtwo\,\Epi^2(s)\,(\Jtwo)^{-1}=\Epi^2(-s)$; this holds when moreover
+      $P(-s)=\JPi P(s)\JPi^{-1}$, an assumption of this note that PRS does not supply.
       Then $u = u(s)$ is an odd function, $u(-s) = -u(s)$, and in particular $u(0) = 0$.
     \end{lemma}
 
@@ -187,7 +189,8 @@ Independent Researcher, France\\
     \end{proof}
 
     The orientation carried by the modulus is not an artefact of the chiral frame.
-    Its discrete avatar is the oriented frontier observable of~\cite{Beau2026q11of}: on the directed outgoing edges
+    The oriented frontier observable of~\cite{Beau2026q11of} is a discrete counterpart of the orientation datum, not of
+    $u$ (PRS shows that no finite front observable carries $u$): on the directed outgoing edges
     $g \to gs$ of the cascade the central increment is the Heisenberg cocycle
     $\Delta A_c(g, s) = c\,(z(s) + a(g) s_b)$, reduced to $c\,a(g) s_b$ on admissible generators, which is the discrete
     oriented
@@ -211,7 +214,7 @@ Independent Researcher, France\\
       \label{eq:Mdef}
       M^{\mu}{}_{\nu}(s) := \Fchi^{\mu\rho}(s)\, \Fchi_{\rho\nu}(s)
     \end{equation}
-    be the symmetric positive combination obtained by squaring it.
+    be the symmetric combination obtained by squaring it.
     The antiunitary lift acts on the two-form by $\JPi : \Fchi(s) \mapsto \Fchi(-s)$, that is by $\Fchi \mapsto -\Fchi$ at
     linear order in $s$, consistently with Lemma~\ref{lem:u-odd}.
 
@@ -292,7 +295,7 @@ Independent Researcher, France\\
 
     We now define the functional whose chiral curvature governs the split.
     Let $g_{\mu\nu}$ be an effective metric of Lorentzian signature and let $\beta$ be the
-    universal Born--Infeld saturation scale of the bounded-flux completion~\cite{Beau2026c}.
+    Born--Infeld saturation scale of the bounded-flux completion~\cite{Beau2026c}.
     Born--Infeld is taken here as the determinantal completion carried by an antisymmetric field strength; the
     source~\cite{Beau2026c} presents it as a conditional completion, neither derived nor unique, and does not derive the
     antisymmetric field strength.
@@ -386,7 +389,8 @@ Independent Researcher, France\\
 
     \begin{theorem}[Lorentzian reduction of the chiral curvature]
       \label{thm:reduction}
-      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}.
+      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}; for the statements on $u$, assume also the
+      premises of Lemma~\ref{lem:u-odd}.
       With $\Bsat$ as in Definition~\ref{def:B},
       \begin{equation}
         \label{eq:muchi}
@@ -522,7 +526,8 @@ Independent Researcher, France\\
       The identification of the transverse and null loci is established at operator level in the Schur
       reduction~\cite{Beau2026prs}
       under the hypotheses stated there; transposed to the A4 locus through Hypothesis~\ref{hyp:chiral-two-form}
-      ($\iota$ linear and injective) it reads as follows.
+      ($\iota$ linear and injective, with $\Pchi=\iota(T_{\mathrm{out}}(\sigma))$ and the $\JPi$-compatibility of PRS)
+      it reads as follows.
       On the chiral-odd A4 locus:
       \begin{itemize}
         \item if the locking is Schur-transverse, then $\Pchi\neq0$ by the injectivity of $\iota$, and the reduction
@@ -764,8 +769,10 @@ Independent Researcher, France\\
 
     \begin{hypothesis}[Cubic-order transport and equivariance, {[H-Tr3]}]
       \label{hyp:cubic-transport}
-      The $\JPi$-odd third-order Schur tilt $T_{\mathrm{out}}(\partial_s^3P|_0)$ of the locking operator is determined by
-      the generator $\log g$ of the oriented metaplectic step through the same transport as the first-order tilt, and the
+      The $\JPi$-odd third-order Schur tilt $T_{\mathrm{out}}(\partial_s^3P|_0)$ of the locking operator is determined
+      by
+      the generator $\log g$ of the oriented metaplectic step through the same transport as the first-order tilt, and
+      the
       transport $T$ and the map $\iota$ are $\mathfrak{su}(2)$-equivariant for the adjoint action on the generation
       triplet.
       The transport hypothesis [H-Tr] of~\cite{Beau2026prs} is of first order only and says nothing at cubic order.
@@ -822,7 +829,7 @@ Independent Researcher, France\\
       \label{prop:contact-invariant}
       Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{hyp:nondegenerate}.
       The first contact $s_*:=\min\{s>0:\Dchi(s)=0\}$ is a point of the trajectory $\{\Fchi(s)\}$ and is independent of
-      the chart.
+      the chart, for charts that are monotone on $[0,s_*]$.
       The value $u(s_*)$ at that point is invariant under orientation-preserving reparametrisation, and $|u(s_*)|$
       under every odd reparametrisation, the sign labelling the branch.
     \end{proposition}
@@ -908,8 +915,9 @@ Independent Researcher, France\\
       Hypothesis~\ref{hyp:nondegenerate} (existence of the locked pair and non-degeneracy),
       Hypothesis~\ref{lem:coincidence} (coincidence, only to read the lock along the Born--Infeld modulus),
       Hypothesis~\ref{hyp:cubic-transport} (cubic-order transport and equivariance), the $\JPi$-covariance of the family
-      in Lemma~\ref{lem:u-odd}, and, from~\cite{Beau2026prs}, the contraction and symbol hypotheses of its Schur form,
-      the $\JPi$-compatibility, and the first-order transport hypothesis [H-Tr].
+      in Lemma~\ref{lem:u-odd}, and, from~\cite{Beau2026prs}, the chiral splitting, the contraction and symbol
+      hypotheses of its Schur form, the generation-carrier hypothesis [H-Gen] with the $\JPi$-compatibility, and the
+      first-order transport hypothesis [H-Tr].
       No source supplies any of them; each is a missing element, not an excluded one.
 
     \paragraph{Conditional (this note).}
@@ -918,7 +926,6 @@ Independent Researcher, France\\
       locking operator needs Hypothesis~\ref{hyp:cubic-transport}.
       The fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit} gives $\partial_s^3P|_0=\operatorname{ad}_X^2
       (\partial_sP|_0)$ and a transverse component that it does not fix (Remark~\ref{rem:conditional-sign}).
-      Not concluded.
 
     \paragraph{Contact (this note, Section~\ref{sec:boundary}).}
       No selection of the A4 lock between a boundary contact and an interior stationary point is established
@@ -970,7 +977,7 @@ Independent Researcher, France\\
       $|u|$, the existence of a locked pair (Hypothesis~\ref{hyp:nondegenerate}), the selection of the lock between a
       boundary contact and an interior stationary point, and the intrinsic component $\mathcal{R}_{\chi,\perp}$ of the
       cubic response of the two-form trajectory (informally the torsion of the projector path;
-      Hypothesis~\ref{hyp:fixed-generator-orbit} sets it to zero).
+      Hypothesis~\ref{hyp:fixed-generator-orbit} does not fix it).
       The cubic response is understood modulo odd reparametrisation of the local modulus: under
       $s = t + \alpha t^3 + O(t^5)$ one has
       \[

@@ -1,4 +1,9 @@
-"""Front D normalisability test: does the BI/A4 saturation functional define s_* coordinate-independently?
+"""Scope note (A4-Note 3.0): wording below about an 'admissible' or 'inadmissible' contact, about a derived closed form, or about
+an open metaplectic phase as the source of the transverse cubic response is exploratory and superseded. In A4-Note 3.0
+the quartic coefficient is chart-dependent, the cubic transverse channel of the cascade generator is not established, and
+no selection of the A4 lock is established; the checks below are exact algebra only.
+
+Front D normalisability test: does the BI/A4 saturation functional define s_* coordinate-independently?
 
 Bias-independent, exact symbolic verification (no sampling) of the single Front D fence question
 (fermionic-matter/front-d-normalisation-fence.md): the chiral defect rate dDelta_chi/ds|_0 is covariant
@@ -19,11 +24,11 @@ This script verifies four facts that together answer the test:
   (a) the first-order defect rate is covariant: d/ds_proj ↦ phi'(0) · d/ds_BI  (so the rate alone is not
       physical, exactly the fence's lambda^{-1} covariance);
   (b) when s_* is the radicand contact D_chi(s_*)=0, the physical value u(s_*) is the SAME computed in the
-      s_proj chart or the s_BI chart — the contact is coordinate-independent (ADMISSIBLE s_*);
+      s_proj chart or the s_BI chart — the contact is coordinate-independent (chart-independent s_*);
   (c) the genus sign mu_chi^2 = B''(0) is reparametrisation-invariant (re-derives the A4-note corollary);
   (d) by contrast, the extremum of a FINITE polynomial truncation of B is chart-dependent: its physical
-      location differs between the two charts (INADMISSIBLE s_*), confirming the fence success condition
-      that a truncated-polynomial minimum is not an admissible s_*.
+      location differs between the two charts (chart-dependent extremum), confirming the fence success condition
+      that a truncated-polynomial minimum is chart-dependent.
 
 Conclusion (printed): on the saturation-contact (boundary) branch s_* is coordinate-independent, so
 |u| = |u(s_*)| is well-posed; the truncated-interior alternative is not, matching the A4-note's open
@@ -83,7 +88,7 @@ def main():
     checks["c_genus_chainrule"] = sp.simplify(B_proj_2nd - phip0**2 * B_BI_2nd) == 0
     checks["c_genus_sign_preserved"] = sp.sign(B_proj_2nd) == sp.sign(B_BI_2nd)
 
-    # (d) Truncated interior extremum is chart-dependent (INADMISSIBLE s_*).
+    # (d) Truncated interior extremum is chart-dependent (chart-dependent extremum).
     # s_BI chart: extremum of B truncated at quartic order, B4(x) = B0 + (mu2/2)x^2 + g4 x^4.
     B4_BI = B0 + (mu2 / 2) * s**2 + g4 * s**4
     ext_BI = [r for r in sp.solve(sp.diff(B4_BI, s), s) if r.is_real and r > 0]
@@ -104,10 +109,10 @@ def main():
     print("rate (s_BI)   =", rate_BI, "   rate (s_proj) =", sp.nsimplify(rate_proj),
           "  -> covariant by phi'(0) =", phip0, "(rate alone NOT physical)")
     print("contact s_* (geometric, D_chi=0): u(s_*) =", u_phys_BI,
-          "= same in both charts -> ADMISSIBLE, |u| = |u(s_*)| well-posed")
+          "= same in both charts -> chart-independent, |u| = |u(s_*)| well-defined")
     print("truncated interior extremum: s_BI-chart =", sp.nsimplify(ext_BI),
           ", s_proj-chart mapped back =", sp.nsimplify(ext_proj_mapped),
-          "-> DIFFERENT physical points -> INADMISSIBLE")
+          "-> DIFFERENT physical points -> chart-dependent")
     print()
     print("ANSWER: yes, on the saturation-contact (boundary) branch s_* is coordinate-independent;")
     print("the truncated-interior alternative is not (A4-note's open boundary-vs-interior selection).")

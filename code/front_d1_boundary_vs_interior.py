@@ -93,7 +93,7 @@ def main():
 
     print()
     print("radicand contact  s_c = sqrt(D0/c)  -> independent of B-coefficients and of the phase gamma")
-    print("                       (fixed by the radicand alone: AVAILABLE, chart-independent -> ADMISSIBLE)")
+    print("                       (fixed by the radicand alone: AVAILABLE, chart-independent)")
     print("interior extremum condition f(s) = mu2 + 4 g4 s^2 + 6(g6+gamma) s^4 = 0")
     print("   df/d(g6)    =", dwint_dg6, "   (extremum condition depends on the non-derived sextic datum)")
     print("   df/d(gamma) =", dwint_dgamma, "   (extremum condition depends on the non-derived complex phase)")
@@ -101,8 +101,8 @@ def main():
           f"interior s_int^2: gamma=0 -> {w_int_g0}, gamma=1/100 -> {w_int_gp} (phase-dependent)")
     print()
     print("ANSWER: within the no-circularity fence, only the radicand contact D_chi(s_*)=0 defines a")
-    print("chart-independent A4 lock from the available data; the interior lock is inadmissible unless the")
-    print("non-derived complex phase/ordering is supplied. No selection of the lock is established.")
+    print("chart-independent point from the available data; an interior lock would need the")
+    print("non-derived data. No selection of the lock is established.")
     print("ALL EXACT CHECKS PASSED")
 
 
