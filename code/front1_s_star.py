@@ -2,8 +2,10 @@
 
 Scope: "electric" here is the hypothesis of a supplied purely electric two-form (A4-Note Hypothesis [H-F]); the genus of
 the chiral two-form is not derived. The script solves the radicand algebra only.
-The quartic coefficient b = P.R/beta^2 used below is parametrisation-dependent (A4-Note Lemma "Parametrisation dependence of
-the quartic coefficient"); the b != 0 contacts printed here are exploratory algebra in a fixed chart, not intrinsic results.
+The quartic coefficient b = P.R/beta^2 used below is parametrisation-dependent (A4-Note Lemma "Parametrisation
+dependence of
+the quartic coefficient"); the b != 0 contacts printed here are exploratory algebra in a fixed chart, not intrinsic
+results.
 Only the b = 0 (exactly straight ray) contact beta/|E| is exact.
 
 Bias-independent, exact symbolic verification (no sampling) of the radial contact s_*, the first of the three factors of
@@ -22,7 +24,8 @@ Five results are verified.
   (A) Leading order: dropping the quartic, the contact Delta_chi(s_*) = 0 gives s_*^2 = 1/a, i.e.
       s_* = beta / |E_P|, exact for the exactly straight ray (cor:radial-contact), not for a general trajectory.
   (B) Quartic correction: keeping the quartic, the smallest positive root (first saturation contact, the
-      first contact, selection of the lock not established) is s_*^2 = (a - sqrt(a^2 - 4b)) / (2b), whose series about b = 0 is
+      first contact, selection of the lock not established) is s_*^2 = (a - sqrt(a^2 - 4b)) / (2b), whose series
+      about b = 0 is
           s_*^2 = 1/a + b/a^3 + 2 b^2/a^5 + O(b^3),
       hence  s_* = (beta/|E_P|) [ 1 + (P.R_chi) beta^2 / (2 |E_P|^4) + O(b^2) ].
       The correction is carried entirely by the quartic coefficient b = P.R_chi/beta^2.

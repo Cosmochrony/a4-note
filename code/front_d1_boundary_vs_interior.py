@@ -43,7 +43,8 @@ def main():
     s_contact = sp.sqrt(D0 / c)                       # boundary: geometric contact D_chi(s_c)=0
     assert sp.simplify(D_chi.subs(s, s_contact)) == 0
 
-    # Saturation functional. Quartic data (mu2<0, supplied electric two-form, g4) are available; the sextic coefficient is
+    # Saturation functional. Quartic data (mu2<0, supplied electric two-form, g4) are available; the sextic
+    # coefficient is
     # g6 + gamma, where gamma is the non-derived complex-phase/ordering datum the A4-note isolates.
     mu2, g4, g6, gamma, B0 = sp.symbols("mu2 g4 g6 gamma B0", real=True)
     B = B0 + (mu2 / 2) * s**2 + g4 * s**4 + (g6 + gamma) * s**6

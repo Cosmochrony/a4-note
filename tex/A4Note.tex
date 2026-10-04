@@ -87,7 +87,8 @@ Independent Researcher, France\\
   \end{abstract}
 
   \noindent\textbf{Keywords:}
-  Born--Infeld saturation margin; chiral modulus; antisymmetric two-form; $\JPi$-equivariance; Schur complement;
+  Born--Infeld saturation margin; chiral modulus; antisymmetric two-form; \texorpdfstring{$\JPi$}{J_Π}-equivariance;
+  Schur complement;
   projection locking; generation split; Lorentzian genus.
 
   \newpage
@@ -107,15 +108,14 @@ Independent Researcher, France\\
     conditional $3\times3$ model of~\cite{Beau2026a34} on $\operatorname{Sym}^2(V_\rho)$ and
     $(E_\Pi^2)_{\mathrm{even}}$; no such identification is available, so that reading is not used
     here.
-    The Schur reduction~\cite{Beau2026prs} fixed the structural status of $u$: it is controlled by the
-    $D_{\pm}$-transported,
-    generation-projected component of the antiunitary chiral equivariance defect
-    $\Delta_\chi(P) = \pi_{LL} - \tau \pi_{RR} \tau^{-1}$ of the eliminated block $1 - P$, it vanishes for the chirally
-    symmetric minimal non-injectivity, and a non-zero value requires a chiral symmetry-breaking carried by the
-    projection-locking axiom A4.
-    Under an equivariant construction of the finite locking operator, finite projection locking is $\JPi$-equivariant,
-    so $u_{\mathrm{fin}} = 0$ for $q$ an odd prime~\cite{Beau2026prs}; a non-zero split then needs a $\JPi$-odd datum
-    outside that construction, which is located in the Lorentzian completion as a hypothesis.
+    The Schur reduction~\cite{Beau2026prs} relates $u$ to the antiunitary chiral equivariance defect
+    $\Delta_\chi(P) = \pi_{LL} - \tau \pi_{RR} \tau^{-1}$ of the eliminated block $1 - P$ as a structural reading,
+    not a theorem; under its generation-reading hypothesis, a non-zero $u$ requires a locking operator that breaks
+    $\JPi$-equivariance, and on its interpretive reading of the axioms this can come only from axiom A4.
+    For the finite locking operator, $u_{\mathrm{fin}}=0$ holds in~\cite{Beau2026prs} only under an identification of
+    the parity $c\leftrightarrow q-c$ with $\JPi$, an equivariant construction and a finite reading of the Schur
+    expression, none of which is supplied; a non-zero split would then need a $\JPi$-odd datum outside that
+    construction, located in the Lorentzian completion as a hypothesis.
     The split is then governed by the chiral curvature $\muchi := \partial_s^2 \Bsat(0)$ of a saturation functional $\Bsat$
     along the $\JPi$-odd modulus $s$ opened by Lorentzian complexification, with the trichotomy: $\muchi > 0$ makes the
     symmetric point a stable minimum of $\Bsat$; $\muchi < 0$ makes it an unstable point, and a $\JPi$-conjugate
@@ -173,7 +173,8 @@ Independent Researcher, France\\
       \label{lem:u-odd}
       Let $s$ be the $\JPi$-odd modulus, with $\JPi : s \mapsto -s$.
       Assume the generation-reading hypothesis of~\cite{Beau2026prs} (its Hypothesis [H-Gen], with $J_\Pi$-compatible
-      $D$ and $\Pi_S$ and a reading map to the generation space) and that the family $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is
+      $D$ and $\Pi_S$ and a reading map to the generation space) and that the family
+      $\Epi^2(s)|_{\Cgen}=\diag(1,\tfrac12+u(s),\tfrac12-u(s))$ is
       $\JPi$-covariant, $\Jtwo\,\Epi^2(s)\,(\Jtwo)^{-1}=\Epi^2(-s)$; this holds when moreover
       $P(-s)=\JPi P(s)\JPi^{-1}$, an assumption of this note that PRS does not supply.
       Then $u = u(s)$ is an odd function, $u(-s) = -u(s)$, and in particular $u(0) = 0$.
@@ -297,7 +298,9 @@ Independent Researcher, France\\
       \label{rem:collinear}
       Under Hypothesis~\ref{hyp:chiral-two-form} the trajectory $\{\Fchi(s)\}$ lies on the line $\mathbb R F_0$:
       $\Fchi(s)=\varphi(s)F_0$.
-      Consequently $\mathcal R_\chi=\tfrac{\varphi'''(0)}{6}F_0$ is parallel to $\Pchi$ and $\mathcal R_{\chi,\perp}=0$
+      Consequently $\mathcal R_\chi=\tfrac{\varphi'''(0)}{6}F_0$ is parallel to $\Pchi$ and, when
+      $\Pchi\cdot\Pchi\neq0$,
+      $\mathcal R_{\chi,\perp}=0$
       (Lemma~\ref{lem:gauge}).
       This is a consequence of restricting the carrier to the $\JPi$-odd Hermitian part on the outer weights; a
       non-collinear trajectory would require a carrier with a larger domain, which Hypothesis~\ref{hyp:chiral-two-form}
@@ -480,8 +483,9 @@ Independent Researcher, France\\
     By Hypothesis~\ref{hyp:chiral-two-form} the margin $\Bsat$ is already a function of the Schur modulus, so
     Theorem~\ref{thm:reduction} uses no second modulus; the coincidence below is needed only to read the A4 lock along
     the Born--Infeld modulus $s_{\mathrm{BI}}$ instead.
-    At the finite level this tilt vanishes, $\partial_s ( 1 - P_{\mathrm{fin}}(s) )|_{0} = 0$ by the $\JPi$-equivariance of
-    finite locking~\cite{Beau2026prs}, so the modulus is carried entirely by the Lorentzian completion.
+    At the finite level, the $\JPi$-odd part of such a tilt would vanish for a family of finite locking operators
+    constructed equivariantly; PRS defines no such family and supplies no finite reading~\cite{Beau2026prs}, so the
+    modulus is taken, as a hypothesis, to be carried by the Lorentzian completion.
 
     \begin{hypothesis}[Tangential coincidence on the A4 locus, {[H-Coin]}]
       \label{lem:coincidence}
@@ -729,7 +733,7 @@ Independent Researcher, France\\
       A contact $\Dchi(s_*)=0$ exists if and only if $|\varphi|$ attains $1/\sqrt a=\beta/|\mathbf{E}_{F_0}|$, and the
       first
       contact is the first such $s_*>0$.
-      In a chart $t=\varphi(s)$ that is monotone on $[0,s_*]$ the contact is
+      In a chart $t=\varphi(s)$ that is increasing on $[0,s_*]$ the contact is
       \begin{equation}
         \label{eq:s-star-affine}
         t_* = \frac{\beta}{|\mathbf{E}_{F_0}|} .
@@ -842,7 +846,9 @@ Independent Researcher, France\\
       \label{prop:contact-invariant}
       Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{hyp:nondegenerate}.
       The first contact, the first $s_*>0$ with $\Dchi(s_*)=0$, defines a point $\Fchi(s_*)$ of the trajectory
-      $\{\Fchi(s)\}$ that is independent of the chart, for charts that are monotone on $[0,s_*]$; the parameter value
+      $\{\Fchi(s)\}$ that is independent of the chart, for increasing charts on $[0,s_*]$ (a decreasing chart sends it
+      to the conjugate
+      point $-\Fchi(s_*)$); the parameter value
       $s_*$ itself transforms with the chart.
       The value $u(s_*)$ at that point is invariant under orientation-preserving reparametrisation, and $|u(s_*)|$
       under every odd reparametrisation, the sign labelling the branch.
@@ -876,8 +882,7 @@ Independent Researcher, France\\
     \paragraph{Anchored upstream (proved/structural).}
       Equivariant Born--Infeld parity, the fibre reading of the involution $c \leftrightarrow q-c$ being a structurally
       motivated
-      hypothesis (O18~\cite{Beau2026a22}); the finite $\JPi$-equivariance and $u_{\mathrm{fin}} = 0$ for
-      $q$ an odd prime, under the equivariant construction of~\cite{Beau2026prs}; the oriented frontier cocycle on
+      hypothesis (O18~\cite{Beau2026a22}); the oriented frontier cocycle on
       directed edges~\cite{Beau2026q11of} and the
       symmetric-shell cancellation $\Theta_{\mathrm{raw}} = 0$~\cite{Beau2026aar}; the identification of the
       Schur-null and Schur-transverse loci of~\cite{Beau2026prs} under its hypotheses; the projection-locking theorem

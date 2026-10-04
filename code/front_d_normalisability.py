@@ -1,4 +1,5 @@
-"""Scope note (A4-Note 3.0): wording below about an 'admissible' or 'inadmissible' contact, about a derived closed form, or about
+"""Scope note (A4-Note 3.0): wording below about an 'admissible' or 'inadmissible' contact, about a derived closed
+form, or about
 an open metaplectic phase as the source of the transverse cubic response is exploratory and superseded. In A4-Note 3.0
 the quartic coefficient is chart-dependent, the trajectory is collinear under the construction hypothesis, and
 no selection of the A4 lock is established; the checks below are exact algebra only.
@@ -13,7 +14,8 @@ physical point.
 
 Grounding in the A4-note (Beau2026bim):
   - saturation is the radicand contact: D_chi(s) >= 0 with saturation D_chi(s) -> 0; for a supplied electric
-    (timelike) chiral polarisation D_chi reaches 0 at finite |s|, where an A4 lock, if it occurs there, is a non-trivial pair +-s_* (hypothesis)
+    (timelike) chiral polarisation D_chi reaches 0 at finite |s|, where an A4 lock, if it occurs there, is a
+    non-trivial pair +-s_* (hypothesis)
     (A4-note Sec. "The Born-Infeld saturation margin");
   - the projector modulus s_proj (Front C) and the BI saturation modulus s_BI are related by a
     non-degenerate odd reparametrisation s_BI = phi(s_proj), phi(0)=0, phi'(0)!=0 (Hypothesis "Tangential
@@ -51,7 +53,8 @@ def main():
     b1, b3 = sp.Rational(7, 4), sp.Rational(-2, 3)
     u = lambda x: b1 * x + b3 * x**3
 
-    # Even saturation functional B(s_BI) = B0 + (mu2/2) s^2 + g4 s^4 + g6 s^6, supplied electric two-form, mu2 < 0 (hypothesis).
+    # Even saturation functional B(s_BI) = B0 + (mu2/2) s^2 + g4 s^4 + g6 s^6, supplied electric two-form, mu2 < 0
+    # (hypothesis).
     B0, mu2, g4, g6 = sp.Integer(5), sp.Rational(-1, 1), sp.Rational(1, 8), sp.Rational(-1, 200)
     B = lambda x: B0 + (mu2 / 2) * x**2 + g4 * x**4 + g6 * x**6
 
