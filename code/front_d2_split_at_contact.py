@@ -1,33 +1,15 @@
-"""Scope note (A4-Note 3.0): wording below about an 'admissible', 'unique' or 'fence-admissible' lock and about the
-quartic coefficient as an 'open datum' is exploratory and superseded. In A4-Note 3.0 the quartic coefficient of the
-radicand is chart-dependent and no selection of the A4 lock between a boundary contact and an interior stationary
-point is established; the checks below remain exact algebra only.
+"""Split at the first contact: u(s_*) = u_1 s_* modulo odd reparametrisation (exact symbolic, no sampling).
 
-Front D2: u_partial = u(s_*), the split at the admissible A4 contact, modulo odd reparametrisation.
+Setup: the split is the odd carrier u(s) = u_1 s + u_3 s^3 + ..., with
+u_1 = <J_3, {E_0, E_1}>/<J_3, J_3>, for E_Pi(s) = E_0 + s E_1 + s^2 E_2 + s^3 E_3 + ... with E_0, E_2 even and E_1, E_3 odd.
+s_* is the first contact Delta_chi(s_*) = 0 of the radicand, when it exists.
 
-Bias-independent, exact symbolic verification (no sampling) of the first Front D2 step: the
-"linear-exact vs transverse-curvature" test. It decides whether u(s_*) is exhausted by u_1 s_*, where
-u_1 = u'(0) is the split rate, or whether a genuine transverse-curvature contribution survives.
-
-Setup (Front C): the split is the odd carrier
-    u(s) = u_1 s + u_3 s^3 + ...,   u_1 = <J_3, {E_0, E_1}> / <J_3, J_3>,
-with E_Pi(s) = E_0 + s E_1 + s^2 E_2 + s^3 E_3 + ... and parity E_0,E_2 even, E_1,E_3 odd. s_* is the
-first saturation contact Delta_chi(s_*) = 0 (selection of the lock not established, Front D1).
-
-Three results are verified.
-  (A) Carrier expansion: u(s) has only ODD powers, with u_1 = <J_3,{E_0,E_1}>/<J_3,J_3> and
-      u_3 = <J_3,{E_0,E_3}+{E_1,E_2}>/<J_3,J_3>.
-  (B) The scalar carrier's higher odd terms are PURE reparametrisation gauge: under an odd
-      reparametrisation s = t + alpha t^3 + ... the cubic transforms as u_3 -> u_3 + alpha u_1, so it is
-      removed by alpha = -u_3/u_1; equivalently the carrier-adapted modulus t = u(s)/u_1 linearises u to
-      u = u_1 t identically. So the carrier carries no reparametrisation-invariant higher obstruction
-      (test (ii) closes positively for the carrier).
-  (C) The transverse curvature is NOT in the carrier but in s_*: the contact s_* depends on the radicand
-      quartic b = P.R_chi/beta^2 (chart-dependent coefficient, A4-Note 3.0), while u_1 does not.
-
-Conclusion (printed): modulo odd reparametrisation, u_partial = u_1 s_*, with the only transverse-curvature
-dependence entering through s_* (the radicand contact). No number is produced: u_1 awaits the explicit
-locked-frame operators E_0, E_1, and s_* awaits the radicand quartic. No figures. English.
+Checks:
+  (A) u(s) has only odd powers, with u_1 as above and u_3 = <J_3, {E_0, E_3} + {E_1, E_2}>/<J_3, J_3>.
+  (B) Under s = t + alpha t^3 the cubic term transforms as u_3 -> u_3 + alpha u_1, so it is parametrisation gauge;
+      the carrier-adapted modulus t = u(s)/u_1 makes u = u_1 t.
+  (C) The position of the contact depends on the chart-dependent quartic coefficient of the radicand, while u_1 does not.
+No number is produced: u_1 awaits explicit operators E_0, E_1 and s_* awaits the radicand. No figures. English.
 """
 
 import sympy as sp
@@ -124,7 +106,7 @@ def main():
     print("RESULT (modulo odd reparametrisation):  u_partial = u(s_*) = u_1 * s_* ,")
     print("the scalar carrier's higher odd terms being pure reparametrisation gauge; the transverse")
     print("curvature, if any, enters ONLY through s_* (the first contact of the radicand).")
-    print("No number: u_1 awaits explicit locked-frame E0,E1; s_* awaits the radicand quartic.")
+    print("No number: u_1 awaits explicit locked-frame E0,E1; s_* awaits the radicand.")
     print("ALL EXACT CHECKS PASSED")
 
 

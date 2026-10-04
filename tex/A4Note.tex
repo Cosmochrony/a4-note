@@ -73,16 +73,15 @@ Independent Researcher, France\\
     of the chiral
     polarisation \texorpdfstring{$\Pchi$}{P}.
     Hypotheses that no source supplies are stated where used: a Lorentzian co-metric, the construction of the two-form,
-    a local-minimum reading of axiom A4, the existence and non-degeneracy of a locked pair, and the first-order
-    transport
-    hypothesis of PRS.
-    The genus is not determined: the central commutator does not supply an electric assignment, since the central
-    direction is not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is
-    available.
-    The quartic coefficient of the radicand depends on the parametrisation and carries no selection between a boundary
-    contact and an interior stationary point.
-    An exactly straight purely electric ray reaches the bound at \texorpdfstring{$t_*=\beta/|\mathbf{{E}}_{{\mathcal
-    P}}|$}{t* = β/|E|}.
+    a local-minimum reading of A4, the existence and non-degeneracy of a locked pair, the covariance of the locking
+    family under \texorpdfstring{$J_\Pi$}{J_Π}, and, from PRS, its generation-reading and first-order transport
+    hypotheses.
+    The scope is that of PRS: the split vanishes for the reference operator, the consequences for a general locking
+    operator are conditional, and no mechanism for a non-zero split is derived.
+    The genus is not determined: the central commutator supplies no electric assignment, since the central direction is
+    not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is available.
+    The quartic coefficient of the radicand depends on the parametrisation and selects no lock; an exactly straight
+    purely electric ray reaches the bound at \texorpdfstring{$t_*=\beta/|\mathbf{E}_{\mathcal P}|$}{t* = β/|E|}.
     The magnitude \texorpdfstring{$|u|$}{|u|} is not predicted.
   \end{abstract}
 
@@ -155,6 +154,15 @@ Independent Researcher, France\\
       No source supplies it: Q5b has rank three, Q8 is conditional, and Q11 gives this signature only for a negative
       temporal and positive spatial coefficient.
     \end{hypothesis}
+
+    \paragraph{Scope.}
+    This note takes over the scope of~\cite{Beau2026prs}: for the reference operator $\Pi_S^*\Pi_S$ the split vanishes
+    under the generation-reading hypothesis; for a general locking operator $P\neq\Pi_S^*\Pi_S$ the
+    compression-remainder
+    formula and the Seeley--DeWitt identification do not transfer, and every statement below about a non-zero split is
+    conditional on the hypotheses named in it.
+    The note examines a saturation functional of a supplied two-form and derives no physical mechanism for a non-zero
+    split.
 
   \section{The chiral modulus is $\JPi$-odd and oriented}
     \label{sec:oriented}
@@ -493,7 +501,7 @@ Independent Researcher, France\\
       reparametrisation,
       \begin{equation}
         \label{eq:coincidence}
-        s_{\mathrm{BI}} = \phi(s_{\mathrm{proj}}), \qquad \phi(0) = 0, \qquad \phi'(0) \neq 0 ,
+        s_{\mathrm{BI}} = \psi(s_{\mathrm{proj}}), \qquad \psi(0) = 0, \qquad \psi'(0) \neq 0 ,
       \end{equation}
       so that A4 identifies their first-order transverse direction up to non-degenerate reparametrisation.
       This is a tangential identification of the $\JPi$-odd direction, not a strict identification of the parameters.
@@ -502,21 +510,22 @@ Independent Researcher, France\\
 
     \begin{corollary}[Reparametrisation-invariance of the genus]
       \label{cor:reparam}
-      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}, and let $\phi$ be any $C^2$
+      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}, and let $\psi$ be any $C^2$
       reparametrisation
-      of the modulus with $\phi(0)=0$ and $\phi'(0)\neq0$, in particular that of Hypothesis~\ref{lem:coincidence}.
+      of the modulus with $\psi(0)=0$ and $\psi'(0)\neq0$, in particular that of Hypothesis~\ref{lem:coincidence}.
       Then
       \begin{equation}
         \label{eq:reparam}
-        \partial_{s}^2 (\Bsat\circ\phi)(0) = \phi'(0)^2 \, \partial_{s}^2 \Bsat(0) ,
+        \partial_{s}^2 (\Bsat\circ\psi)(0) = \psi'(0)^2 \, \partial_{s}^2 \Bsat(0) ,
       \end{equation}
       so $\operatorname{sign}(\muchi)$ is independent of the chart, and the genus reduction of
       Theorem~\ref{thm:reduction} is well-posed.
     \end{corollary}
 
     \begin{proof}
-      Equation~\eqref{eq:reparam} is the chain rule for $\Bsat \circ \phi$ at $\phi(0) = 0$, using $\partial_s \Bsat(0) = 0$
-      from Proposition~\ref{prop:parity}; the positive factor $\phi'(0)^2$ leaves the sign unchanged.
+      Equation~\eqref{eq:reparam} is the chain rule for $\Bsat \circ \psi$ at $\psi(0) = 0$, using $\partial_s \Bsat(0)
+      = 0$
+      from Proposition~\ref{prop:parity}; the positive factor $\psi'(0)^2$ leaves the sign unchanged.
     \end{proof}
 
     The first-order projector variation supplies the chiral polarisation explicitly.
@@ -571,7 +580,7 @@ Independent Researcher, France\\
     the branch open: the oriented metaplectic step has the exact $\mathfrak{sl}_2$ opening
     $\alpha(t,s)=ts\,r/\sinh r\not\equiv0$ with $\mu(t,s)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
     transport hypothesis [H-Tr] of PRS.
-    By Corollary~\ref{cor:reparam} the genus does not depend on the positive Jacobian $\phi'(0)$.
+    By Corollary~\ref{cor:reparam} the genus does not depend on the positive Jacobian $\psi'(0)$.
 
   \section{The genus of the chiral polarisation}
     \label{sec:genus}
@@ -832,14 +841,14 @@ Independent Researcher, France\\
     \begin{proposition}[The defect rate is reparametrisation-covariant]
       \label{prop:rate-covariant}
       Assume the finite-locking equivariance $\Dchi(P(0))=0$ of~\cite{Beau2026prs}.
-      Under a reparametrisation of the modulus $s \mapsto \phi(s)$, $\phi(0) = 0$, $\phi'(0) \neq 0$, the defect
-      rate is covariant, not invariant: it rescales by the Jacobian $\phi'(0)$.
+      Under a reparametrisation of the modulus $s \mapsto \psi(s)$, $\psi(0) = 0$, $\psi'(0) \neq 0$, the defect
+      rate is covariant, not invariant: it rescales by the Jacobian $\psi'(0)$.
       Hence the rate alone carries no chart-independent magnitude.
     \end{proposition}
 
     \begin{proof}
-      $\Dchi(P)$ is a function on the modulus line; the chain rule at $s = 0$, with $\phi(0) = 0$ and
-      $\Dchi(P(0)) = 0$, makes the first-order coefficient scale by $\phi'(0)$ between charts.
+      $\Dchi(P)$ is a function on the modulus line; the chain rule at $s = 0$, with $\psi(0) = 0$ and
+      $\Dchi(P(0)) = 0$, makes the first-order coefficient scale by $\psi'(0)$ between charts.
     \end{proof}
 
     \begin{proposition}[Chart-independence of the first contact]
@@ -933,10 +942,10 @@ Independent Researcher, France\\
       two-form, exactly odd), Hypothesis~\ref{hyp:local-min} (local-minimum reading of A4),
       Hypothesis~\ref{hyp:nondegenerate} (existence of the locked pair and non-degeneracy),
       Hypothesis~\ref{lem:coincidence} (coincidence, only to read the lock along the Born--Infeld modulus),
-      the $\JPi$-covariance of the family
-      in Lemma~\ref{lem:u-odd}, and, from~\cite{Beau2026prs}, the chiral splitting, the contraction and symbol
-      hypotheses of its Schur form, the generation-reading hypothesis [H-Gen] with the $\JPi$-compatibility, and the
-      first-order transport hypothesis [H-Tr].
+      the $\JPi$-covariance of the family in Lemma~\ref{lem:u-odd}, and, from~\cite{Beau2026prs}, the
+      generation-reading hypothesis [H-Gen] (with the $\JPi$-compatibility and the reading map) and the first-order
+      transport hypothesis [H-Tr].
+      The scope is that of~\cite{Beau2026prs}: no mechanism for a non-zero split is derived.
       No source supplies any of them; each is a missing element, not an excluded one.
 
     \paragraph{Conditional (this note).}

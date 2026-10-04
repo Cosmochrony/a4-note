@@ -34,9 +34,10 @@ Results, each for a supplied two-form and under the hypotheses named in the pape
 
 Hypotheses that no source supplies are stated where used: a full-rank Lorentzian co-metric, the construction of the
 two-form from the locking data, the local-minimum reading of A4, the existence and non-degeneracy of the locked pair,
-the coincidence with the Born–Infeld modulus, and from PRS the chiral splitting,
-the contraction and symbol hypotheses of its Schur form, the generation-reading hypothesis with $J_\Pi$-compatibility,
-and the first-order transport hypothesis. The genus is not
+the covariance of the locking family under $J_\Pi$, and from PRS the generation-reading hypothesis and the first-order
+transport hypothesis; the coincidence with the Born–Infeld modulus is used only to read the lock along that modulus.
+The scope is that of PRS: for the reference operator the split vanishes, for a general locking operator the consequences
+are conditional, and no mechanism for a non-zero split is derived. The genus is not
 determined: the central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.

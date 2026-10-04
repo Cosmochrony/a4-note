@@ -24,10 +24,9 @@ Tests.
       alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence a branch
       sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
-Conclusion (printed): conditional factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>,
-with T_{J_3} the angular oriented area (= N_A, dictionary-bound) and s_* the radial saturation contact
-(A4-note open R_chi curvature). Under the hypothesis the open pieces are the radial s_* and the angular
-N_A, with no selector beyond them; the localisation hypothesis itself is open. No figures. English.
+Conclusion (printed): conditional factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>
+(first order in s_*), with T_{J_3} the angular oriented area (dictionary-bound through N_A) and s_* the first contact of
+the radicand. The localisation hypothesis itself is open. No figures. English.
 """
 
 import sympy as sp

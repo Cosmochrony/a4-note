@@ -1,47 +1,18 @@
-"""Front 1: the radial saturation contact s_*, solved exactly from the electric chiral radicand.
+"""Radicand algebra for a supplied purely electric two-form (exact symbolic, no sampling).
 
-Scope: "electric" here is the hypothesis of a supplied purely electric two-form (A4-Note Hypothesis [H-F]); the genus of
-the chiral two-form is not derived. The script solves the radicand algebra only.
-The quartic coefficient b = P.R/beta^2 used below is parametrisation-dependent (A4-Note Lemma "Parametrisation
-dependence of
-the quartic coefficient"); the b != 0 contacts printed here are exploratory algebra in a fixed chart, not intrinsic
-results.
-Only the b = 0 (exactly straight ray) contact beta/|E| is exact.
+Setting: a := |E_P|^2/beta^2 >= 0 for the electric part of the polarisation P, and b := P.R_chi/beta^2 the coefficient
+of s^4 in the radicand Delta_chi(s) = 1 - a s^2 + b s^4 + O(s^6). The coefficient b is parametrisation-dependent
+(A4-Note, Lemma on parametrisation dependence): under s = t + alpha t^3 it shifts by alpha P.P/beta^2 = -2 alpha a.
 
-Bias-independent, exact symbolic verification (no sampling) of the radial contact s_*, the first of the three factors of
-the generation split u_partial = sqrt(2) sigma s_* T_{J3}(...) / <J3,J3> under the localisation hypothesis
-of the A4-Note paragraph 'Front D factorisation (conditional)'. We compute the radial factor
-s_*, the A4 saturation contact Delta_chi(s_*) = 0 on the electric branch (A4-note Beau2026bim,
-eq:Dchi-electric, prop:amplitude-dichotomy, rem:conditional-sign).
-
-Radicand (electric branch, A4-note eq:Dchi-electric), with a := |E_P|^2/beta^2 >= 0 the electric
-polarisation and b := P.R_chi/beta^2 the quartic coefficient (chart-dependent; it sees only the P-parallel part of
-R_chi, which is parametrisation gauge, A4-Note 3.0):
-
-    Delta_chi(s) = 1 - a s^2 + b s^4 + O(s^6).
-
-Five results are verified.
-  (A) Leading order: dropping the quartic, the contact Delta_chi(s_*) = 0 gives s_*^2 = 1/a, i.e.
-      s_* = beta / |E_P|, exact for the exactly straight ray (cor:radial-contact), not for a general trajectory.
-  (B) Quartic correction: keeping the quartic, the smallest positive root (first saturation contact, the
-      first contact, selection of the lock not established) is s_*^2 = (a - sqrt(a^2 - 4b)) / (2b), whose series
-      about b = 0 is
-          s_*^2 = 1/a + b/a^3 + 2 b^2/a^5 + O(b^3),
-      hence  s_* = (beta/|E_P|) [ 1 + (P.R_chi) beta^2 / (2 |E_P|^4) + O(b^2) ].
-      The correction is carried entirely by the quartic coefficient b = P.R_chi/beta^2.
-  (C) Branch selection: the OTHER root s_*^2 = (a + sqrt(a^2-4b))/(2b) -> infinity as b -> 0; it is the
-      far interior root, not the first contact. The boundary branch is the minus-sign root.
-  (D) Reparametrisation / parallel gauge: in the exploratory fixed-generator model (not established), an orbit gives
-      R_chi = -(2/3)|c|^2 P, i.e. a P-PARALLEL cubic response. The two-form is then the straight ray
-      F_chi(s) = (s - (2/3)|c|^2 s^3) P, and in the affine modulus t with F_chi = t P the radicand has NO
-      quartic term, so the contact is exactly t_* = beta/|E_P|. We verify that the parallel part of R_chi
-      is removable by the odd reparametrisation that affinises the ray: it does not move the invariant
-      contact. So s_* = beta/|E_P| is the value in the natural (affine) gauge.
-  (E) Transverse residue: only a P-TRANSVERSE component of R_chi could shift s_* away from beta/|E_P|; under
-      the construction hypothesis of A4-Note 3.0 the trajectory is collinear and no such component exists.
-
-Conclusion (printed): s_* = beta/|E_P| in the affine gauge for an exactly straight ray (exact algebra); a P-parallel
-correction is gauge. No number is produced for |E_P| or beta themselves (dictionary scales). No figures. English.
+Checks:
+  (A) Exactly straight ray, Delta_chi(t) = 1 - a t^2: first contact t_* = beta/|E_P| (exact).
+  (B) Algebra of the truncated radicand with b != 0: smallest positive root s_*^2 = (a - sqrt(a^2 - 4b))/(2b) and its
+      series in b. This is algebra in a fixed chart; b has no intrinsic meaning, so the series is not an intrinsic
+      result.
+  (C) The other root (a + sqrt(a^2 - 4b))/(2b) tends to infinity as b -> 0.
+  (D) Worked example in a model where R_chi is parallel to P: the odd reparametrisation that affinises the ray removes
+      the quartic term and gives t_* = beta/|E_P| exactly.
+Nothing here selects a locking mechanism or fixes a value of |u|. No figures.
 """
 
 import sympy as sp

@@ -1,35 +1,12 @@
-"""Scope note (A4-Note 3.0): wording below about an 'admissible', 'unique' or 'fence-admissible' lock and about the
-quartic coefficient as an 'open datum' is exploratory and superseded. In A4-Note 3.0 the quartic coefficient of the
-radicand is chart-dependent and no selection of the A4 lock between a boundary contact and an interior stationary
-point is established; the checks below remain exact algebra only.
+"""Algebra of a radicand contact versus an interior extremum of a truncated saturation functional (exact symbolic).
 
-Front D1: boundary-vs-interior selection test for the A4 chiral lock.
-
-Bias-independent, exact symbolic / exact-rational verification (no sampling) of the single remaining
-Front D conditionality (fermionic-matter/front-d-normalisability-test.md): which configuration A4 locks,
-the radicand contact (boundary) or an interior extremum of the saturation functional (interior).
-
-Discipline: a configuration is fence-admissible only if it is determined by DERIVED, available data
-without importing a non-derived complex phase or cascade ordering (A4-note states the sixth-order
-interior lock is "doubly conditional, on a non-derived complex phase and on a non-prescribed ordering").
-
-Available data: the radicand D_chi(s) and the saturation functional B(s) to the order actually fixed by
-the corpus (quartic; the sextic coefficient is exactly the non-derived phase/ordering datum).
-
-The test verifies:
-  (1) the radicand contact s_c (root of D_chi(s)=0) is independent of every B-coefficient AND of the
-      phase datum: it is fixed by the radicand alone -> available, chart-independent (boundary ADMISSIBLE);
-  (2) a non-trivial interior extremum s_int (nonzero root of B'(s)=0) DEPENDS on the sextic coefficient
-      and on the phase datum gamma: it is not fixed by the available quartic data -> requires the
-      non-derived phase/ordering (interior NOT ADMISSIBLE without extra data);
-  (3) turning on the non-derived phase gamma moves s_int but leaves s_c untouched.
-
-Conclusion (printed): within the no-circularity fence, only the radicand contact defines a
-chart-independent A4 lock from the available data; the interior lock is contingent on a future
-first-principles derivation of the phase and ordering. No selection of the lock is established: the contact
-value |u(s_*)| is the normalisation if a boundary lock is assumed.
-
-No figures. Code and comments in English.
+The script checks three algebraic facts and selects no locking mechanism:
+  (1) the root s_c of the radicand Delta_chi(s) = 0 depends only on the radicand, not on the coefficients of the
+      saturation functional B(s) or on a sextic parameter gamma;
+  (2) a non-zero interior extremum s_int of a truncated B (B'(s) = 0) depends on the sextic coefficient and on gamma;
+  (3) varying gamma moves s_int and leaves s_c untouched.
+Which of the two configurations, if either, is the A4 lock is not established (A4-Note, remark on the absence of a
+selection of the lock). No figures. Code and comments in English.
 """
 
 import sympy as sp
@@ -101,9 +78,8 @@ def main():
     print(f"   exact instance: s_c = {s_c_val} (phase-invariant); "
           f"interior s_int^2: gamma=0 -> {w_int_g0}, gamma=1/100 -> {w_int_gp} (phase-dependent)")
     print()
-    print("ANSWER: within the no-circularity fence, only the radicand contact D_chi(s_*)=0 defines a")
-    print("chart-independent point from the available data; an interior lock would need the")
-    print("non-derived data. No selection of the lock is established.")
+    print("RESULT: the radicand contact D_chi(s_*)=0 depends on the radicand alone; the interior extremum of a")
+    print("truncated B depends on the sextic coefficient and gamma. No selection of the lock is established.")
     print("ALL EXACT CHECKS PASSED")
 
 
