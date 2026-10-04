@@ -1,5 +1,8 @@
 """Front 1: the radial saturation contact s_*, solved exactly from the electric chiral radicand.
 
+Scope: "electric" here is the hypothesis of a supplied purely electric two-form (A4-Note Hypothesis [H-F]); the genus of
+the chiral two-form is not derived. The script solves the radicand algebra only.
+
 Bias-independent, exact symbolic verification (no sampling) of the radial contact s_*, the first of the three factors of
 the generation split u_partial = sqrt(2) sigma s_* T_{J3}(...) / <J3,J3> under the localisation hypothesis
 of the A4-Note paragraph 'Front D factorisation (conditional)'. We compute the radial factor

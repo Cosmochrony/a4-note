@@ -21,8 +21,8 @@ Tests.
       projection). So the projection closes as a map, independent of the explicit Pi_S, D^pm beyond
       symbol-compatibility.
   (3) Norm vs sign: T_{J_3} evaluated on the oriented cascade is the oriented symplectic AREA
-      alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence the spontaneous
-      V-A sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
+      alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence a branch
+      sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
 Conclusion (printed): conditional factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>,
 with T_{J_3} the angular oriented area (= N_A, dictionary-bound) and s_* the radial saturation contact
@@ -119,7 +119,7 @@ def main():
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
     print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
-    print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> spontaneous V-A sign, NOT a positive norm.")
+    print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> branch sign, NOT a positive norm.")
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
     print("CONDITIONAL FACTORISATION (localisation hypothesis, auxiliary compression):")

@@ -7,7 +7,7 @@ evaluated at the A4-saturated configuration s_*. The test asks whether s_* is a 
 physical point.
 
 Grounding in the A4-note (Beau2026bim):
-  - saturation is the radicand contact: D_chi(s) >= 0 with saturation D_chi(s) -> 0; for an electric
+  - saturation is the radicand contact: D_chi(s) >= 0 with saturation D_chi(s) -> 0; for a supplied electric
     (timelike) chiral polarisation D_chi reaches 0 at finite |s|, where A4 locks a non-trivial pair +-s_*
     (A4-note Sec. "The Born-Infeld saturation margin");
   - the projector modulus s_proj (Front C) and the BI saturation modulus s_BI are related by a

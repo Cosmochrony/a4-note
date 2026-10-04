@@ -22,7 +22,7 @@ Three results.
       Then {E_0, E_1}|_{e_pm} = sqrt(2) sigma E_1|_{e_pm}, hence
           u_1 = sqrt(2) sigma <J_3, E_1> / <J_3, J_3> .
       The E_0-dependence has collapsed to the scalar sqrt(2) sigma (the even-block eigenvalue 1/sqrt(2)
-      times the spontaneous V-A sign); u_1 is the generation-J_3 projection of E_1, not a free scalar.
+      times the branch sign); u_1 is the generation-J_3 projection of E_1, not a free scalar.
   (C) Assembly: u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)>/<J_3, J_3>. The residual
       unknown is exactly <J_3, E_1>, the generation-J_3 projection of the D^pm-transported defect rate; under
       the hypothesis it is carried there (not a free scalar and not in s_*).
