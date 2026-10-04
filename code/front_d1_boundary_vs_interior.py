@@ -22,13 +22,13 @@ def main():
 
     # Saturation functional. Quartic data (mu2<0, supplied electric two-form, g4) are available; the sextic
     # coefficient is
-    # g6 + gamma, where gamma is the non-derived complex-phase/ordering datum the A4-note isolates.
+    # g6 + gamma, where gamma is an assumed parameter of the sextic coefficient (no source fixes it).
     mu2, g4, g6, gamma, B0 = sp.symbols("mu2 g4 g6 gamma B0", real=True)
     B = B0 + (mu2 / 2) * s**2 + g4 * s**4 + (g6 + gamma) * s**6
 
     checks = {}
 
-    # (1) Contact is fixed by the radicand alone: independent of all B-data and of the phase.
+    # (1) Contact is fixed by the radicand alone: independent of all B-data and of the sextic parameter gamma.
     checks["contact_indep_g4"] = sp.diff(s_contact, g4) == 0
     checks["contact_indep_g6"] = sp.diff(s_contact, g6) == 0
     checks["contact_indep_gamma"] = sp.diff(s_contact, gamma) == 0
@@ -45,7 +45,7 @@ def main():
     ds_dgamma = -sp.diff(f, gamma) / sp.diff(f, s)
     checks["interior_root_moves_with_phase"] = sp.simplify(ds_dgamma) != 0
 
-    # (3) Concrete exact instance: turning on the non-derived phase gamma moves the interior root in
+    # (3) Concrete exact instance: turning on the assumed sextic parameter gamma moves the interior root in
     # w = s^2, while the radicand contact s_c is untouched. Use a genuine sextic (g6 != 0).
     w = sp.symbols("w", positive=True)
     subs0 = {D0: 4, c: 1, mu2: sp.Rational(-1, 1), g4: sp.Rational(1, 8), g6: sp.Rational(1, 100), B0: 5}
@@ -74,9 +74,9 @@ def main():
     print("                       (fixed by the radicand alone: AVAILABLE, chart-independent)")
     print("interior extremum condition f(s) = mu2 + 4 g4 s^2 + 6(g6+gamma) s^4 = 0")
     print("   df/d(g6)    =", dwint_dg6, "   (extremum condition depends on the non-derived sextic datum)")
-    print("   df/d(gamma) =", dwint_dgamma, "   (extremum condition depends on the non-derived complex phase)")
-    print(f"   exact instance: s_c = {s_c_val} (phase-invariant); "
-          f"interior s_int^2: gamma=0 -> {w_int_g0}, gamma=1/100 -> {w_int_gp} (phase-dependent)")
+    print("   df/d(gamma) =", dwint_dgamma, "   (extremum condition depends on the assumed sextic parameter gamma)")
+    print(f"   exact instance: s_c = {s_c_val} (gamma-invariant); "
+          f"interior s_int^2: gamma=0 -> {w_int_g0}, gamma=1/100 -> {w_int_gp} (gamma-dependent)")
     print()
     print("RESULT: the radicand contact D_chi(s_*)=0 depends on the radicand alone; the interior extremum of a")
     print("truncated B depends on the sextic coefficient and gamma. No selection of the lock is established.")

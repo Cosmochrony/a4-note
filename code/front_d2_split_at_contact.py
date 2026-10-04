@@ -105,9 +105,8 @@ def main():
     print("scalar cubic gauge: new c3 = U3 + alpha*U1  -> removable by alpha = -U3/U1")
     print("contact w_* = s_*^2 =", w_star, "  (depends on curvature b = P.R_chi/beta^2; -> 1/a as b->0)")
     print()
-    print("RESULT (modulo odd reparametrisation):  u_partial = u(s_*) = u_1 * s_* ,")
-    print("the scalar carrier's higher odd terms being pure reparametrisation gauge; the transverse")
-    print("curvature, if any, enters ONLY through s_* (the first contact of the radicand).")
+    print("RESULT (algebra): to first order in s_*, u(s_*) = u_1 * s_*, the carrier's higher odd terms being")
+    print("reparametrisation gauge; the first contact s_* depends on the chart-dependent quartic coefficient.")
     print("No number: u_1 awaits explicit locked-frame E0,E1; s_* awaits the radicand.")
     print("ALL EXACT CHECKS PASSED")
 

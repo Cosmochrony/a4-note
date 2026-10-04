@@ -76,18 +76,17 @@ Independent Researcher, France\\
     a local-minimum reading of A4, the existence and non-degeneracy of a locked pair, the covariance of the locking
     family under \texorpdfstring{$J_\Pi$}{J_Π}, and, from PRS, its generation-reading and first-order transport
     hypotheses.
-    The scope is that of PRS: the split vanishes for the reference operator, the consequences for a general locking
-    operator are conditional, and no mechanism for a non-zero split is derived.
+    The scope is that of PRS: under its generation-reading hypothesis the split vanishes for the reference operator, the
+    consequences for a general locking operator are conditional, and no mechanism for a non-zero split is derived.
     The genus is not determined: the central commutator supplies no electric assignment, since the central direction is
     not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is available.
-    The quartic coefficient of the radicand depends on the parametrisation and selects no lock; an exactly straight
-    purely electric ray reaches the bound at \texorpdfstring{$t_*=\beta/|\mathbf{E}_{\mathcal P}|$}{t* = β/|E|}.
+    The quartic coefficient of the radicand depends on the parametrisation and selects no lock; for a collinear purely
+    electric ray the bound is reached at \texorpdfstring{$t_*=\beta/|\mathbf{E}_{F_0}|$}{t* = β/|E|}.
     The magnitude \texorpdfstring{$|u|$}{|u|} is not predicted.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
   Born--Infeld saturation margin; chiral modulus; antisymmetric two-form; \texorpdfstring{$\JPi$}{J_Π}-equivariance;
-  Schur complement;
   projection locking; generation split; Lorentzian genus.
 
   \newpage
@@ -108,7 +107,8 @@ Independent Researcher, France\\
     $(E_\Pi^2)_{\mathrm{even}}$; no such identification is available, so that reading is not used
     here.
     The Schur reduction~\cite{Beau2026prs} relates $u$ to the antiunitary chiral equivariance defect
-    $\Delta_\chi(P) = \pi_{LL} - \tau \pi_{RR} \tau^{-1}$ of the eliminated block $1 - P$ as a structural reading,
+    $\Delta_\chi(P) = \pi_{LL} - \tau \overline{\pi_{RR}} \tau^{-1}$ of the eliminated block $1 - P$ as a structural
+    reading,
     not a theorem; under its generation-reading hypothesis, a non-zero $u$ requires a locking operator that breaks
     $\JPi$-equivariance, and on its interpretive reading of the axioms this can come only from axiom A4.
     For the finite locking operator, $u_{\mathrm{fin}}=0$ holds in~\cite{Beau2026prs} only under an identification of
@@ -140,8 +140,9 @@ Independent Researcher, France\\
     between a boundary contact and an interior stationary point is established.
     Section~\ref{sec:status} records the epistemic strata.
 
-    We work throughout on a flat effective co-metric of Lorentzian signature, on which the operator-level and
-    spectral-level definitions of $u$ coincide~\cite{Beau2026prs}.
+    We work throughout on a flat effective co-metric of Lorentzian signature (PRS restricts the comparison of operator
+    and
+    spectral readings of $u$ to the reference residue~\cite{Beau2026prs}, and no such comparison is made here).
     Only the signature enters the genus.
     The sources leave the coefficients and the signature of a full-rank co-metric conditional: the rank-three
     co-metric of Q5b~\cite{Beau2026q5b} has a zero central entry, the completion of Q8~\cite{BeauQ8} is conditional,
@@ -200,7 +201,7 @@ Independent Researcher, France\\
 
     The orientation carried by the modulus is not an artefact of the chiral frame.
     The oriented frontier observable of~\cite{Beau2026q11of} is a discrete counterpart of the orientation datum, not of
-    $u$ (PRS shows that no finite front observable carries $u$): on the directed outgoing edges
+    $u$ (PRS argues, conditionally, that no finite front observable carries $u$): on the directed outgoing edges
     $g \to gs$ of the cascade the central increment is the Heisenberg cocycle
     $\Delta A_c(g, s) = c\,(z(s) + a(g) s_b)$, reduced to $c\,a(g) s_b$ on admissible generators, which is the discrete
     oriented
@@ -274,11 +275,8 @@ Independent Researcher, France\\
       backreaction term rather than of the linear modulus carrier of Lemma~\ref{lem:antisymmetry}.
     \end{proof}
 
-    The lemma bears on the antisymmetric/symmetric fork implicit in the definition deliverable of~\cite{Beau2026prs}:
-    the symmetric replacement $M^{\mu}{}_{\nu} = \Fchi^{\mu\rho} \Fchi_{\rho\nu}$
-    used
-    elsewhere to remove a Pfaffian sign ambiguity is precisely what must be avoided at the level of the primary variable,
-    because removing the sign ambiguity removes the orientation that carries the split.
+    The lemma shows that the symmetric replacement $M^{\mu}{}_{\nu} = \Fchi^{\mu\rho} \Fchi_{\rho\nu}$ cannot be the
+    primary variable: it removes the sign, hence the orientation that distinguishes the two branches.
 
     \begin{hypothesis}[Construction of the chiral two-form, {[H-F]}]
       \label{hyp:chiral-two-form}
@@ -354,8 +352,9 @@ Independent Researcher, France\\
 
     The functional $\Bsat$ is fixed in its role, not merely in its formula.
     By the projection-locking theorem~\cite{Beau2026a26} and axiom A4~\cite{Beau2026m}, resolution occurs only where the
-    continuous Born--Infeld saturation meets the discrete shell support; the physically locked chiral configuration is the
-    saturated admissible extremum selected on that support.
+    continuous Born--Infeld saturation meets the discrete shell support; the locked chiral configuration is read, under
+    the hypothesis below, as a
+    saturated admissible extremum on that support.
     The variational reading is stated as a hypothesis.
 
     \begin{hypothesis}[Local-minimum reading of A4, {[H-Min]}]
@@ -840,7 +839,7 @@ Independent Researcher, France\\
 
     \begin{proposition}[The defect rate is reparametrisation-covariant]
       \label{prop:rate-covariant}
-      Assume the finite-locking equivariance $\Dchi(P(0))=0$ of~\cite{Beau2026prs}.
+      Assume $\Dchi(P(0))=0$, which holds when $P(0)$ commutes with $J_\Pi$.
       Under a reparametrisation of the modulus $s \mapsto \psi(s)$, $\psi(0) = 0$, $\psi'(0) \neq 0$, the defect
       rate is covariant, not invariant: it rescales by the Jacobian $\psi'(0)$.
       Hence the rate alone carries no chart-independent magnitude.

@@ -1,8 +1,6 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: >-
-  The Born–Infeld Saturation Margin of the Chiral Modulus: Antisymmetric Structure and Lorentzian Genus of the
-  Generation Split
+title: "The Born–Infeld Saturation Margin of the Chiral Modulus: Antisymmetric Structure and Lorentzian Genus of the Generation Split"
 type: article
 authors:
   - family-names: "Beau"
@@ -14,9 +12,7 @@ doi: "10.5281/zenodo.20633931"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: >-
-  The Born–Infeld Saturation Margin of the Chiral Modulus: Antisymmetric Structure and Lorentzian Genus of the
-  Generation Split
+  title: "The Born–Infeld Saturation Margin of the Chiral Modulus: Antisymmetric Structure and Lorentzian Genus of the Generation Split"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"

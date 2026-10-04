@@ -86,7 +86,7 @@ def main():
     checks["D_parallel_PR_sign"] = (PR_parallel > 0)  # positive, would mimic an "interior" b>0...
     # ...but it is gauge: the invariant contact is t_* = beta/EP regardless. (verified above)
 
-    # ---- (E) Transverse residue is the single open datum -----------------------------------------
+    # ---- (E) The quartic coefficient is chart-dependent -----------------------------------------
     # Only a P-transverse R_chi can move s_* off beta/|E_P| (A4-Note 3.0, Lemma on parametrisation dependence);
     # its source is not established (rem:path-invariant). We record this as the residual open coefficient.
     # (E) is a statement about the model of A4-Note 3.0, not a computed check; it is not recorded as a PASS item.
@@ -102,7 +102,7 @@ def main():
     print(f"      correction:       s_* = (beta/|E_P|)(1 + P.R_chi beta^2/(2|E_P|^4) + ...)")
     print(f"  (C) interior root diverges as b->0 (not first contact)")
     print(f"  (D) parallel R_chi = -(2/3)|c|^2 P is pure gauge: affine contact t_* = beta/|E_P| exactly")
-    print(f"  (E) only P-transverse R_chi shifts s_* (source not established)")
+    print(f"  (E) b is chart-dependent: the b != 0 roots above are algebra in a fixed chart, not intrinsic")
     print("-" * 78)
     allok = True
     for k, v in checks.items():
@@ -110,7 +110,7 @@ def main():
         allok = allok and ok
         print(f"  [{'PASS' if ok else 'FAIL'}]  {k}")
     print("=" * 78)
-    print("RESULT: s_* = beta/|E_P| for the exactly straight ray (exact algebra); a P-transverse R_chi would shift it.")
+    print("RESULT: s_* = beta/|E_P| for the exactly straight ray (exact algebra); b != 0 roots are chart algebra.")
     print("ALL CHECKS PASS" if allok else "SOME CHECKS FAILED")
     return allok
 
