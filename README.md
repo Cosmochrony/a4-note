@@ -35,7 +35,7 @@ Results, each for a supplied two-form and under the hypotheses named in the pape
 Hypotheses that no source supplies are stated where used: a full-rank Lorentzian co-metric, the construction of the
 two-form from the locking data, the local-minimum reading of A4, the existence and non-degeneracy of the locked pair,
 the coincidence with the Born–Infeld modulus, and from PRS the chiral splitting,
-the contraction and symbol hypotheses of its Schur form, the generation-carrier hypothesis with $J_\Pi$-compatibility,
+the contraction and symbol hypotheses of its Schur form, the generation-reading hypothesis with $J_\Pi$-compatibility,
 and the first-order transport hypothesis. The genus is not
 determined: the central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
