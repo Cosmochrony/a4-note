@@ -1,14 +1,16 @@
 """Split at the first contact: u(s_*) = u_1 s_* modulo odd reparametrisation (exact symbolic, no sampling).
 
 Setup: the split is the odd carrier u(s) = u_1 s + u_3 s^3 + ..., with
-u_1 = <J_3, {E_0, E_1}>/<J_3, J_3>, for E_Pi(s) = E_0 + s E_1 + s^2 E_2 + s^3 E_3 + ... with E_0, E_2 even and E_1, E_3 odd.
+u_1 = <J_3, {E_0, E_1}>/<J_3, J_3>, for E_Pi(s) = E_0 + s E_1 + s^2 E_2 + s^3 E_3 + ...
+with E_0, E_2 even and E_1, E_3 odd.
 s_* is the first contact Delta_chi(s_*) = 0 of the radicand, when it exists.
 
 Checks:
   (A) u(s) has only odd powers, with u_1 as above and u_3 = <J_3, {E_0, E_3} + {E_1, E_2}>/<J_3, J_3>.
   (B) Under s = t + alpha t^3 the cubic term transforms as u_3 -> u_3 + alpha u_1, so it is parametrisation gauge;
       the carrier-adapted modulus t = u(s)/u_1 makes u = u_1 t.
-  (C) The position of the contact depends on the chart-dependent quartic coefficient of the radicand, while u_1 does not.
+  (C) The position of the contact depends on the chart-dependent quartic coefficient of the radicand, while u_1
+      does not.
 No number is produced: u_1 awaits explicit operators E_0, E_1 and s_* awaits the radicand. No figures. English.
 """
 
