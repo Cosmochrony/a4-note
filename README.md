@@ -15,45 +15,40 @@ open deliverable on the Lorentzian saturation functional: the definition of
 $\mathcal{B}_{\mathrm{sat}}(s)$ along the $J_\Pi$-odd modulus that controls the three-generation
 split coefficient $u$.
 
-Three results are established.
+Results, each for a supplied two-form and under the hypotheses named in the paper:
 
-1. **Antisymmetry lemma.** The generation modulus is $J_\Pi$-odd, and the symmetric square
-   $M = F_\chi F_\chi$ is $J_\Pi$-even from birth, so it cannot carry the oriented modulus; the primary
-   modulus variable must be an antisymmetric chiral two-form $F_{\chi,\mu\nu}(s)$.
+1. **Symmetric square.** The generation modulus is $J_\Pi$-odd under a $J_\Pi$-covariant family, and the symmetric
+   square $M = F_\chi F_\chi$ of an odd two-form is $J_\Pi$-even, so it cannot carry the branch sign; the carrier is
+   taken, by hypothesis, to be an odd antisymmetric chiral two-form $F_{\chi,\mu\nu}(s)$.
 
-2. **Sign-locked saturation functional.** $\mathcal{B}_{\mathrm{sat}}(s)$ is defined as the
-   Born–Infeld determinantal saturation margin of a supplied such two-form, with the overall sign fixed by
-   the admissibility role of $\mathcal{B}_{\mathrm{sat}}$ (projection locking; axiom A4 selects
-   saturated minima), not by matching a Maxwell weak-field expansion.
+2. **Saturation functional.** $\mathcal{B}_{\mathrm{sat}}(s)$ is defined as the Born–Infeld determinantal saturation
+   margin of such a supplied two-form, with the sign fixed by the admissibility role of axiom A4, not by a Maxwell
+   weak-field expansion.
 
-3. **Genus reduction.** The second variation reduces to
-   $\mu_\chi := \partial_s^2 \mathcal{B}_{\mathrm{sat}}(0) = \tfrac{1}{2}\,P_{\chi,\mu\nu} P_\chi^{\mu\nu}$,
-   so the existence and stability of the split are governed by the Lorentzian genus of
-   the chiral polarisation $P_\chi$ in an effective co-metric of Lorentzian signature.
+3. **Genus reduction.** The second variation is
+   $\mu_\chi := \partial_s^2 \mathcal{B}_{\mathrm{sat}}(0) = \tfrac{1}{2}\,P_{\chi,\mu\nu} P_\chi^{\mu\nu}$, the
+   Lorentzian genus of the chiral polarisation $P_\chi$: $\mu_\chi > 0$ makes the symmetric point a strict local
+   minimum of $\mathcal{B}_{\mathrm{sat}}$ and $\mu_\chi < 0$ a strict local maximum. Under a local-minimum reading of
+   axiom A4, a negative genus means the symmetric point is not locked; the existence of a locked pair and the
+   non-vanishing of $u$ there are hypotheses.
 
-Premises that no source supplies are stated as hypotheses wherever a result uses them: a full-rank Lorentzian
-co-metric, the construction of the two-form from the locking data, the coincidence of the Born–Infeld
-modulus with the Schur tilt, the non-degeneracy of the split at the locked pair, and, for the
-Schur-transverse branch, the hypotheses of PRS (chiral splitting, contraction, Lichnerowicz compression,
-symbol condition, transport of the metaplectic opening to the locking operator, non-annihilation). The genus is not
-determined: the
-central commutator does not supply an electric assignment, because the central direction is not
-temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry,
-conditional completion of Q8, free temporal coefficient in Q11) and because no map from the
-generation operator to a two-form is available.
+Hypotheses that no source supplies are stated where used: a full-rank Lorentzian co-metric, the construction of the
+two-form from the locking data, the local-minimum reading of A4, the existence and non-degeneracy of the locked pair,
+the coincidence with the Born–Infeld modulus, a cubic-order transport hypothesis, and from PRS the contraction and symbol
+hypotheses of its Schur form, $J_\Pi$-compatibility and the first-order transport hypothesis. The genus is not
+determined: the central commutator does not supply an electric assignment, because the central direction is not
+temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
+of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
-For a supplied purely electric two-form the radicand is extended to quartic order: the
-Born–Infeld pseudoscalar cancels, and the amplitude $|u|$ is reduced to the transverse cubic
-backreaction of the two-form trajectory, modulo odd reparametrisation, together with the
-boundary-versus-interior selection of the saturation problem. On the real symplectic cascade of
-the model the transverse (spin-two) channel of the cubic response vanishes at the metaplectic phase
-$\gamma = 0$ for every ordering and reference, so the amplitude mechanism is Born–Infeld
-saturation; the sixth-order interior lock is doubly conditional, on a non-derived complex phase and
-on a non-prescribed ordering. With the companion eliminated-block note, which fixes one block of
-the $J_\Pi$-odd tangent as half the defect rate $\partial_s \Delta_\chi(P)|_0$ rather than a unique
-carrier, the saturation contact $\Delta_\chi(s_*) = 0$ is the unique chart-independent A4 lock under
-the stated premises. The magnitude $|u|$ itself is not predicted: it is fixed through the
-chiral-frontier normalisation $\mathcal{N}_A$, a dictionary-bound quantity.
+The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus (it
+shifts by $\alpha\,P\cdot P$ under $s \to s + \alpha s^3$), so it selects neither a boundary contact nor an interior
+stationary point; the component of the cubic response orthogonal to $P$ is the intrinsic datum. For a supplied purely
+electric two-form whose trajectory is exactly straight, the radicand is $1 - |E|^2 t^2/\beta^2$ and the first contact
+is $t_* = \beta/|E|$ exactly; for other trajectories this value is an approximation on a domain the corpus does not
+control. The defect rate is covariant under reparametrisation, and the first contact and $|u(s_*)|$ are chart-independent
+when the contact exists. No selection of the A4 lock between a boundary contact and an interior stationary point is
+established. The magnitude $|u|$ is not predicted: it is fixed through the chiral-frontier normalisation
+$\mathcal{N}_A$, a dictionary-bound quantity.
 
 The even sector $\mathrm{diag}(1, \tfrac{1}{2}, \tfrac{1}{2})$ of $E_\Pi^2$ is the algebraic value of
 $(C_2 - J_3^2)/C_2$ at $C_2 = 2$; reading it as the Born–Infeld even sector would require an

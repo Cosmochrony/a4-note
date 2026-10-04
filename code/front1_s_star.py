@@ -2,6 +2,9 @@
 
 Scope: "electric" here is the hypothesis of a supplied purely electric two-form (A4-Note Hypothesis [H-F]); the genus of
 the chiral two-form is not derived. The script solves the radicand algebra only.
+The quartic coefficient b = P.R/beta^2 used below is parametrisation-dependent (A4-Note Lemma "Parametrisation dependence of
+the quartic coefficient"); the b != 0 contacts printed here are exploratory algebra in a fixed chart, not intrinsic results.
+Only the b = 0 (exactly straight ray) contact beta/|E| is exact.
 
 Bias-independent, exact symbolic verification (no sampling) of the radial contact s_*, the first of the three factors of
 the generation split u_partial = sqrt(2) sigma s_* T_{J3}(...) / <J3,J3> under the localisation hypothesis
