@@ -18,12 +18,12 @@ Three results.
       (PRS transport), and the J_Pi-odd diagonal of \\dot Q(0) is the transported defect rate
       pi_LL' - pi_RR'(bar) = d/ds Delta_chi(P)|_0 (the LL-block defect-rate identity of Beau2026ebj).
   (B) Even-sector reduction (the new content): on C^3_gen the algebraic even sector is E_0^2 = diag(1,1/2,1/2),
-      so E_0 acts as sigma/sqrt(2) on the J_3-carrying outer block (e_+, e_-), sigma = +-1 the branch sign.
-      Then {E_0, E_1}|_{e_pm} = sqrt(2) sigma E_1|_{e_pm}, hence
-          u_1 = sqrt(2) sigma <J_3, E_1> / <J_3, J_3> .
-      The E_0-dependence has collapsed to the scalar sqrt(2) sigma (the even-block eigenvalue 1/sqrt(2)
-      times the branch sign); u_1 is the generation-J_3 projection of E_1, not a free scalar.
-  (C) Assembly: u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)>/<J_3, J_3>. The residual
+      so E_0 acts as eps/sqrt(2) on the J_3-carrying outer block (e_+, e_-), eps = +-1 the convention sign.
+      Then {E_0, E_1}|_{e_pm} = sqrt(2) eps E_1|_{e_pm}, hence
+          u_1 = sqrt(2) eps <J_3, E_1> / <J_3, J_3> .
+      The E_0-dependence has collapsed to the scalar sqrt(2) eps (the even-block eigenvalue 1/sqrt(2)
+      times the convention sign); u_1 is the generation-J_3 projection of E_1, not a free scalar.
+  (C) Assembly: u_partial = u_1 s_* = sqrt(2) eps s_* <J_3, E_1(d_s Delta_chi)>/<J_3, J_3>. The residual
       unknown is exactly <J_3, E_1>, the generation-J_3 projection of the D^pm-transported defect rate; under
       the hypothesis it is carried there (not a free scalar and not in s_*).
 
@@ -73,16 +73,16 @@ def part_A_block_transport():
 
 
 def part_B_even_sector_reduction():
-    """On C^3_gen: E_0^2 = diag(1,1/2,1/2) => E_0 = sigma diag(1, 1/sqrt2, 1/sqrt2); reduce u_1."""
+    """On C^3_gen: E_0^2 = diag(1,1/2,1/2) => E_0 = eps diag(1, 1/sqrt2, 1/sqrt2); reduce u_1."""
     J3 = sp.diag(0, 1, -1)
     r2 = 1 / sp.sqrt(2)
     checks = {}
     extras = {}
 
-    for sigma in (sp.Integer(1), sp.Integer(-1)):
-        E0 = sigma * sp.diag(1, r2, r2)                 # even-sector root (algebraic value (C_2 - J_3^2)/C_2)
+    for eps in (sp.Integer(1), sp.Integer(-1)):
+        E0 = eps * sp.diag(1, r2, r2)                 # even-sector root (algebraic value (C_2 - J_3^2)/C_2)
         # Check the even-sector identity E_0^2 = diag(1,1/2,1/2).
-        checks[f"E0_sq_identity_s{sigma}"] = is_zero(E0 * E0 - sp.diag(1, sp.Rational(1, 2), sp.Rational(1, 2)))
+        checks[f"E0_sq_identity_s{eps}"] = is_zero(E0 * E0 - sp.diag(1, sp.Rational(1, 2), sp.Rational(1, 2)))
 
         # Generic J_Pi-odd Hermitian E_1 on C^3_gen (J_Pi^(2): e0->-e0, e+ <-> e-).
         Jpi = sp.Matrix([[-1, 0, 0], [0, 0, 1], [0, 1, 0]])
@@ -96,11 +96,11 @@ def part_B_even_sector_reduction():
 
         anti = E0 * E1 + E1 * E0
         u1 = sp.expand(hs(anti, J3) / hs(J3, J3))
-        u1_reduced = sp.expand(sp.sqrt(2) * sigma * hs(E1, J3) / hs(J3, J3))
-        checks[f"u1_reduces_sqrt2_sigma_s{sigma}"] = sp.simplify(u1 - u1_reduced) == 0
-        # u_1 is a linear functional of E_1 (no free E_0 scalar beyond sqrt(2) sigma): off-diagonal e0<->e+-
+        u1_reduced = sp.expand(sp.sqrt(2) * eps * hs(E1, J3) / hs(J3, J3))
+        checks[f"u1_reduces_sqrt2_eps_s{eps}"] = sp.simplify(u1 - u1_reduced) == 0
+        # u_1 is a linear functional of E_1 (no free E_0 scalar beyond sqrt(2) eps): off-diagonal e0<->e+-
         # parts of E_1 do not enter (the reduction uses only the e_pm block eigenvalue of E_0).
-        extras[f"u1_s{sigma}"] = u1
+        extras[f"u1_s{eps}"] = u1
     return checks, extras
 
 
@@ -115,11 +115,11 @@ def main():
         assert ok, name
 
     print()
-    print("Even-sector reduction:  u_1 = sqrt(2) * sigma * <J_3, E_1> / <J_3, J_3>   (sigma = +-1, branch sign)")
-    print("  -> the E_0-dependence collapses to the even-block factor sqrt(2) sigma;")
+    print("Even-sector reduction:  u_1 = sqrt(2) * eps * <J_3, E_1> / <J_3, J_3>   (eps = +-1, convention sign)")
+    print("  -> the E_0-dependence collapses to the even-block factor sqrt(2) eps;")
     print("     u_1 is the generation-J_3 projection of E_1 = -Pi_S D dotQ(0) D Pi_S^*, a constrained")
     print("     bilinear, NOT a free scalar.")
-    print("Assembly:  u_partial = u_1 s_* = sqrt(2) sigma s_* <J_3, E_1(d_s Delta_chi)> / <J_3, J_3>.")
+    print("Assembly:  u_partial = u_1 s_* = sqrt(2) eps s_* <J_3, E_1(d_s Delta_chi)> / <J_3, J_3>.")
     print("Under the localisation hypothesis the residual unknown is carried by <J_3, E_1>, the generation-J_3")
     print("projection of the D^pm-transported defect rate d_s Delta_chi(P)|_0 -- not a free scalar, not in s_*.")
     print("ALL EXACT CHECKS PASSED")

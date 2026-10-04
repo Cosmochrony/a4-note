@@ -43,7 +43,7 @@ temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zer
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
-(it shifts by $\alpha\,P\cdot P$ under $s \to s + \alpha s^3$), so it selects neither a boundary contact nor an
+(it shifts by $\omega\,P\cdot P$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
 interior stationary point. Under the construction hypothesis the carrier is one-dimensional, so the two-form trajectory
 is collinear and the cubic response is parallel to $P$. For a purely electric two-form the radicand is then exactly
 $1 - |E|^2 \varphi(s)^2/\beta^2$, a contact exists if and only if $|\varphi|$ reaches $\beta/|E|$, and in the chart

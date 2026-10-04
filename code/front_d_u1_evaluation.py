@@ -5,7 +5,7 @@ hypothesis of the A4-Note paragraph 'Front D factorisation (conditional)'; the e
 eliminated-block note (Beau2026ebj, moving-embedding product rule) are not included, and the hypothesis is open.
 
 Bias-independent, exact symbolic verification (no sampling). The split rate reduced (front_d3_u1_reduction)
-to u_1 = sqrt(2) sigma <J_3, E_1>/<J_3, J_3>, concentrating all non-trivial dependence in <J_3, E_1>. This
+to u_1 = sqrt(2) eps <J_3, E_1>/<J_3, J_3>, concentrating all non-trivial dependence in <J_3, E_1>. This
 script evaluates that projection via the Sym^2 lift (the locked spin/chiral frame, modulo symbol
 compatibility Q14: the principal symbol equals the Clifford symbol, so the D^pm transport acts as the
 Sym^2 representation), answering the three tests.
@@ -24,7 +24,7 @@ Tests.
       alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence a branch
       sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
-Conclusion (printed): conditional factorisation u_partial = sqrt(2) sigma s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>
+Conclusion (printed): conditional factorisation u_partial = sqrt(2) eps s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>
 (first order in s_*), with T_{J_3} the angular oriented area (dictionary-bound through N_A) and s_* the first contact of
 the radicand. The localisation hypothesis itself is open. No figures. English.
 """
@@ -87,7 +87,7 @@ def main():
     # Schur audit: within the sl_2 image no generator populates R_mix (Q14 Prop. 6.5, Rem. 6.4).
     checks["Rmix_empty_phasefree"] = sp.simplify(hs(jpi_odd(sym2_lift(a * E + b * F + c * H)), Rmix)) == 0
 
-    # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (branch sign) ------
+    # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (convention sign) ------
     r = sp.symbols("r", positive=True)
     cosh_r = 1 + t * s / 2
     g1 = sp.exp(t * E) * sp.exp(s * F)                                            # = [[1+ts, t],[s, 1]]
@@ -118,12 +118,12 @@ def main():
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
     print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
-    print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> branch sign, NOT a positive norm.")
+    print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> convention sign, NOT a positive norm.")
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
     print("CONDITIONAL FACTORISATION (localisation hypothesis, auxiliary compression):")
-    print("  u_partial = sqrt(2) sigma s_* T_J3(d_s Delta_chi) / <J3,J3>,")
-    print("  factors: sqrt(2) sigma (even block, algebraic (C_2 - J_3^2)/C_2; branch sign) x s_* (radial"
+    print("  u_partial = sqrt(2) eps s_* T_J3(d_s Delta_chi) / <J3,J3>,")
+    print("  factors: sqrt(2) eps (even block, algebraic (C_2 - J_3^2)/C_2; convention sign) x s_* (radial"
           " saturation, A4 R_chi open)")
     print("           x T_J3 (angular oriented area = N_A, dictionary-bound).")
     print("  Under the hypothesis, no selector beyond s_* and N_A.")
