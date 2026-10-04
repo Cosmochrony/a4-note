@@ -88,7 +88,7 @@ def main():
     # Schur audit: a complex metaplectic phase would be required to populate R_mix.
     checks["Rmix_empty_phasefree"] = sp.simplify(hs(jpi_odd(sym2_lift(a * E + b * F + c * H)), Rmix)) == 0
 
-    # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (V-A sign) ------
+    # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (branch sign) ------
     r = sp.symbols("r", positive=True)
     cosh_r = 1 + t * s / 2
     g1 = sp.exp(t * E) * sp.exp(s * F)                                            # = [[1+ts, t],[s, 1]]
@@ -124,7 +124,7 @@ def main():
     print()
     print("CONDITIONAL FACTORISATION (localisation hypothesis, auxiliary compression):")
     print("  u_partial = sqrt(2) sigma s_* T_J3(d_s Delta_chi) / <J3,J3>,")
-    print("  factors: sqrt(2) sigma (even block, algebraic (C_2 - J_3^2)/C_2; V-A) x s_* (radial saturation, A4 R_chi open)")
+    print("  factors: sqrt(2) sigma (even block, algebraic (C_2 - J_3^2)/C_2; branch sign) x s_* (radial saturation, A4 R_chi open)")
     print("           x T_J3 (angular oriented area = N_A, dictionary-bound).")
     print("  Under the hypothesis, no selector beyond s_* and N_A.")
     print("ALL EXACT CHECKS PASSED")

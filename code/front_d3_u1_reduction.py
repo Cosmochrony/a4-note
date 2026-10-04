@@ -18,7 +18,7 @@ Three results.
       (PRS transport), and the J_Pi-odd diagonal of \\dot Q(0) is the transported defect rate
       pi_LL' - pi_RR'(bar) = d/ds Delta_chi(P)|_0 (the LL-block defect-rate identity of Beau2026ebj).
   (B) Even-sector reduction (the new content): on C^3_gen the algebraic even sector is E_0^2 = diag(1,1/2,1/2),
-      so E_0 acts as sigma/sqrt(2) on the J_3-carrying outer block (e_+, e_-), sigma = +-1 the V-A sign.
+      so E_0 acts as sigma/sqrt(2) on the J_3-carrying outer block (e_+, e_-), sigma = +-1 the branch sign.
       Then {E_0, E_1}|_{e_pm} = sqrt(2) sigma E_1|_{e_pm}, hence
           u_1 = sqrt(2) sigma <J_3, E_1> / <J_3, J_3> .
       The E_0-dependence has collapsed to the scalar sqrt(2) sigma (the even-block eigenvalue 1/sqrt(2)
@@ -115,7 +115,7 @@ def main():
         assert ok, name
 
     print()
-    print("Even-sector reduction:  u_1 = sqrt(2) * sigma * <J_3, E_1> / <J_3, J_3>   (sigma = +-1, V-A sign)")
+    print("Even-sector reduction:  u_1 = sqrt(2) * sigma * <J_3, E_1> / <J_3, J_3>   (sigma = +-1, branch sign)")
     print("  -> the E_0-dependence collapses to the even-block factor sqrt(2) sigma;")
     print("     u_1 is the generation-J_3 projection of E_1 = -Pi_S D dotQ(0) D Pi_S^*, a constrained")
     print("     bilinear, NOT a free scalar.")

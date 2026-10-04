@@ -46,7 +46,7 @@ def main():
     b1, b3 = sp.Rational(7, 4), sp.Rational(-2, 3)
     u = lambda x: b1 * x + b3 * x**3
 
-    # Even saturation functional B(s_BI) = B0 + (mu2/2) s^2 + g4 s^4 + g6 s^6, electric genus mu2 < 0.
+    # Even saturation functional B(s_BI) = B0 + (mu2/2) s^2 + g4 s^4 + g6 s^6, supplied electric two-form, mu2 < 0 (hypothesis).
     B0, mu2, g4, g6 = sp.Integer(5), sp.Rational(-1, 1), sp.Rational(1, 8), sp.Rational(-1, 200)
     B = lambda x: B0 + (mu2 / 2) * x**2 + g4 * x**4 + g6 * x**6
 

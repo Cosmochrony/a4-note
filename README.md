@@ -31,10 +31,11 @@ Three results are established.
    so the existence and stability of the split are governed by the Lorentzian genus of
    the chiral polarisation $P_\chi$ in an effective co-metric of Lorentzian signature.
 
-Four premises that no source supplies are stated as hypotheses wherever a result uses them: the
-construction of the two-form from the locking data, the coincidence of the Born–Infeld modulus with
-the Schur tilt, the transport of the metaplectic opening to the locking projector (a hypothesis of
-PRS), and the non-degeneracy of the split at the saturated pair. The genus is not determined: the
+Premises that no source supplies are stated as hypotheses wherever a result uses them: a full-rank Lorentzian
+co-metric, the construction of the two-form from the locking data, the coincidence of the Born–Infeld
+modulus with the Schur tilt, the non-degeneracy of the split at the locked pair, and, for the
+Schur-transverse branch, the hypotheses of PRS (chiral splitting, contraction, Lichnerowicz compression,
+symbol condition, transport of the metaplectic opening to the locking operator, non-annihilation). The genus is not determined: the
 central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry,
 conditional completion of Q8, free temporal coefficient in Q11) and because no map from the

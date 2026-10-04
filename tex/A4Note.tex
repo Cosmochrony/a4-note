@@ -71,9 +71,10 @@ Independent Researcher, France\\
     \texorpdfstring{$\muchi = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$}{μ_χ² = ½ P_{μν} P^{μν}} is the Lorentzian genus
     of the
     chiral polarisation \texorpdfstring{$\Pchi$}{P}.
-    Four premises that no source supplies are stated as hypotheses wherever used: the construction of the two-form from
-    the locking data, the coincidence of the Born--Infeld modulus with the Schur tilt, the transport of the
-    metaplectic opening to the locking projector, and the non-degeneracy of the split at the saturated pair.
+    Premises that no source supplies are stated as hypotheses wherever used: a full-rank Lorentzian co-metric, the
+    construction of the two-form from the locking data, the coincidence of the Born--Infeld modulus with the Schur
+    tilt, the non-degeneracy of the split at the locked pair, and the hypotheses of the Schur-transverse branch of PRS,
+    including the transport of the metaplectic opening to the locking operator.
     The genus is not determined: the central commutator does not supply an electric assignment, since the central
     direction is not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is
     available.
@@ -142,6 +143,14 @@ Independent Researcher, France\\
     co-metric of Q5b~\cite{Beau2026q5b} has a zero central entry, the completion of Q8~\cite{BeauQ8} is conditional,
     and the temporal coefficient is unconstrained~\cite{Beau2026q11}.
 
+    \begin{hypothesis}[Lorentzian effective co-metric, {[H-Lor]}]
+      \label{hyp:lorentzian}
+      The effective co-metric is a full-rank four-dimensional Lorentzian co-metric of signature $(-,+,+,+)$.
+      Only the signature enters the genus.
+      No source supplies it: Q5b has rank three, Q8 is conditional, and Q11 gives this signature only for a negative
+      temporal and positive spatial coefficient.
+    \end{hypothesis}
+
   \section{The chiral modulus is $\JPi$-odd and oriented}
     \label{sec:oriented}
 
@@ -201,6 +210,7 @@ Independent Researcher, France\\
 
     \begin{lemma}[Antisymmetric carrier]
       \label{lem:antisymmetry}
+      Assume Hypothesis~\ref{hyp:chiral-two-form}.
       The symmetric square $M(s)$ is $\JPi$-even and stationary at the symmetric point:
       \begin{equation}
         \label{eq:M-even}
@@ -216,7 +226,7 @@ Independent Researcher, France\\
     \end{lemma}
 
     \begin{proof}
-      Under $\JPi$ one has $\Fchi \mapsto -\Fchi$ at linear order, so by~\eqref{eq:Mdef}
+      By Hypothesis~\ref{hyp:chiral-two-form}, $\Fchi(-s) = -\Fchi(s)$, so by~\eqref{eq:Mdef}
       $M = \Fchi \Fchi \mapsto (-\Fchi)(-\Fchi) = M$: the square is $\JPi$-invariant.
       Substituting~\eqref{eq:Fchi-linear} gives $M(s) = s^2\, \Pchi^{\mu\rho} \Pchi_{\rho\nu} + O(s^3)$, whence
       $M(0) = 0$ and $\partial_s M(0) = 0$, which is~\eqref{eq:M-even}.
@@ -255,8 +265,9 @@ Independent Researcher, France\\
       \label{hyp:chiral-two-form}
       There is an injective linear map $\iota$ from the $\JPi$-odd part of $\mathrm{End}(\Cgen)$ on the outer weights
       into real two-forms of the effective spacetime, and the chiral two-form is
-      $\Fchi(s)=\iota\big(\Pi_S D\,(P(s)-P(0))\,D\,\Pi_S^*\big|_{\mathrm{gen},\,\JPi\text{-odd}}\big)$, odd in $s$,
-      with $\Fchi(s)=s\,\Pchi+O(s^2)$.
+      $\Fchi(s)=\iota\big(\Pi_S D\,(P(s)-P(0))\,D\,\Pi_S^*\big|_{\mathrm{gen},\,\JPi\text{-odd}}\big)$, exactly odd,
+      $\Fchi(-s)=-\Fchi(s)$, with $\Fchi(s)=s\,\Pchi+O(s^3)$.
+      Here $s$ is the Schur modulus of the locking operator.
       No source supplies $\iota$: the generation operator $\Jthree$ acts on the generation factor, a Clifford bivector
       acts on the spinor factor, and the two carriers are distinct.
       It is a missing element, not an excluded one.
@@ -264,8 +275,9 @@ Independent Researcher, France\\
 
     \begin{hypothesis}[Non-degeneracy of the split at the saturated pair, {[H-Nd]}]
       \label{hyp:nondegenerate}
-      When $\muchi<0$, the odd carrier $u(s)$ of Lemma~\ref{lem:u-odd} does not vanish at the saturated pair $\pm s_*$
-      of the locking.
+      When $\muchi<0$, the radicand $\Dchi$ reaches its bound at a finite contact $s_*>0$, which gives a
+      $\JPi$-conjugate saturated pair $\pm s_*$ of the locking, and the odd carrier $u(s)$ of
+      Lemma~\ref{lem:u-odd} does not vanish at that pair.
       Oddness gives $u(0)=0$ and $u(-s)=-u(s)$ only.
     \end{hypothesis}
 
@@ -319,11 +331,13 @@ Independent Researcher, France\\
 
     \begin{proposition}[Parity of the margin]
       \label{prop:parity}
+      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}.
       $\Bsat(s) = \Bsat(-s)$, so $s = 0$ is automatically a stationary point of $\Bsat$.
     \end{proposition}
 
     \begin{proof}
-      Under $\JPi$ the two-form obeys $\Fchi(s) \mapsto \Fchi(-s) = -\Fchi(s) + O(s^2)$, and the determinant
+      By Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form} the two-form obeys $\Fchi(-s) = -\Fchi(s)$, and
+      the determinant
       in~\eqref{eq:Dchi}
       depends on $\Fchi$ only through even powers, since for an antisymmetric argument the odd elementary symmetric functions
       of
@@ -358,7 +372,7 @@ Independent Researcher, France\\
 
     \begin{theorem}[Lorentzian reduction of the chiral curvature]
       \label{thm:reduction}
-      Assume Hypothesis~\ref{hyp:chiral-two-form}.
+      Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{lem:coincidence}.
       With $\Bsat$ as in Definition~\ref{def:B},
       \begin{equation}
         \label{eq:muchi}
@@ -368,8 +382,9 @@ Independent Researcher, France\\
       genus
       of the chiral polarisation $\Pchi$ in the effective co-metric.
       A spacelike (magnetic-type) $\Pchi$ gives $\muchi > 0$, a stable symmetric point, and $u = 0$; a timelike
-      (electric-type) $\Pchi$ gives $\muchi < 0$, an unstable symmetric point, a $\JPi$-conjugate saturated pair $\pm s_*$,
-      and, under Hypothesis~\ref{hyp:nondegenerate}, a split $u \neq 0$ whose sign labels the two branches; a null
+      (electric-type) $\Pchi$ gives $\muchi < 0$, an unstable symmetric point, and, under
+      Hypothesis~\ref{hyp:nondegenerate}, a $\JPi$-conjugate saturated
+      pair $\pm s_*$ carrying a split $u \neq 0$ whose sign labels the two branches; a null
       $\Pchi$ gives $\muchi = 0$, the marginal case.
     \end{theorem}
 
@@ -385,9 +400,9 @@ Independent Researcher, France\\
       The mapping to the trichotomy then follows from the variational reading of Definition~\ref{def:B}: at $\muchi > 0$ the
       symmetric point is a stable minimum and is selected ($u = 0$); at $\muchi < 0$ it is a local maximum, and the
       deformation
-      flows to the saturated admissible pair $\pm s_*$ where $u(\pm s_*) = \mp u(s_*)$ by Lemma~\ref{lem:u-odd},
-      non-zero
-      under Hypothesis~\ref{hyp:nondegenerate}, the overall sign labelling the two branches; at $\muchi = 0$ the second
+      selects, by the variational reading, the saturated admissible pair $\pm s_*$; its existence and the non-vanishing
+      of $u(\pm s_*)=\mp u(s_*)$ are the content of Hypothesis~\ref{hyp:nondegenerate} (Lemma~\ref{lem:u-odd} gives only
+      the oddness), the overall sign labelling the two branches; at $\muchi = 0$ the second
       variation is degenerate and the locking
       character is decided by the leading non-vanishing even coefficient $\lambda_{2k}$ of
       $\Bsat(s) = \Bsat(0) + \lambda_{2k} s^{2k} + O(s^{2k+2})$.
@@ -480,7 +495,9 @@ Independent Researcher, France\\
       equivalently the non-vanishing of $X \mapsto \Pi_S D X D \Pi_S^* |_{\mathrm{gen},\,\JPi\text{-odd}}$ on the direction
       $\partial_s P|_{0}$.
       Injectivity of this transport on the whole $\JPi$-odd eliminated subspace is sufficient but stronger than required; the
-      lemma depends only on transversality of the opened direction.
+      argument depends only on transversality of the opened direction.
+      This is the notion of PRS, where it is formulated for the $\JPi$-odd part $\sigma$ of $\partial_s P|_0$ as
+      $T_{\mathrm{out}}(\sigma)\neq0$; the two agree under the $\JPi$-compatibility stated there.
     \end{definition}
 
     The discharge is then a dichotomy.
@@ -488,8 +505,8 @@ Independent Researcher, France\\
     \begin{proposition}[Discharge dichotomy (after the Schur reduction)]
       \label{prop:dichotomy}
       The transverse/null dichotomy is established at operator level in the Schur reduction~\cite{Beau2026prs}
-      under the hypotheses stated there; transposed to the A4 locus through Hypothesis~\ref{lem:coincidence} it reads
-      as follows.
+      under the hypotheses stated there; transposed to the A4 locus through Hypotheses~\ref{hyp:chiral-two-form}
+      ($\iota$ linear and injective) and~\ref{lem:coincidence} it reads as follows.
       On the chiral-odd A4 locus:
       \begin{itemize}
         \item if the locking is Schur-transverse and Hypothesis~\ref{lem:coincidence} holds, the Born--Infeld modulus
@@ -575,7 +592,7 @@ Independent Researcher, France\\
     position.
     The operative object is therefore the quartic of $\Dchi$, not that of $\Bsat$.
 
-    By the parity of Proposition~\ref{prop:parity} the two-form is an odd function of the modulus, refining the linear
+    By Hypothesis~\ref{hyp:chiral-two-form} the two-form is an odd function of the modulus, refining the linear
     expansion~\eqref{eq:Fchi-linear} to
     \begin{equation}
       \label{eq:Fchi-cubic}
@@ -633,6 +650,7 @@ Independent Researcher, France\\
 
     \begin{proposition}[Coordinate-level boundary-versus-interior selection]
       \label{prop:amplitude-dichotomy}
+      Assume Hypothesis~\ref{hyp:chiral-two-form}.
       Fix an odd local modulus $s$ for the chiral two-form trajectory.
       For a supplied purely electric two-form the quartic radicand in that parametrisation is governed by the
       coefficient
@@ -671,11 +689,12 @@ Independent Researcher, France\\
 
     \begin{corollary}[Radial contact in the affine electric gauge]
       \label{cor:radial-contact}
-      For a supplied purely electric two-form in the Schur-transverse branch, under Hypotheses~\ref{hyp:chiral-two-form}
+      For a supplied purely electric two-form in the Schur-transverse branch of PRS (under its hypotheses), under
+      Hypotheses~\ref{hyp:chiral-two-form}
       and~\ref{lem:coincidence}, and after quotienting the $\Pchi$-parallel cubic response by odd
       reparametrisation, the affine radial contact of the Born--Infeld radicand is fixed by $\Dchi(s_*) = 0$.
       Writing $a := |\mathbf{E}_{\mathcal P}|^2 / \beta^2$ and $b := \Pchi \cdot \mathcal{R}_{\chi} / \beta^2$, the
-      boundary branch of $\Dchi(s) = 1 - a s^2 + b s^4 + O(s^6)$ has the positive contact
+      boundary branch of $\Dchi(s) = 1 - a s^2 + b s^4 + O(s^6)$ has, when $4b\le a^2$, the positive contact
       \begin{equation}
         \label{eq:s-star-contact}
         s_*^2 = \frac{1 - \sqrt{1 - 4b/a^2}}{2b/a}
@@ -796,8 +815,10 @@ Independent Researcher, France\\
       the cascade,
       since the transverse cubic datum vanishes when the phase follows the real cascade and is non-zero otherwise, with no
       placement prescribed.
-      These statements concern the cascade generator; their transfer to the cubic tilt of the locking projector uses
-      the transport hypothesis [H-Tr] of~\cite{Beau2026prs} and Hypothesis~\ref{hyp:chiral-two-form}.
+      These statements concern the cascade generator; their transfer to the cubic tilt of the locking operator uses
+      the transport hypothesis [H-Tr] of~\cite{Beau2026prs} and Hypothesis~\ref{hyp:chiral-two-form}, and the
+      Schur's-lemma argument above further assumes that the transport and $\iota$ are $\mathfrak{su}(2)$-equivariant,
+      which no source supplies.
     \end{remark}
 
     On the real cascade of the model the boundary-versus-interior selection is therefore resolved in favour of
@@ -825,6 +846,7 @@ Independent Researcher, France\\
 
     \begin{proposition}[The defect rate is reparametrisation-covariant]
       \label{prop:rate-covariant}
+      Assume Hypothesis~\ref{lem:coincidence}, which ties the modulus of $u$ to that of $\Dchi(P)$.
       Under an odd reparametrisation of the modulus $s \mapsto \phi(s)$, $\phi(0) = 0$, $\phi'(0) \neq 0$, the defect
       rate is covariant, not invariant: it rescales by the Jacobian $\phi'(0)$.
       Hence the rate alone carries no chart-independent magnitude; the invariant datum is the split $u(s_*)$ evaluated at a
@@ -841,6 +863,7 @@ Independent Researcher, France\\
 
     \begin{proposition}[Chart-independence of the saturation contact]
       \label{prop:contact-invariant}
+      Assume Hypothesis~\ref{lem:coincidence}.
       The first saturation contact $\Dchi(s_*) = 0$ of Proposition~\ref{prop:amplitude-dichotomy} is a geometric condition
       on the radicand: its solution is independent of the chart and of the coefficients of $\Bsat$ beyond the radicand
       itself.
@@ -941,17 +964,19 @@ Independent Researcher, France\\
       the metaplectic phase $\gamma = 0$ --- for every ordering and every reference, by the weight-preserving no-op
       (Remark~\ref{rem:path-invariant}) --- so the amplitude mechanism is Born--Infeld saturation, under the transfer
       hypotheses of that remark.
-      What is settled is the amplitude mechanism for a supplied two-form, not the magnitude $|u|$, which remains
+      What is stated is the amplitude mechanism for a supplied two-form, not the magnitude $|u|$, which remains
       dictionary-bound (Open).
 
     \paragraph{Premises carried (this note).}
-      Hypothesis~\ref{hyp:chiral-two-form} (construction of the two-form), Hypothesis~\ref{lem:coincidence}
-      (coincidence), Hypothesis~\ref{hyp:nondegenerate} (non-degeneracy), and the transport hypothesis [H-Tr]
-      of~\cite{Beau2026prs}.
+      Hypothesis~\ref{hyp:lorentzian} (Lorentzian co-metric), Hypothesis~\ref{hyp:chiral-two-form} (construction of the
+      two-form), Hypothesis~\ref{lem:coincidence} (coincidence), Hypothesis~\ref{hyp:nondegenerate} (non-degeneracy and
+      existence of the locked pair), and, for the Schur-transverse branch, the hypotheses of~\cite{Beau2026prs}: chiral
+      splitting, contraction, Lichnerowicz compression, symbol condition, the transport hypothesis [H-Tr] and the
+      non-annihilation hypothesis [H-Ker].
       No source supplies any of them; each is a missing element, not an excluded one.
 
     \paragraph{Conditional (this note).}
-      The sixth-order magnetic interior lock --- a $\Pchi$-transverse cubic response, equivalently a non-empty spin-two
+      The sixth-order interior lock --- a $\Pchi$-transverse cubic response, equivalently a non-empty spin-two
       channel --- is doubly conditional on two independent inputs the corpus does not fix.
       It requires a complex metaplectic phase $\gamma \neq 0$, absent from the real cascade of the model; and, even
       granting
@@ -1007,12 +1032,12 @@ Independent Researcher, France\\
       purely electric two-form, in the affine electric gauge $s_* = \beta/|\mathbf{E}_{\mathcal P}|$.
       The quartic correction is entirely the transverse Schur backreaction $\Pchi \cdot \mathcal{R}_{\chi}$, whose
       $\Pchi$-parallel part is removed by odd reparametrisation (Remark~\ref{rem:conditional-sign}).
-      The radial contact $s_*$ is thereby settled as a form result, the radial factor of the contact split under the
+      The radial contact $s_*$ is thereby stated as a form result, the radial factor of the contact split under the
       conditional factorisation above, while its numerical magnitude still
       routes through the upstream normalisations $\beta$, $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
 
     \paragraph{Open.}
-      The amplitude mechanism is settled (saturation, Genus above); the magnitude $|u|$ is narrowed by
+      The amplitude mechanism is stated (saturation, Genus above); the magnitude $|u|$ is narrowed by
       Section~\ref{sec:amplitude} but not closed.
       On the real cascade of the model the boundary-versus-interior selection is resolved in favour of saturation, so
       the
