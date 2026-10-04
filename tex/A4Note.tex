@@ -73,8 +73,8 @@ Independent Researcher, France\\
     of the chiral
     polarisation \texorpdfstring{$\Pchi$}{P}.
     Hypotheses that no source supplies are stated where used: a Lorentzian co-metric, the construction of the two-form,
-    a local-minimum reading of axiom A4, the existence and non-degeneracy of a locked pair, and the transport
-    hypotheses of PRS.
+    a local-minimum reading of axiom A4, the existence and non-degeneracy of a locked pair, and the first-order transport
+    hypothesis of PRS and a cubic-order transport hypothesis.
     The genus is not determined: the central commutator does not supply an electric assignment, since the central
     direction is not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is
     available.
@@ -112,16 +112,16 @@ Independent Researcher, France\\
     $\Delta_\chi(P) = \pi_{LL} - \tau \pi_{RR} \tau^{-1}$ of the eliminated block $1 - P$, it vanishes for the chirally
     symmetric minimal non-injectivity, and a non-zero value requires a chiral symmetry-breaking carried by the
     projection-locking axiom A4.
-    The finite sector was excluded as a source: finite projection locking is $\JPi$-equivariant, so $u_{\mathrm{fin}} = 0$
-    for
-    $q$ an odd prime, and the remaining obstruction is entirely Lorentzian~\cite{Beau2026prs}.
+    Under an equivariant construction of the finite locking operator, finite projection locking is $\JPi$-equivariant,
+    so $u_{\mathrm{fin}} = 0$ for $q$ an odd prime~\cite{Beau2026prs}; a non-zero split then needs a $\JPi$-odd datum
+    outside that construction, which is located in the Lorentzian completion as a hypothesis.
     The split is then governed by the chiral curvature $\muchi := \partial_s^2 \Bsat(0)$ of a saturation functional $\Bsat$
     along the $\JPi$-odd modulus $s$ opened by Lorentzian complexification, with the trichotomy: $\muchi > 0$ makes the
     symmetric point a stable minimum of $\Bsat$; $\muchi < 0$ makes it an unstable point, and a $\JPi$-conjugate
     locked pair $\pm s_*$ with a split $u \neq 0$ is then a hypothesis (Hypothesis~\ref{hyp:nondegenerate});
     $\muchi = 0$ is marginal.
 
-    This note settles the structural prerequisites for $\muchi$ and states the premises under which its sign is read.
+    This note states the structural prerequisites for $\muchi$ and states the premises under which its sign is read.
     Section~\ref{sec:oriented} records that the modulus is $\JPi$-odd and oriented, and recalls its discrete avatar.
     Section~\ref{sec:antisymmetry} proves that the symmetric square $M = \Fchi \Fchi$ cannot carry the sign of the
     $\JPi$-odd modulus, and takes an odd antisymmetric two-form $\Fchi_{\mu\nu}(s)$ as the carrier by hypothesis.
@@ -189,8 +189,10 @@ Independent Researcher, France\\
     The orientation carried by the modulus is not an artefact of the chiral frame.
     Its discrete avatar is the oriented frontier observable of~\cite{Beau2026q11of}: on the directed outgoing edges
     $g \to gs$ of the cascade the central increment is the Heisenberg cocycle
-    $\Delta A_c(g, s) = c\,(z(s) + a(g) s_b)$, reduced to $c\,a(g) s_b$ on admissible generators, which measures the dynamic
-    $\Jthree$ rather than a free shear.
+    $\Delta A_c(g, s) = c\,(z(s) + a(g) s_b)$, reduced to $c\,a(g) s_b$ on admissible generators, which is the discrete
+    oriented
+    increment of the cascade (the $\Jthree$-coefficient of the metaplectic step comes from the $\mathfrak{sl}_2$
+    commutator, not from the Heisenberg bracket, Q14 Proposition~6.5).
     This increment is linear in the orientation datum $s_b$ and therefore odd under orientation reversal.
     Its symmetric average vanishes identically, $\Theta_{\mathrm{raw}} = 0$ on symmetric shells~\cite{Beau2026aar},
     which is exactly the statement that a symmetrisation annihilates an orientation-odd signal.
@@ -248,6 +250,7 @@ Independent Researcher, France\\
 
     \begin{corollary}[Role of the symmetric square]
       \label{cor:M-backreaction}
+      Assume Hypothesis~\ref{hyp:chiral-two-form}.
       The symmetric combination $M = \Fchi \Fchi$ enters the saturation functional only at second order in $s$, as a
       $\JPi$-even saturating backreaction or higher-order term.
       It is excluded as the primary modulus variable but admissible as a subleading contribution.
@@ -290,9 +293,11 @@ Independent Researcher, France\\
     We now define the functional whose chiral curvature governs the split.
     Let $g_{\mu\nu}$ be an effective metric of Lorentzian signature and let $\beta$ be the
     universal Born--Infeld saturation scale of the bounded-flux completion~\cite{Beau2026c}.
-    Born--Infeld is the unique local completion compatible with a finite transport capacity, and its determinantal action is
-    carried by an antisymmetric field strength~\cite{Beau2026c}; this is the structure into which the antisymmetric two-form
-    $\Fchi_{\mu\nu}(s)$ of Section~\ref{sec:antisymmetry} enters.
+    Born--Infeld is taken here as the determinantal completion carried by an antisymmetric field strength; the
+    source~\cite{Beau2026c} presents it as a conditional completion, neither derived nor unique, and does not derive the
+    antisymmetric field strength.
+    It is an input of this note, into which the antisymmetric two-form $\Fchi_{\mu\nu}(s)$ of
+    Section~\ref{sec:antisymmetry} enters.
 
     \begin{definition}[Chiral admissibility radicand and saturation margin]
       \label{def:B}
@@ -397,7 +402,8 @@ Independent Researcher, France\\
       locked configuration, if one exists, lies at some $s\neq0$ and comes in a $\JPi$-conjugate pair $\pm s_*$;
       its existence and the non-vanishing of $u(\pm s_*)=\mp u(s_*)$ are the content of
       Hypothesis~\ref{hyp:nondegenerate}.
-      If $\muchi>0$, the symmetric point is a locked candidate with $u(0)=0$; the theorem does not decide whether
+      If $\muchi>0$, the symmetric point is a locked candidate with $u(0)=0$ (Lemma~\ref{lem:u-odd}); the theorem does
+      not decide whether
       another locked configuration exists at larger $|s|$.
     \end{theorem}
 
@@ -513,7 +519,8 @@ Independent Researcher, France\\
 
     \begin{proposition}[Schur-null and Schur-transverse loci on the A4 locus]
       \label{prop:dichotomy}
-      The identification of the transverse and null loci is established at operator level in the Schur reduction~\cite{Beau2026prs}
+      The identification of the transverse and null loci is established at operator level in the Schur
+      reduction~\cite{Beau2026prs}
       under the hypotheses stated there; transposed to the A4 locus through Hypothesis~\ref{hyp:chiral-two-form}
       ($\iota$ linear and injective) it reads as follows.
       On the chiral-odd A4 locus:
@@ -538,7 +545,9 @@ Independent Researcher, France\\
     The genus of Theorem~\ref{thm:reduction} is the sign of $\Pchi_{\mu\nu}\Pchi^{\mu\nu}$, fixed by the index structure
     of the chiral polarisation~\eqref{eq:Pchi-schur} once a two-form carrier is supplied
     (Hypothesis~\ref{hyp:chiral-two-form}).
-    The projected Dirac square has the Lichnerowicz form
+    In the regime where the compression remainder of~\cite{Beau2026prs} is the projective endomorphism
+    of~\cite{Beau2026q14},
+    the projected Dirac square has the Lichnerowicz form
     $E=\tfrac{R}{4}+\tfrac12\gamma^\mu\gamma^\nu F^a_{\mu\nu}T^a+\Epi$~\cite{Beau2026q14, Beau2026prs}; its bivector
     term is the gauge curvature, a summand distinct from $\Epi$, so no source writes the chiral polarisation as a
     Clifford bivector.
@@ -633,7 +642,7 @@ Independent Researcher, France\\
 
     \begin{lemma}[Parametrisation dependence of the quartic coefficient]
       \label{lem:gauge}
-      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}.
+      Assume Hypotheses~\ref{hyp:lorentzian} and~\ref{hyp:chiral-two-form}, and $\Pchi_{\mu\nu}\Pchi^{\mu\nu}\neq0$.
       Under an odd reparametrisation $s=t+\alpha t^3+O(t^5)$, the two-form $\hat\Fchi(t)=\Fchi(s(t))$ has the same
       $\Pchi$ and the cubic response $\hat{\mathcal R}_\chi=\mathcal R_\chi+\alpha\Pchi$, so that
       $\Pchi\cdot\hat{\mathcal R}_\chi=\Pchi\cdot\mathcal R_\chi+\alpha\,\Pchi_{\mu\nu}\Pchi^{\mu\nu}$, and the
@@ -744,70 +753,32 @@ Independent Researcher, France\\
       \label{rem:conditional-sign}
       Hypothesis~\ref{hyp:fixed-generator-orbit} is not derived from the present corpus: the complexification fixes
       the tangent direction $X$, not the orbit.
-      Under it, $\partial_s^3 P|_{0} = \operatorname{ad}_X^2(\partial_s P|_{0})$, and on the rank-one $\JPi$-odd
-      outer-weight direction (the antisymmetric mode $e_+ - e_-$) this collapses to
-      \[
-        \partial_s^3 P|_{0} = -4|b|^2\, \partial_s P|_{0}, \qquad \mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2\, \Pchi ,
-      \]
-      with $b$ the amplitude of $X$ on that mode: the cubic response is parallel to the polarisation.
-      A $\Pchi$-parallel $\mathcal{R}_{\chi}$ is pure reparametrisation gauge, removable by the odd modulus
-      transformation $\mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha \Pchi$: the two-form trajectory is then the
-      straight ray $\Fchi(s) = (s - \tfrac{2}{3}|b|^2 s^3)\, \Pchi$, the quartic of $\Dchi$ is gaugeable to the marginal
-      value, and the apparent interior minimum is only the fold of the non-affine modulus.
-      A straight ray has no curvature, so $\Dchi$ decreases monotonically to the bound
-      (Corollary~\ref{cor:radial-contact}).
-      A genuine interior lock would require a $\Pchi$-transverse component of $\mathcal{R}_{\chi}$, absent on the
-      rank-one mode and not supplied by a fixed-generator orbit; it is part of the open path-curvature datum.
+      Under it, $\partial_s^3 P|_{0} = \operatorname{ad}_X^2(\partial_s P|_{0})$.
+      If $\mathcal{R}_{\chi}$ is parallel to $\Pchi$, it is pure reparametrisation gauge, removable by the odd modulus
+      transformation $\mathcal{R}_{\chi} \mapsto \mathcal{R}_{\chi} + \alpha \Pchi$, and the trajectory is straight to
+      order $s^3$ in the corresponding chart, with no quartic term in $\Dchi$ for a purely electric two-form
+      (Lemma~\ref{lem:gauge}).
+      A $\Pchi$-transverse component $\mathcal{R}_{\chi,\perp}$ is not supplied by the fixed-generator orbit hypothesis
+      and is part of the open path-curvature datum.
     \end{remark}
 
-    \begin{hypothesis}[Cubic-order transport and equivariance, {[H-Tr3]}]
-      \label{hyp:cubic-transport}
-      The $\JPi$-odd third-order Schur tilt $T_{\mathrm{out}}(\partial_s^3P|_0)$ of the locking operator is determined
-      by
-      the generator $\log g$ of the oriented metaplectic step through the same transport as the first-order tilt, and
-      the
-      transport $T$ and the map $\iota$ are $\mathfrak{su}(2)$-equivariant for the adjoint action on the generation
-      triplet.
-      The transport hypothesis [H-Tr] of~\cite{Beau2026prs} is of first order only and says nothing at cubic order.
-      No source supplies this hypothesis.
-    \end{hypothesis}
-
-    \begin{remark}[Path-invariant cascade generator and the spin obstruction to calibration]
+    \begin{remark}[Cubic transverse channel of the cascade generator]
       \label{rem:path-invariant}
-      Under the adjoint action of the generation $\mathrm{su}(2)$ the endomorphism algebra decomposes into irreducibles,
-      $\mathrm{End}(\Cgen) = \mathbf{1} \oplus \mathbf{3} \oplus \mathbf{5}$, with $\Jthree$ pure spin one and the
-      weight-two mixing direction that the transverse cubic response $\mathcal{R}_{\chi}$ must reach pure spin two, in
-      distinct irreducible components.
-      Under Hypothesis~\ref{hyp:cubic-transport}, Schur's lemma says that the transport acts on each component by an
-      independent scalar, so calibrating the spin-one (genus) channel of the transport to the supplied polarisation does
-      not fix the spin-two (transverse) scalar: the component $\mathcal R_{\chi,\perp}$ is not reachable by genus
-      calibration.
-      The transverse cubic response is moreover sourced only by the complex metaplectic phase $\gamma$ of the Lorentzian
-      complexification, through the unique weight-balanced bracket combination; the real symplectic cascade of the model
-      of~\cite{Beau2026q14} carries $\gamma = 0$ and its $\Jthree$ enters only at second Baker--Campbell--Hausdorff
-      order,
-      so its transverse cubic response vanishes.
-      This vanishing is path-invariant: for a weight-preserving reference $P_0$ the phase generator commutes with $P_0$,
-      so a phase adjacent to $P_0$ is a no-op and every ordering of the real cascade gives the same vanishing transverse
-      component, for every reference $P_0 = \diag(p_0, p_1, p_2)$.
-      Hence the statement about the cascade generator does not rest on Hypothesis~\ref{hyp:fixed-generator-orbit}:
-      on the real cascade of the model the transverse channel is empty independently of the single-generator model, and
-      a sixth-order interior stationary point would require
-      both a complex phase $\gamma \neq 0$, absent from the real cascade of the model, and a placement of that phase in
-      the cascade,
-      since the transverse cubic datum vanishes when the phase follows the real cascade and is non-zero otherwise, with no
-      placement prescribed.
-      These statements concern the cascade generator; their transfer to the cubic tilt of the locking operator uses
-      Hypotheses~\ref{hyp:chiral-two-form} and~\ref{hyp:cubic-transport}, not the first-order transport hypothesis of
-      PRS.
+      The transverse cubic response $\mathcal R_{\chi,\perp}$ must lie in a spin-two component of
+      $\mathrm{End}(\Cgen)=\mathbf 1\oplus\mathbf 3\oplus\mathbf 5$, while $\Jthree$ is pure spin one.
+      Under Hypothesis~\ref{hyp:cubic-transport}, Schur's lemma then says that the transport acts on each component by
+      an independent scalar, so calibrating the spin-one (genus) channel does not fix the spin-two scalar.
+      Whether the cubic transverse channel of the real cascade generator vanishes is not established here: the claim
+      that it is sourced only by a complex metaplectic phase is not verified, and a direct evaluation of
+      $\operatorname{ad}_X^3$ on the weight-diagonal reference $P_0=\diag(0.3,1,0.7)$ with the real generator
+      $X=\log g$, $g=\exp(E)\exp(2F)$, gives a non-zero $\JPi$-odd weight-two entry.
+      No statement about the emptiness of this channel, about the position of a sixth-order interior stationary point,
+      or about a locking mechanism is made.
     \end{remark}
 
-    On the real cascade of the model, under Hypotheses~\ref{hyp:chiral-two-form} and~\ref{hyp:cubic-transport}, the
-    transverse cubic channel is empty.
-    This does not select a locking mechanism: the choice between a boundary contact and an interior stationary point of
-    the radicand is not established here.
-    What remains is the magnitude $|u|$, fixed by the chiral-frontier normalisation $\mathcal{N}_A$, whose dictionary
-    status is recorded in Section~\ref{sec:status}.
+    The cubic-order data of the locking trajectory are therefore open: Hypothesis~\ref{hyp:cubic-transport} is the
+    premise under which they could be read from the cascade generator, and the magnitude $|u|$ is fixed through the
+    chiral-frontier normalisation $\mathcal{N}_A$, whose dictionary status is recorded in Section~\ref{sec:status}.
 
   \section{Chart covariance of the defect rate and of the first contact}
     \label{sec:boundary}
@@ -859,8 +830,8 @@ Independent Researcher, France\\
       lock.
       The quartic coefficient that could distinguish them is chart-dependent
       (Proposition~\ref{prop:amplitude-dichotomy}),
-      a sixth-order interior stationary point is conditional on a complex metaplectic phase and an ordering that no
-      source fixes (Remark~\ref{rem:path-invariant}), and Hypothesis~\ref{hyp:local-min} does not distinguish a boundary
+      the cubic transverse channel of the cascade generator is not established (Remark~\ref{rem:path-invariant}), and
+      Hypothesis~\ref{hyp:local-min} does not distinguish a boundary
       contact from an interior minimum.
       The existence of a locked pair is the content of Hypothesis~\ref{hyp:nondegenerate}.
       The magnitude $|u|=|u(s_*)|$ then involves the value of the split at the contact, sourced at first order by the
@@ -872,10 +843,11 @@ Independent Researcher, France\\
     \label{sec:status}
 
     \paragraph{Anchored upstream (proved/structural).}
-      The Born--Infeld determinantal action carried by an antisymmetric field strength~\cite{Beau2026c}; equivariant
-      Born--Infeld parity, the fibre reading of the involution $c \leftrightarrow q-c$ being a structurally motivated
+      Equivariant Born--Infeld parity, the fibre reading of the involution $c \leftrightarrow q-c$ being a structurally
+      motivated
       hypothesis (O18~\cite{Beau2026a22}); the finite $\JPi$-equivariance and $u_{\mathrm{fin}} = 0$ for
-      $q$ an odd prime~\cite{Beau2026prs}; the oriented frontier cocycle on directed edges~\cite{Beau2026q11of} and the
+      $q$ an odd prime, under the equivariant construction of~\cite{Beau2026prs}; the oriented frontier cocycle on
+      directed edges~\cite{Beau2026q11of} and the
       symmetric-shell cancellation $\Theta_{\mathrm{raw}} = 0$~\cite{Beau2026aar}; the identification of the
       Schur-null and Schur-transverse loci of~\cite{Beau2026prs} under its hypotheses; the projection-locking theorem
       and axiom A4~\cite{Beau2026a26, Beau2026m}.
@@ -931,16 +903,11 @@ Independent Researcher, France\\
       No source supplies any of them; each is a missing element, not an excluded one.
 
     \paragraph{Conditional (this note).}
-      A sixth-order interior stationary point of the radicand --- a $\Pchi$-transverse cubic response, equivalently a
-      non-empty spin-two channel --- is doubly conditional on two independent inputs the corpus does not fix.
-      It requires a complex metaplectic phase $\gamma \neq 0$, absent from the real cascade of the model; and, even
-      granting the phase, a placement of it in the cascade, since the transverse cubic datum vanishes when the phase
-      follows the real cascade and is non-zero otherwise, with no placement prescribed
-      (Remark~\ref{rem:path-invariant}), and the transfer of these statements to the locking operator needs
-      Hypothesis~\ref{hyp:cubic-transport}.
-      The fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit} is one special case, on which the cubic tilt
-      collapses on the rank-one $\JPi$-odd outer-weight mode to $\mathcal{R}_{\chi} = -\tfrac{2}{3}|b|^2 \Pchi$, parallel
-      to the polarisation, hence pure reparametrisation gauge (Remark~\ref{rem:conditional-sign}).
+      The cubic transverse channel of the real cascade generator, and the position of any sixth-order interior
+      stationary point of the radicand, are not established (Remark~\ref{rem:path-invariant}); their transfer to the
+      locking operator needs Hypothesis~\ref{hyp:cubic-transport}.
+      The fixed-generator orbit Hypothesis~\ref{hyp:fixed-generator-orbit} gives $\partial_s^3P|_0=\operatorname{ad}_X^2
+      (\partial_sP|_0)$ and a transverse component that it does not fix (Remark~\ref{rem:conditional-sign}).
       Not concluded.
 
     \paragraph{Contact (this note, Section~\ref{sec:boundary}).}

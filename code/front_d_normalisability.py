@@ -8,10 +8,10 @@ physical point.
 
 Grounding in the A4-note (Beau2026bim):
   - saturation is the radicand contact: D_chi(s) >= 0 with saturation D_chi(s) -> 0; for a supplied electric
-    (timelike) chiral polarisation D_chi reaches 0 at finite |s|, where A4 locks a non-trivial pair +-s_*
+    (timelike) chiral polarisation D_chi reaches 0 at finite |s|, where an A4 lock, if it occurs there, is a non-trivial pair +-s_* (hypothesis)
     (A4-note Sec. "The Born-Infeld saturation margin");
   - the projector modulus s_proj (Front C) and the BI saturation modulus s_BI are related by a
-    non-degenerate odd reparametrisation s_BI = phi(s_proj), phi(0)=0, phi'(0)!=0 (Lemma "Tangential
+    non-degenerate odd reparametrisation s_BI = phi(s_proj), phi(0)=0, phi'(0)!=0 (Hypothesis "Tangential
     coincidence"), so they label the SAME physical point;
   - sign(mu_chi^2) is reparametrisation-invariant (Corollary "Reparametrisation-invariance of the genus").
 

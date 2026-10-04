@@ -1,4 +1,9 @@
-"""Front D1: boundary-vs-interior selection test for the A4 chiral lock.
+"""Scope note (A4-Note 3.0): wording below about an 'admissible', 'unique' or 'fence-admissible' lock and about the
+quartic coefficient as an 'open datum' is exploratory and superseded. In A4-Note 3.0 the quartic coefficient of the
+radicand is chart-dependent and no selection of the A4 lock between a boundary contact and an interior stationary
+point is established; the checks below remain exact algebra only.
+
+Front D1: boundary-vs-interior selection test for the A4 chiral lock.
 
 Bias-independent, exact symbolic / exact-rational verification (no sampling) of the single remaining
 Front D conditionality (fermionic-matter/front-d-normalisability-test.md): which configuration A4 locks,
@@ -21,8 +26,8 @@ The test verifies:
 
 Conclusion (printed): within the no-circularity fence, only the radicand contact defines a
 chart-independent A4 lock from the available data; the interior lock is contingent on a future
-first-principles derivation of the phase and ordering. Hence the boundary branch is uniquely admissible
-and |u| = |u(s_*)| at the contact is the fence-admissible normalisation, no longer branch-conditional.
+first-principles derivation of the phase and ordering. No selection of the lock is established: the contact
+value |u(s_*)| is the normalisation if a boundary lock is assumed.
 
 No figures. Code and comments in English.
 """
@@ -97,7 +102,7 @@ def main():
     print()
     print("ANSWER: within the no-circularity fence, only the radicand contact D_chi(s_*)=0 defines a")
     print("chart-independent A4 lock from the available data; the interior lock is inadmissible unless the")
-    print("non-derived complex phase/ordering is supplied. Boundary branch uniquely admissible.")
+    print("non-derived complex phase/ordering is supplied. No selection of the lock is established.")
     print("ALL EXACT CHECKS PASSED")
 
 

@@ -20,9 +20,9 @@ datum):
 
 Five results are verified.
   (A) Leading order: dropping the quartic, the contact Delta_chi(s_*) = 0 gives s_*^2 = 1/a, i.e.
-      s_* = beta / |E_P| exactly. This is the boundary branch of prop:amplitude-dichotomy.
+      s_* = beta / |E_P|, exact for the exactly straight ray (cor:radial-contact), not for a general trajectory.
   (B) Quartic correction: keeping the quartic, the smallest positive root (first saturation contact, the
-      fence-admissible boundary branch) is s_*^2 = (a - sqrt(a^2 - 4b)) / (2b), whose series about b = 0 is
+      first contact, selection of the lock not established) is s_*^2 = (a - sqrt(a^2 - 4b)) / (2b), whose series about b = 0 is
           s_*^2 = 1/a + b/a^3 + 2 b^2/a^5 + O(b^3),
       hence  s_* = (beta/|E_P|) [ 1 + (P.R_chi) beta^2 / (2 |E_P|^4) + O(b^2) ].
       The correction is carried entirely by the quartic coefficient b = P.R_chi/beta^2.
@@ -34,8 +34,8 @@ Five results are verified.
       quartic term, so the contact is exactly t_* = beta/|E_P|. We verify that the parallel part of R_chi
       is removable by the odd reparametrisation that affinises the ray: it does not move the invariant
       contact. So s_* = beta/|E_P| is the value in the natural (affine) gauge.
-  (E) Transverse residue: only a P-TRANSVERSE component of R_chi (sourced by the open complex metaplectic
-      phase gamma, rem:path-invariant) can shift s_* away from beta/|E_P|. It is the SAME single open datum
+  (E) Transverse residue: only a P-TRANSVERSE component of R_chi (cubic channel not established,
+      rem:path-invariant) can shift s_* away from beta/|E_P|. It is the SAME single open datum
       already isolated by the A4-note, not a new unknown.
 
 Conclusion (printed): the radial factor is s_* = beta/|E_P| in the affine gauge, with the only correction
