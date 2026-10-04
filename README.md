@@ -34,22 +34,22 @@ Results, each for a supplied two-form and under the hypotheses named in the pape
 
 Hypotheses that no source supplies are stated where used: a full-rank Lorentzian co-metric, the construction of the
 two-form from the locking data, the local-minimum reading of A4, the existence and non-degeneracy of the locked pair,
-the coincidence with the Born–Infeld modulus, a cubic-order transport hypothesis, and from PRS the chiral splitting,
+the coincidence with the Born–Infeld modulus, and from PRS the chiral splitting,
 the contraction and symbol hypotheses of its Schur form, the generation-carrier hypothesis with $J_\Pi$-compatibility,
 and the first-order transport hypothesis. The genus is not
 determined: the central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
-The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus (it
-shifts by $\alpha\,P\cdot P$ under $s \to s + \alpha s^3$), so it selects neither a boundary contact nor an interior
-stationary point; the component of the cubic response orthogonal to $P$ is the intrinsic datum. For a supplied purely
-electric two-form whose trajectory is exactly straight, the radicand is $1 - |E|^2 t^2/\beta^2$ and the first contact
-is $t_* = \beta/|E|$ exactly; for other trajectories this value is an approximation on a domain the corpus does not
-control. The defect rate is covariant under reparametrisation, and the first contact and $|u(s_*)|$ are
-chart-independent
-when the contact exists. No selection of the A4 lock between a boundary contact and an interior stationary point is
-established. The magnitude $|u|$ is not predicted: it is fixed through the chiral-frontier normalisation
+The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
+(it shifts by $\alpha\,P\cdot P$ under $s \to s + \alpha s^3$), so it selects neither a boundary contact nor an
+interior stationary point. Under the construction hypothesis the carrier is one-dimensional, so the two-form trajectory
+is collinear and the cubic response is parallel to $P$. For a purely electric two-form the radicand is then exactly
+$1 - |E|^2 \varphi(s)^2/\beta^2$, a contact exists if and only if $|\varphi|$ reaches $\beta/|E|$, and in the chart
+$t = \varphi(s)$ the first contact is $t_* = \beta/|E|$. The defect rate is covariant under reparametrisation, and the
+first contact and $|u(s_*)|$ are chart-independent when the contact exists. No selection of the A4 lock between a
+boundary contact and an interior stationary point is established. The magnitude $|u|$ is not predicted: it is fixed
+through the chiral-frontier normalisation
 $\mathcal{N}_A$, a dictionary-bound quantity.
 
 The even sector $\mathrm{diag}(1, \tfrac{1}{2}, \tfrac{1}{2})$ of $E_\Pi^2$ is the algebraic value of
