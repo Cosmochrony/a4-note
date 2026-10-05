@@ -18,7 +18,7 @@ split coefficient $u$.
 Results, each for a supplied two-form and under the hypotheses named in the paper:
 
 1. **Symmetric square.** The generation modulus is $J_\Pi$-odd under a $J_\Pi$-covariant family, and the symmetric
-   square $M = F_\chi F_\chi$ of an odd two-form is $J_\Pi$-even, so it cannot carry the branch sign; the carrier is
+   square $M = F_\chi F_\chi$ of an odd two-form is $J_\Pi$-even, so it cannot carry the orientation sign; the carrier is
    taken, by hypothesis, to be an odd antisymmetric chiral two-form $F_{\chi,\mu\nu}(s)$.
 
 2. **Saturation functional.** $\mathcal{B}_{\mathrm{sat}}(s)$ is defined as the Born–Infeld determinantal saturation
@@ -78,3 +78,11 @@ bash compile.sh
 
 Runs `pdflatex → bibtex → pdflatex → pdflatex` on `tex/A4Note.tex` and produces
 `out/A4Note.pdf`.
+
+## Known debt (scripts)
+
+Seven scripts in `code/` do not run from a fresh clone and support no retained result: `front_capacity_cell_depth.py`
+(missing `.npz` data) and `front_interlevel_cell_depth.py`, `front_intrinsic_stabilisation_depths.py`,
+`front_quantised_resolution_density.py`, `front_quantum_cell_depth.py`, `front_renewed_floor_multicycle.py`,
+`front_valency_forced_hardexit.py` (missing module `spectral_relaxation_lib`). The TeX does not cite them; they are
+inherited from `main` and recorded here as debt, not as evidence.

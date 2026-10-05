@@ -63,7 +63,7 @@ Independent Researcher, France\\
     This companion of the Projective Residue Schur reduction (PRS) examines the Lorentzian saturation functional
     controlling the generation split \texorpdfstring{$u$}{u}.
     The symmetric square of the \texorpdfstring{$\JPi$}{J_Π}-odd modulus is \texorpdfstring{$\JPi$}{J_Π}-even and
-    cannot carry the branch
+    cannot carry the orientation
     sign; the carrier is taken, by hypothesis, to be an odd antisymmetric chiral two-form
     \texorpdfstring{$\Fchi_{\mu\nu}(s)$}{F_{μν}(s)}.
     \texorpdfstring{$\Bsat(s)$}{B_sat(s)} is defined as the Born--Infeld determinantal saturation margin of such a
@@ -150,6 +150,7 @@ Independent Researcher, France\\
 
     \begin{hypothesis}[Lorentzian effective co-metric, {[H-Lor]}]
       \label{hyp:lorentzian}
+      \sloppy
       The effective co-metric is a full-rank four-dimensional Lorentzian co-metric of signature $(-,+,+,+)$.
       Only the signature enters the genus.
       No source supplies it: Q5b has rank three, Q8 is conditional, and Q11 gives this signature only for a negative
@@ -242,11 +243,11 @@ Independent Researcher, France\\
         M(-s) = M(s), \qquad M(0) = 0, \qquad \partial_s M(0) = 0 .
       \end{equation}
       Consequently every scalar functional $\Phi[M]$ is even in $s$ to the order at which $M$ is even and obeys
-      $\partial_s \Phi[M]|_{s=0} = 0$; it assigns the same value to the two $\JPi$-conjugate branches $\pm s_*$ and is
+      $\partial_s \Phi[M]|_{s=0} = 0$; it assigns the same value to the two $\JPi$-conjugate orientation branches $\pm s_*$ and is
       therefore
       blind to the sign of $u$.
       The split modulus cannot be carried by $M$.
-      A variable that resolves the two branches must change sign under $s \mapsto -s$; the odd antisymmetric two-form
+      A variable that resolves the two orientation branches must change sign under $s \mapsto -s$; the odd antisymmetric two-form
       of Hypothesis~\ref{hyp:chiral-two-form} does.
       This note does not show that it is the only odd carrier.
     \end{lemma}
@@ -259,7 +260,7 @@ Independent Researcher, France\\
       For any functional $\Phi[M]$ the chain rule gives
       $\partial_s \Phi[M]|_{0} = (\delta\Phi/\delta M) : \partial_s M|_{0} = 0$, so $\Phi$ has no linear response to the
       modulus.
-      The branch choice is the sign of $u(s_*) = -u(-s_*)$ by Lemma~\ref{lem:u-odd}; distinguishing $+s_*$ from
+      The choice of orientation branch is the sign of $u(s_*) = -u(-s_*)$ by Lemma~\ref{lem:u-odd}; distinguishing $+s_*$ from
       $-s_*$ requires a quantity odd in $s$, which $\Phi[M]$ is not.
       Therefore $M$ cannot be the primary modulus variable.
       The odd two-form of Hypothesis~\ref{hyp:chiral-two-form} changes sign under $s \mapsto -s$, as the
@@ -280,7 +281,7 @@ Independent Researcher, France\\
     \end{proof}
 
     The lemma shows that the symmetric replacement $M^{\mu}{}_{\nu} = \Fchi^{\mu\rho} \Fchi_{\rho\nu}$ cannot be the
-    primary variable: it removes the sign, hence the orientation that distinguishes the two branches.
+    primary variable: it removes the sign, hence the orientation that distinguishes the two orientation branches.
 
     \begin{hypothesis}[Construction of the chiral two-form, {[H-F]}]
       \label{hyp:chiral-two-form}
@@ -573,15 +574,15 @@ Independent Researcher, France\\
       \begin{itemize}
         \item if the locking is Schur-transverse, then $\Pchi\neq0$ by the injectivity of $\iota$, and the reduction
         $\muchi = \tfrac12 \Pchi_{\mu\nu} \Pchi^{\mu\nu}$ of Theorem~\ref{thm:reduction} is the genus computation;
-        \item if the locking is Schur-null, then $\Pchi = 0$ and $\muchi = 0$ at quadratic order, the marginal branch
+        \item if the locking is Schur-null, then $\Pchi = 0$ and $\muchi = 0$ at quadratic order, the marginal case
         of the trichotomy of Theorem~\ref{thm:reduction}, decided by the first non-vanishing even coefficient
         $\lambda_{2k}$ rather than directly by $u = 0$.
       \end{itemize}
     \end{proposition}
 
     PRS~\cite{Beau2026prs} identifies the Schur-null and Schur-transverse loci under explicit hypotheses and leaves
-    the branch open: the oriented metaplectic step has the exact $\mathfrak{sl}_2$ opening
-    $\alpha(t,s)=ts\,r/\sinh r\not\equiv0$ with $\mu(t,s)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
+    the Schur-null/Schur-transverse alternative open: the oriented metaplectic step has the exact $\mathfrak{sl}_2$ opening
+    $\alpha(x,y)=xy\,r/\sinh r\not\equiv0$ with $\mu(x,y)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
     transport hypothesis [H-Tr] of PRS.
     By Corollary~\ref{cor:reparam} the genus does not depend on the positive Jacobian $\psi'(0)$.
 
@@ -843,6 +844,7 @@ Independent Researcher, France\\
 
     \begin{proposition}[The defect rate is reparametrisation-covariant]
       \label{prop:rate-covariant}
+      \sloppy
       Assume $\Dchi(P(0))=0$, which holds when $P(0)$ commutes with $J_\Pi$.
       Under a reparametrisation of the modulus $s \mapsto \psi(s)$, $\psi(0) = 0$, $\psi'(0) \neq 0$, the defect
       rate is covariant, not invariant: it rescales by the Jacobian $\psi'(0)$.
@@ -863,7 +865,7 @@ Independent Researcher, France\\
       point $-\Fchi(s_*)$); the parameter value
       $s_*$ itself transforms with the chart.
       The value $u(s_*)$ at that point is invariant under orientation-preserving reparametrisation, and $|u(s_*)|$
-      under every odd reparametrisation, the sign labelling the branch.
+      under every odd reparametrisation, the sign labelling the orientation branch.
     \end{proposition}
 
     \begin{proof}
@@ -927,7 +929,7 @@ Independent Researcher, France\\
     \paragraph{Loci in PRS~\cite{Beau2026prs}.}
       PRS identifies the Schur-null and Schur-transverse loci of the opened direction $\partial_s P|_{0}$; which holds
       is
-      open, because the transport of the metaplectic opening $\alpha(t,s)=ts\,r/\sinh r$ to the transported tilt is a
+      open, because the transport of the metaplectic opening $\alpha(x,y)=xy\,r/\sinh r$ to the transported tilt is a
       hypothesis of PRS.
 
     \paragraph{Genus (this note).}
@@ -966,9 +968,9 @@ Independent Researcher, France\\
       when the contact exists.
 
     \paragraph{Front D factorisation (conditional).}
-      The statement below is conditional on [H-Gen] of~\cite{Beau2026prs} in its multiplicative reading of the
-      triplet (the generation triplet is an $E_\Pi$-invariant subspace, as in the realisation of~\cite{Beau2026ebj}),
-      on the transport hypothesis [H-Tr], on [H-F] and [H-Nd] for the trajectory and the contact, and on the
+      The statement below is conditional on [H-Gen] of~\cite{Beau2026prs} together with its separate multiplicative-reading
+      hypothesis [H-Mult] (the generation triplet is read as an $E_\Pi$-invariant subspace, as in the realisation
+      of~\cite{Beau2026ebj}), on the transport hypothesis [H-Tr], on [H-F] and [H-Nd] for the trajectory and the contact, and on the
       localisation hypothesis that follows.
       Under the localisation hypothesis that the first-order source of the split is exhausted by the transported
       left-handed block $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent, that is, that the $J_3$ component
@@ -988,8 +990,8 @@ Independent Researcher, France\\
       The sign $\varepsilon=\pm1$ is a convention sign: with $E_1^{\mathrm{aux}}=-G_0\dot Q(0)G_0^{*}$ and
       $T_{J_3}$ the transport $\langle J_3, G_0\dot Q(0)G_0^{*}\rangle$ of the odd tangent one finds $\varepsilon=+1$ on
       the witness of~\cite{Beau2026ebj}, and $\varepsilon=-1$ if $T_{J_3}$ is defined on $E_1^{\mathrm{aux}}$.
-      That $E_\Pi\preceq0$ fixes the sign of $E_0$ holds in the multiplicative reading only; under the real-linear
-      reading map of~\cite{Beau2026prs} the sign is not derived here.
+      That $E_\Pi\preceq0$ fixes the sign of $E_0$ holds under [H-Mult] only; under [H-Gen] alone, with its real-linear
+      reading map, the sign is not derived here.
       The functional $T_{J_3}$ is real-linear, not complex-linear, since the $RR$ block enters through a conjugate;
       $s_*$ is the first contact $\Dchi(s_*) = 0$ when it exists, carrying the dependence on the trajectory of the
       two-form; and $T_{J_3}$ is the oriented Cartan projection
@@ -1010,6 +1012,9 @@ Independent Researcher, France\\
       of [H-Gen], where $J_\Pi^2=-1$ on $\mathcal S_\Pi$.
       The even normal form is non-zero and $J$-even, so by the remark of~\cite{Beau2026prs} on compatibility with Q14 it
       cannot sit on the left-admissible branch of Q14 in the chiral frame of that note.
+      Three objects are kept apart: the rate $u'(0)$; the first-order normal form
+      $\diag(1,\tfrac12+u,\tfrac12-u)$, valid to first order in $s$ only; and the contact value $u(s_*)$, whose linear
+      term $u'(0)\,s_*$ is the only part treated here and is not controlled at the contact.
       Under the hypothesis the remaining magnitude data are the two upstream quantities already isolated --- the radial
       contact $s_*$ through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
@@ -1020,7 +1025,7 @@ Independent Researcher, France\\
       chart $t=\varphi(s)$ when $|\varphi|$ reaches that value (Corollary~\ref{cor:radial-contact}); its position in the
       Schur modulus is not determined, and the quartic coefficient does not enter it intrinsically
       (Lemma~\ref{lem:gauge}).
-      The numerical magnitude of the split routes through the upstream normalisations $\beta$,
+      The numerical magnitude of the split routes through the upstream normalisations $\beta$ (the Born--Infeld scale),
       $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
 
     \paragraph{Open.}
@@ -1057,8 +1062,8 @@ Independent Researcher, France\\
       since $1/10$ is a dictionary value and $\mathcal{N}_A$ its conversion factor.
       The genuine first-principles front is therefore upstream and structural, not a numerical amplitude: the ADE case
       selection and the level-to-generation map, the derivation of the projective-resolution growth
-      $\Lambda_{\mathrm{proj}}(n)$ and of the cascade exponent $\beta$ (the central open problem
-      of~\cite{Beau2026a4}; no structural bound on $\beta$ is established, the Born--Infeld/Ramanujan route not
+      $\Lambda_{\mathrm{proj}}(n)$ and of the cascade exponent $\beta_{\mathrm{casc}}$ (the central open problem
+      of~\cite{Beau2026a4}; no structural bound on $\beta_{\mathrm{casc}}$ is established, the Born--Infeld/Ramanujan route not
       yielding one~\cite{Beau2026a8}), and the derivation of the transfer constant $N_{\mathrm{casc}}$ that
       fixes $\mathcal{N}_A$~\cite{Beau2026q14}.
 
