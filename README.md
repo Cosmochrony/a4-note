@@ -43,16 +43,16 @@ temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zer
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
 A conditional factorisation of the contact split to first order in $s_*$ (Front D) is given under [H-Gen], [H-Mult],
-[H-Tr], [H-F], [H-Nd] and a localisation hypothesis that fails in the only available witness (EBJ); it fixes no
-magnitude.
+[H-Tr], [H-F], [H-Nd] and the $J_\Pi$-covariance and diagonal-form premises of Lemma~u-odd, and a localisation hypothesis that fails in the
+available witnesses of the eliminated-block note (EBJ), which also fall outside [H-Gen](i); it fixes no magnitude.
 
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
 (it shifts by $\omega\,P\cdot P/\beta^2$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
 interior stationary point. Under the construction hypothesis the carrier is one-dimensional, so the two-form trajectory
 is collinear and the cubic response is parallel to $P$. For a purely electric two-form the radicand is then exactly
-$1 - |E|^2 \varphi(s)^2/\beta^2$, a contact exists if and only if $|\varphi|$ reaches $\beta/|E|$, and in the chart
-$t = \varphi(s)$ the first contact is $t_* = \beta/|E|$. The defect rate is covariant under reparametrisation, and the
-first contact and $|u(s_*)|$ are chart-independent when the contact exists. No selection of the A4 lock between a
+$1 - |E_{F_0}|^2 \varphi(s)^2/\beta^2$ (collinear ray $F_\chi(s)=\varphi(s)F_0$, $E_{F_0}$ its electric field), a contact exists if and only if $|\varphi|$ reaches $\beta/|E_{F_0}|$, and in the chart
+$t = \varphi(s)$ the first contact is $t_* = \beta/|E_{F_0}|$. The defect rate is covariant under reparametrisation, and the
+first contact is chart-independent when it exists, and so is $|u(s_*)|$ under the premises of the oddness lemma and [H-Gen]. No selection of the A4 lock between a
 boundary contact and an interior stationary point is established. The magnitude $|u|$ is not predicted: it is fixed
 through the chiral-frontier normalisation
 $\mathcal{N}_A$, a dictionary-bound quantity.

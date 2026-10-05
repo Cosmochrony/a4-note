@@ -17,16 +17,17 @@ R_mix = [[0,0,0],[0,0,1],[0,-1,0]].
 
 Tests.
   (1) Reduction to defect: <J_3, E_1> depends only on the J_Pi-odd defect, not on the J_Pi-even chiral sum.
-  (2) Generation projection: <J_3, E_1> = T_{J_3}(defect) = the Cartan (H/J_3) component of the Sym^2-lifted
+  (2) Generation projection (convention of this script: T_{J_3} := <J_3, .>/<J_3, J_3>, the J_3-component; the TeX T is
+      <J_3, .>): the J_3-component of E_1 = T_{J_3}(defect) = the Cartan (H/J_3) component of the Sym^2-lifted
       transported defect -- a CLOSED linear functional (the E,F off-diagonal content drops under the J_3
       projection). So the projection closes as a map, independent of the explicit Pi_S, D^pm beyond
       symbol-compatibility.
   (3) Norm vs sign: T_{J_3} evaluated on the oriented cascade is the oriented symplectic AREA
-      alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence a branch
+      alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence an orientation
       sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
-Conclusion (printed): conditional factorisation u_partial = sqrt(2) eta s_* T_{J_3}(d_s Delta_chi)/<J_3,J_3>
-(first order in s_*), with T_{J_3} the angular oriented area (dictionary-bound through N_A) and s_* the first contact of
+Conclusion (printed): conditional factorisation u_partial = sqrt(2) eta s_* T_{J_3}(d_s Delta_chi)
+(first order in s_*; T_{J_3} the J_3-component as above, = TeX T/<J_3,J_3>), with T_{J_3} the angular oriented area (dictionary-bound through N_A) and s_* the first contact of
 the radicand. The localisation hypothesis itself is open. No figures. English.
 """
 
@@ -115,7 +116,7 @@ def main():
         assert ok, name
 
     print()
-    print("(1)+(2)  J3-component of E1 = T_J3(defect) = (Cartan/J3 component of the Sym^2-lifted transported defect)")
+    print("(1)+(2)  J3-component of E1 = T_J3(defect) (T_J3 := <J3,.>/<J3,J3>) = Cartan/J3 component of the Sym^2-lifted transported defect")
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
     print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
@@ -123,8 +124,7 @@ def main():
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
     print("CONDITIONAL FACTORISATION (localisation hypothesis, auxiliary compression):")
-    print("  u_partial = sqrt(2) eta s_* T_J3(d_s Delta_chi),  T_J3 here = <J3, .>/<J3,J3> (J_3-component;")
-    print("  the TeX T equals <J3, .>, hence the TeX formula carries the division by <J3,J3> explicitly),")
+    print("  u_partial = sqrt(2) eta s_* T_J3(d_s Delta_chi),  T_J3 = <J3, .>/<J3,J3> (J_3-component), i.e. TeX T/<J3,J3>,")
     print("  factors: sqrt(2) eta (even block, algebraic (C_2 - J_3^2)/C_2; sign of E_0 times the sign convention of T) x s_* (radial"
           " saturation, A4 R_chi open)")
     print("           x T_J3 (angular oriented area = N_A, dictionary-bound).")

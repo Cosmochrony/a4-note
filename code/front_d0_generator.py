@@ -3,13 +3,13 @@
 Exact complex-rational / symbolic arithmetic, no floating-point sampling.
 
 Frame: S_Pi = S_L (+) S_R, each C^2; antiunitary Born--Infeld parity J = Sigma_tau o conj with
-Sigma_tau = [[0, tau], [tau^{-1}, 0]]; tau = I is the chirality swap.
-Transported defect: Delta_chi(P) = pi_LL - tau conj(pi_RR) tau^{-1}.
+Sigma_tau = [[0, tau_ch], [tau_ch^{-1}, 0]]; tau_ch = I is the chirality swap.
+Transported defect: Delta_chi(P) = pi_LL - tau_ch conj(pi_RR) tau_ch^{-1}.
 
 Checked:
-  (1) Lemma (tau = I): [Pi_{J-odd}(1-P)]_LL = (1/2) Delta_chi(P), and its RR block is -(1/2) conj(Delta_chi(P)).
-  (2) Proposition (transported frame): the same LL identity for one real orthogonal tau, with Sigma_tau an involution.
-  (3) At an equivariant point (pi_LL = conj(pi_RR), tau = I) the defect and the odd diagonal blocks vanish.
+  (1) Lemma (tau_ch = I): [Pi_{J-odd}(1-P)]_LL = (1/2) Delta_chi(P), and its RR block is -(1/2) conj(Delta_chi(P)).
+  (2) Proposition (transported frame): the same LL identity for one real orthogonal tau_ch, with Sigma_tau an involution.
+  (3) At an equivariant point (pi_LL = conj(pi_RR), tau_ch = I) the defect and the odd diagonal blocks vanish.
   (4) Chiral block products for Pi_S = 1: E_LL = -D_- pi_RR D_+, E_RR = -D_+ pi_LL D_- with E = -D (1-P) D.
   (5) Rate identity: for a J-even orthogonal projector Q0 and a J-odd anti-Hermitian generator A, the Grassmann
       tangent Q1 = [A, Q0] is odd and off-diagonal with respect to Q0, and its LL block equals
@@ -40,17 +40,17 @@ def comm(A, B):
     return A * B - B * A
 
 
-def sigma_tau(tau):
-    return block(Z2, tau, tau.inv(), Z2)
+def sigma_tau(tau_ch):
+    return block(Z2, tau_ch, tau_ch.inv(), Z2)
 
 
-def parity(X, tau=I2):
-    St = sigma_tau(tau)
+def parity(X, tau_ch=I2):
+    St = sigma_tau(tau_ch)
     return St * X.conjugate() * St
 
 
-def odd(X, tau=I2):
-    return (X - parity(X, tau)) / 2
+def odd(X, tau_ch=I2):
+    return (X - parity(X, tau_ch)) / 2
 
 
 def hermitian(r1, r2, x, y):
@@ -65,17 +65,17 @@ def main():
     pi_LR = sp.Matrix([[1 + sp.I, 2], [sp.I, 3 - sp.I]])
     elim = block(pi_LL, pi_LR, pi_LR.H, pi_RR)
 
-    # (1) tau = I frame.
+    # (1) tau_ch = I frame.
     delta = pi_LL - pi_RR.conjugate()
     o = odd(elim)
     checks["bridge_tau_id.LL_is_half_defect"] = is_zero(o[0:2, 0:2] - delta / 2)
     checks["bridge_tau_id.RR_is_minus_half_conj_defect"] = is_zero(o[2:4, 2:4] + delta.conjugate() / 2)
 
-    # (2) General tau: real orthogonal, so tau conj(tau)^{-1} = 1 and Sigma_tau is an involution.
-    tau = sp.Matrix([[sp.Rational(3, 5), -sp.Rational(4, 5)], [sp.Rational(4, 5), sp.Rational(3, 5)]])
-    checks["bridge_tau.Sigma_tau_involution"] = is_zero(sigma_tau(tau) * sigma_tau(tau) - sp.eye(4))
+    # (2) General tau_ch: real orthogonal, so tau_ch conj(tau_ch)^{-1} = 1 and Sigma_tau is an involution.
+    tau_ch = sp.Matrix([[sp.Rational(3, 5), -sp.Rational(4, 5)], [sp.Rational(4, 5), sp.Rational(3, 5)]])
+    checks["bridge_tau.Sigma_tau_involution"] = is_zero(sigma_tau(tau_ch) * sigma_tau(tau_ch) - sp.eye(4))
     checks["bridge_tau.LL_is_half_transported_defect"] = is_zero(
-        odd(elim, tau)[0:2, 0:2] - (pi_LL - tau * pi_RR.conjugate() * tau.inv()) / 2
+        odd(elim, tau_ch)[0:2, 0:2] - (pi_LL - tau_ch * pi_RR.conjugate() * tau_ch.inv()) / 2
     )
 
     # (3) Equivariant point.
@@ -94,7 +94,7 @@ def main():
     # (5) Rate identity on a genuine Grassmann tangent.
     v = sp.Matrix([3, 4 + sp.I])
     q = (v * v.H) / (v.H * v)[0]
-    Q0 = block(q.conjugate(), Z2, Z2, q)  # J-even orthogonal projector for tau = I
+    Q0 = block(q.conjugate(), Z2, Z2, q)  # J-even orthogonal projector for tau_ch = I
     checks["tangent.Q0_even_projector"] = is_zero(Q0 * Q0 - Q0) and is_zero(parity(Q0) - Q0)
     a = sp.Matrix([[sp.I, 2 + sp.I], [-2 + sp.I, -3 * sp.I]])  # anti-Hermitian
     b = sp.Matrix([[1 - sp.I, 2], [2, sp.I / 2]])  # symmetric
