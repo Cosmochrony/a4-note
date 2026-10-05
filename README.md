@@ -67,7 +67,7 @@ Born–Infeld functional along the $J_\Pi$-odd modulus, with the sign convention
 admissibility role of the functional. The Lorentzian genus is the sign of $P_{\mu\nu}P^{\mu\nu}$ of a
 supplied two-form and is not determined here; what remains is the construction of that two-form, the
 magnitude $|u|$, dictionary-bound through $\mathcal{N}_A$, and the upstream structural fronts (ADE
-case selection, level-to-generation map, cascade exponent $\beta$, transfer constant
+case selection, level-to-generation map, cascade exponent $\beta_{\mathrm{casc}}$, transfer constant
 $N_{\mathrm{casc}}$).
 
 ## Compilation

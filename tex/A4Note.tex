@@ -102,6 +102,9 @@ Independent Researcher, France\\
     endomorphism $\Epi^2$ restricted to the gauge-singlet generation triplet $\Cgen$, parametrised by a single real number
     $u$ through $\Epi^2|_{\Cgen} = \diag(1, \tfrac12 + u, \tfrac12 - u)$, with the even sector
     $\diag(1, \tfrac12, \tfrac12)$, the algebraic value of $(C_2-J_3^2)/C_2$ at $C_2=2$.
+    Here and below $X|_{\Cgen}$, and $T_{\mathrm{out}}$ of Definition~\ref{def:transversality}, denote the image of $X$
+    by the reading map $\Phi$ of [H-Gen]; they are plain restrictions to the triplet only under the separate
+    hypothesis [H-Mult] of~\cite{Beau2026prs}.
     Its reading as the Born--Infeld even sector would require an identification between the
     conditional $3\times3$ model of~\cite{Beau2026a34} on $\operatorname{Sym}^2(V_\rho)$ and
     $(E_\Pi^2)_{\mathrm{even}}$; no such identification is available, so that reading is not used
@@ -165,8 +168,8 @@ Independent Researcher, France\\
     conditional on the hypotheses named in it.
     The note examines a saturation functional of a supplied two-form and derives no physical mechanism for a non-zero
     split.
-    Under that generation reading a non-zero residue of a $J_\Pi$-compatible locking is not left-admissible in
-    the sense of~\cite{Beau2026q14} (the remark on compatibility with the left-admissible branch
+    Under [H-Gen](i) and the chiral splitting of~\cite{Beau2026prs}, a non-zero residue of a $J_\Pi$-commuting
+    locking is not left-admissible in the sense of~\cite{Beau2026q14} (the remark on compatibility with the left-admissible branch
     of~\cite{Beau2026prs}); the even normal form used in Front D comes from the family of~\cite{Beau2026ebj}, which is
     not an instance of that reading.
 
@@ -242,8 +245,8 @@ Independent Researcher, France\\
         \label{eq:M-even}
         M(-s) = M(s), \qquad M(0) = 0, \qquad \partial_s M(0) = 0 .
       \end{equation}
-      Consequently every scalar functional $\Phi[M]$ is even in $s$ to the order at which $M$ is even and obeys
-      $\partial_s \Phi[M]|_{s=0} = 0$; it assigns the same value to the two $\JPi$-conjugate orientation branches $\pm s_*$ and is
+      Consequently every scalar functional $\mathsf{F}[M]$ is even in $s$ to the order at which $M$ is even and obeys
+      $\partial_s \mathsf{F}[M]|_{s=0} = 0$; it assigns the same value to the two $\JPi$-conjugate orientation branches $\pm s_*$ and is
       therefore
       blind to the sign of $u$.
       The split modulus cannot be carried by $M$.
@@ -257,11 +260,11 @@ Independent Researcher, France\\
       $M = \Fchi \Fchi \mapsto (-\Fchi)(-\Fchi) = M$: the square is $\JPi$-invariant.
       Substituting~\eqref{eq:Fchi-linear} gives $M(s) = s^2\, \Pchi^{\mu\rho} \Pchi_{\rho\nu} + O(s^3)$, whence
       $M(0) = 0$ and $\partial_s M(0) = 0$, which is~\eqref{eq:M-even}.
-      For any functional $\Phi[M]$ the chain rule gives
-      $\partial_s \Phi[M]|_{0} = (\delta\Phi/\delta M) : \partial_s M|_{0} = 0$, so $\Phi$ has no linear response to the
+      For any functional $\mathsf{F}[M]$ the chain rule gives
+      $\partial_s \mathsf{F}[M]|_{0} = (\delta\mathsf{F}/\delta M) : \partial_s M|_{0} = 0$, so $\mathsf{F}$ has no linear response to the
       modulus.
       The choice of orientation branch is the sign of $u(s_*) = -u(-s_*)$ by Lemma~\ref{lem:u-odd}; distinguishing $+s_*$ from
-      $-s_*$ requires a quantity odd in $s$, which $\Phi[M]$ is not.
+      $-s_*$ requires a quantity odd in $s$, which $\mathsf{F}[M]$ is not.
       Therefore $M$ cannot be the primary modulus variable.
       The odd two-form of Hypothesis~\ref{hyp:chiral-two-form} changes sign under $s \mapsto -s$, as the
       orientation-odd increment of the discrete frontier observable~\cite{Beau2026q11of, Beau2026aar} does.
@@ -582,7 +585,7 @@ Independent Researcher, France\\
 
     PRS~\cite{Beau2026prs} identifies the Schur-null and Schur-transverse loci under explicit hypotheses and leaves
     the Schur-null/Schur-transverse alternative open: the oriented metaplectic step has the exact $\mathfrak{sl}_2$ opening
-    $\alpha(x,y)=xy\,r/\sinh r\not\equiv0$ with $\mu(x,y)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
+    $\alpha(x,y)=xy\,r/\sinh r$, $\cosh r=1+\tfrac{xy}{2}$, $\not\equiv0$ with $\mu(x,y)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
     transport hypothesis [H-Tr] of PRS.
     By Corollary~\ref{cor:reparam} the genus does not depend on the positive Jacobian $\psi'(0)$.
 
@@ -903,7 +906,7 @@ Independent Researcher, France\\
       and axiom A4~\cite{Beau2026a26, Beau2026m}.
 
     \paragraph{Proved (this note).}
-      Under the $\JPi$-covariance of the family, the split coefficient $u(s)$ is odd with $u(0) = 0$
+      Under the $\JPi$-covariance of the family and the diagonal form of its $\Cgen$-restriction, the split coefficient $u(s)$ is odd with $u(0) = 0$
       (Lemma~\ref{lem:u-odd}).
       For an odd two-form, the symmetric square $M = \Fchi \Fchi$ is $\JPi$-even and cannot carry the sign of $u$
       (Lemma~\ref{lem:antisymmetry}, Corollary~\ref{cor:M-backreaction}); that the odd antisymmetric two-form is the
@@ -969,8 +972,8 @@ Independent Researcher, France\\
 
     \paragraph{Front D factorisation (conditional).}
       The statement below is conditional on [H-Gen] of~\cite{Beau2026prs} together with its separate multiplicative-reading
-      hypothesis [H-Mult] (the generation triplet is read as an $E_\Pi$-invariant subspace, as in the realisation
-      of~\cite{Beau2026ebj}), on the transport hypothesis [H-Tr], on [H-F] and [H-Nd] for the trajectory and the contact, and on the
+      hypothesis [H-Mult] (the reading map is multiplicative and positivity-preserving; the finite witness
+      of~\cite{Beau2026ebj} uses a plain restriction, which satisfies it), on the transport hypothesis [H-Tr], on [H-F] and [H-Nd] for the trajectory and the contact, and on the
       localisation hypothesis that follows.
       Under the localisation hypothesis that the first-order source of the split is exhausted by the transported
       left-handed block $\tfrac12 \partial_s \Dchi(P)|_0$ of the $\JPi$-odd tangent, that is, that the $J_3$ component
@@ -981,15 +984,16 @@ Independent Researcher, France\\
       $u_\partial = u(s_*)$ of a covariant family factorises, to first order in $s_*$ (the linear regime of the odd
       carrier, which is not controlled at the contact), into three separated normalisations:
       \[
-        u_\partial = \varepsilon\,\sqrt{2}\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
+        u_\partial = \eta\,\sqrt{2}\,s_*\,\frac{T_{J_3}\bigl(\partial_s \Dchi(P)|_0\bigr)}{\langle J_3, J_3\rangle}.
       \]
       Here $\sqrt{2}$ is the even-block factor of the criterion $u'(0)=-\sqrt2\,(E_1)_{++}$ of~\cite{Beau2026ebj},
       which holds in the normal form $E_0=-\diag(1,2^{-1/2},2^{-1/2})$, that is
       $E_0^2|_{\Cgen} = \diag(1, \tfrac12, \tfrac12)$; this normal form is an initial condition of the realised
       covariant family there, not a value derived for the family of the programme.
-      The sign $\varepsilon=\pm1$ is a convention sign: with $E_1^{\mathrm{aux}}=-G_0\dot Q(0)G_0^{*}$ and
-      $T_{J_3}$ the transport $\langle J_3, G_0\dot Q(0)G_0^{*}\rangle$ of the odd tangent one finds $\varepsilon=+1$ on
-      the witness of~\cite{Beau2026ebj}, and $\varepsilon=-1$ if $T_{J_3}$ is defined on $E_1^{\mathrm{aux}}$.
+      The sign $\eta=\pm1$ is the product of the sign of $E_0$ on the outer block, derived only under [H-Mult] as
+      stated next, and of a definitional sign of $T_{J_3}$: with $E_1^{\mathrm{aux}}=-G_0\dot Q(0)G_0^{*}$ and
+      $T_{J_3}=\langle J_3, G_0\dot Q(0)G_0^{*}\rangle$ one finds $\eta=+1$ on the witness of~\cite{Beau2026ebj}, and
+      $\eta=-1$ if $T_{J_3}$ is defined on $E_1^{\mathrm{aux}}$ instead.
       That $E_\Pi\preceq0$ fixes the sign of $E_0$ holds under [H-Mult] only; under [H-Gen] alone, with its real-linear
       reading map, the sign is not derived here.
       The functional $T_{J_3}$ is real-linear, not complex-linear, since the $RR$ block enters through a conjugate;
@@ -1006,15 +1010,20 @@ Independent Researcher, France\\
       rate, and can hold only as a property of the family selected by the programme; the
       selection of the family and the localisation of the odd tangent onto its left-handed block remain open there.
       In that family $E^2$ has the diagonal form $\diag(1,\tfrac12+u,\tfrac12-u)$ only to first order in $s$: even
-      off-diagonal entries appear at order $s^2$, so Lemma~\ref{lem:u-odd} is used there for the rate $u'(0)$ only.
-      The covariance of~\cite{Beau2026ebj} is that of the embedding, $J_\Pi\Pi_S(s)J_\Pi^{-1}=\Pi_S(-s)$, whereas that
-      of Lemma~\ref{lem:u-odd} is $P(-s)=J_\Pi P(s)J_\Pi^{-1}$; its finite witness has $J^2=+1$ and is not an instance
-      of [H-Gen], where $J_\Pi^2=-1$ on $\mathcal S_\Pi$.
-      The even normal form is non-zero and $J$-even, so by the remark of~\cite{Beau2026prs} on compatibility with Q14 it
-      cannot sit on the left-admissible branch of Q14 in the chiral frame of that note.
+      off-diagonal entries appear at order $s^2$, so the premises of Lemma~\ref{lem:u-odd} do not hold there; the
+      oddness of the rate comes from the parity of the first-order coefficient in~\cite{Beau2026ebj}, not from that
+      lemma.
+      The covariance of~\cite{Beau2026ebj} is that of the embedding, $J_\Pi\Pi_S(s)J_\Pi^{-1}=\Pi_S(-s)$; it implies
+      $P(-s)=J_\Pi P(s)J_\Pi^{-1}$ for $P(s)=\Pi_S(s)^{*}\Pi_S(s)$ but also constrains the embedding itself.
+      Its finite witness has $J^2=+1$ and illustrates such a family; it is not an instance of [H-Gen], where
+      $J_\Pi^2=-1$ on $\mathcal S_\Pi$, and it uses a plain restriction to the triplet, the reading of [H-Mult].
+      The even base block $P(0)$ of that family is $J_\Pi$-compatible, so by the remark of~\cite{Beau2026prs} on
+      compatibility with Q14, under the chiral splitting and the symbol identity of that note, its residue cannot lie on
+      the left-admissible branch of Q14 unless it vanishes.
       Three objects are kept apart: the rate $u'(0)$; the first-order normal form
       $\diag(1,\tfrac12+u,\tfrac12-u)$, valid to first order in $s$ only; and the contact value $u(s_*)$, whose linear
-      term $u'(0)\,s_*$ is the only part treated here and is not controlled at the contact.
+      term $u'(0)\,s_*$ is the only part treated here and is not controlled at the contact; the rate and $s_*$ are
+      taken in the same chart, since both transform under reparametrisation.
       Under the hypothesis the remaining magnitude data are the two upstream quantities already isolated --- the radial
       contact $s_*$ through the A4 radicand curvature, and the angular normalisation of $T_{J_3}$ through
       $\mathcal{N}_A$ --- so the numerical magnitude remains upstream and dictionary-bound.
