@@ -44,7 +44,7 @@ of Q8, free temporal coefficient in Q11) and because no map from the generation 
 
 A conditional factorisation of the contact split to first order in $s_*$ (Front D) is given under [H-Gen], [H-Mult],
 [H-Tr], [H-F], [H-Nd] and the $J_\Pi$-covariance and diagonal-form premises of the oddness lemma, and a localisation hypothesis that fails in the
-available witnesses of the eliminated-block note (EBJ), which also fall outside [H-Gen](i); it fixes no magnitude.
+available witnesses of the eliminated-block note (EBJ), which also fall outside [H-Gen](i); it fixes no magnitude, and [H-Mult] is unusable for a non-zero split in the chiral rank-two left-admissible frame of PRS.
 
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
 (it shifts by $\omega\,P\cdot P/\beta^2$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
