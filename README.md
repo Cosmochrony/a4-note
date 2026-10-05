@@ -36,7 +36,8 @@ Hypotheses that no source supplies are stated where used: a full-rank Lorentzian
 two-form from the locking data, the local-minimum reading of A4, the existence and non-degeneracy of the locked pair,
 the covariance of the locking family under $J_\Pi$, and from PRS the generation-reading hypothesis and the first-order
 transport hypothesis; the coincidence with the Born–Infeld modulus is used only to read the lock along that modulus.
-The scope is that of PRS: for the reference operator the split vanishes, for a general locking operator the consequences
+The scope is that of PRS (the identification of the compression remainder with Q14's projective endomorphism holds only
+under the symbol identity $\Pi_SD^2\Pi_S^*=\mathrm{Lich}$): for the reference operator the split vanishes, for a general locking operator the consequences
 are conditional, and no mechanism for a non-zero split is derived. The genus is not
 determined: the central commutator does not supply an electric assignment, because the central direction is not
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
@@ -44,7 +45,7 @@ of Q8, free temporal coefficient in Q11) and because no map from the generation 
 
 A conditional factorisation of the contact split to first order in $s_*$ (Front D) is given under [H-Gen], [H-Mult],
 [H-Tr], [H-F], [H-Nd] and the $J_\Pi$-covariance and diagonal-form premises of the oddness lemma, and a localisation hypothesis that fails in the
-available witnesses of the eliminated-block note (EBJ), which also fall outside [H-Gen](i); it fixes no magnitude; no frame satisfying all its hypotheses together is exhibited, and [H-Mult] gives $u\equiv0$ or admits no $\Phi$ (with a non-singular even sector) in the chiral rank-two left-admissible frame of PRS (argument stated with [H-Mult] in PRS).
+available witnesses of the eliminated-block note (EBJ), which also fall outside [H-Gen](i); it fixes no magnitude; no frame satisfying all its hypotheses together is exhibited, the factorisation is formal, and [H-Mult] gives $u\equiv0$ or admits no $\Phi$ (with a non-singular even sector) in the chiral rank-two left-admissible frame of PRS (argument stated with [H-Mult] in PRS).
 
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
 (it shifts by $\omega\,P\cdot P/\beta^2$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
