@@ -42,6 +42,10 @@ determined: the central commutator does not supply an electric assignment, becau
 temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zero central entry, conditional completion
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
+A conditional factorisation of the contact split to first order in $s_*$ (Front D) is given under [H-Gen], [H-Mult],
+[H-Tr], [H-F], [H-Nd] and a localisation hypothesis that fails in the only available witness (EBJ); it fixes no
+magnitude.
+
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
 (it shifts by $\omega\,P\cdot P/\beta^2$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
 interior stationary point. Under the construction hypothesis the carrier is one-dimensional, so the two-form trajectory

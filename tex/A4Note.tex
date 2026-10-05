@@ -82,6 +82,9 @@ Independent Researcher, France\\
     not temporal in the co-metrics of the corpus and no map from the generation operator to a two-form is available.
     The quartic coefficient of the radicand depends on the parametrisation and selects no lock; for a collinear purely
     electric ray the bound is reached at \texorpdfstring{$t_*=\beta/|\mathbf{E}_{F_0}|$}{t* = β/|E|}.
+    A conditional factorisation of the contact split to first order in \texorpdfstring{$s_*$}{s*} (Front D) is given
+    under [H-Gen], [H-Mult], [H-Tr], [H-F], [H-Nd] and a localisation hypothesis that fails in the only available
+    witness; it fixes no magnitude.
     The magnitude \texorpdfstring{$|u|$}{|u|} is not predicted.
   \end{abstract}
 
@@ -110,7 +113,7 @@ Independent Researcher, France\\
     $(E_\Pi^2)_{\mathrm{even}}$; no such identification is available, so that reading is not used
     here.
     The Schur reduction~\cite{Beau2026prs} relates $u$ to the antiunitary chiral equivariance defect
-    $\Delta_\chi(P) = \pi_{LL} - \tau \overline{\pi_{RR}} \tau^{-1}$ of the eliminated block $1 - P$ as a structural
+    $\Delta_\chi(P) = \pi_{LL} - \tau_{\mathrm{ch}} \overline{\pi_{RR}} \tau_{\mathrm{ch}}^{-1}$ of the eliminated block $1 - P$ as a structural
     reading,
     not a theorem; under its generation-reading hypothesis, a non-zero $u$ requires a locking operator that breaks
     $\JPi$-equivariance, and on its interpretive reading of the axioms this can come only from axiom A4.
@@ -585,7 +588,7 @@ Independent Researcher, France\\
 
     PRS~\cite{Beau2026prs} identifies the Schur-null and Schur-transverse loci under explicit hypotheses and leaves
     the Schur-null/Schur-transverse alternative open: the oriented metaplectic step has the exact $\mathfrak{sl}_2$ opening
-    $\alpha(x,y)=xy\,r/\sinh r$, $\cosh r=1+\tfrac{xy}{2}$, $\not\equiv0$ with $\mu(x,y)\equiv0$, and its transport to $\partial_s P|_{0}$ is the
+    $\alpha(x,y)=xy\,r/\sinh r$, $\cosh r=1+\tfrac{xy}{2}$, $\not\equiv0$ with $m(x,y)\equiv0$, the $J_3$- and $R_{\mathrm{mix}}$-components of $\log g(x,y)$ on the triplet, and its transport to $\partial_s P|_{0}$ is the
     transport hypothesis [H-Tr] of PRS.
     By Corollary~\ref{cor:reparam} the genus does not depend on the positive Jacobian $\psi'(0)$.
 
@@ -749,7 +752,8 @@ Independent Researcher, France\\
       A contact $\Dchi(s_*)=0$ exists if and only if $|\varphi|$ attains $1/\sqrt a=\beta/|\mathbf{E}_{F_0}|$, and the
       first
       contact is the first such $s_*>0$.
-      In a chart $t=\varphi(s)$ that is increasing on $[0,s_*]$ the contact is
+      In the chart $t=\varphi(s)$, which is a chart when $\varphi'(0)\neq0$ (true when $\Pchi=\varphi'(0)F_0\neq0$) and
+      $\varphi$ is increasing on $[0,s_*]$, the contact is
       \begin{equation}
         \label{eq:s-star-affine}
         t_* = \frac{\beta}{|\mathbf{E}_{F_0}|} .
@@ -824,7 +828,8 @@ Independent Researcher, France\\
       anti-Hermitian and is not seen.
       For the real generator $X=\log g$, $g=\exp(E)\exp(2F)$, lifted to $\mathrm{Sym}^2$ in the basis $(e_0,e_+,e_-)$,
       and the matrix $P_0=\diag(0.3,1,0.7)$, the outer block of $\operatorname{ad}_X^3P_0$ has a non-zero $\JPi$-odd
-      off-diagonal part.
+      off-diagonal part, equal to $\pm\tfrac{11\sqrt3}{3}\,\mathrm{arccosh}(2)^3\approx\pm14.5$ (exact computation in
+      \texttt{code/front\_weights\_cascade\_check.py}).
       This is a computation on matrices: $P_0$ is not $\JPi$-invariant and $e^{sX}P_0e^{-sX}$ is not self-adjoint, so
       the example is not an instance of the premises of Hypothesis~\ref{hyp:chiral-two-form}.
       No conclusion is drawn about a cubic transverse channel of the locking trajectory.
@@ -834,11 +839,11 @@ Independent Researcher, France\\
     \label{sec:boundary}
 
     The companion eliminated-block note~\cite{Beau2026ebj} proves, in the chiral frame with
-    $\JPi = \Sigma_\tau \circ \mathrm{conj}$, $\Sigma_\tau = \bigl(\begin{smallmatrix} 0 & \tau \\ \tau^{-1} & 0
-    \end{smallmatrix}\bigr)$, $\tau : \mathcal{S}_R \to \mathcal{S}_L$ the unitary intertwiner realising the chirality exchange, under the
-    assumption $\tau\,\overline{\tau}^{-1} = \pm 1$ made there, that the left-handed block of the $\JPi$-odd tangent
+    $\JPi = \Sigma_{\tau_{\mathrm{ch}}} \circ \mathrm{conj}$, $\Sigma_{\tau_{\mathrm{ch}}} = \bigl(\begin{smallmatrix} 0 & \tau_{\mathrm{ch}} \\ \tau_{\mathrm{ch}}^{-1} & 0
+    \end{smallmatrix}\bigr)$, $\tau_{\mathrm{ch}} : \mathcal{S}_R \to \mathcal{S}_L$ the unitary intertwiner realising the chirality exchange (written $\tau_{\mathrm{ch}}$ to distinguish it from the coordinate $\tau$ of Q5b and Q11), under the
+    assumption $\tau_{\mathrm{ch}}\,\overline{\tau_{\mathrm{ch}}}^{-1} = \pm 1$ made there, that the left-handed block of the $\JPi$-odd tangent
     of the eliminated block is half the transported equivariance defect rate $\partial_s \Dchi(P)|_0$, with
-    $\Dchi(P) = \pi_{LL} - \tau\,\overline{\pi_{RR}}\,\tau^{-1}$; this determines one block of the odd tangent, a generator defined only up to the centraliser of the locked
+    $\Dchi(P) = \pi_{LL} - \tau_{\mathrm{ch}}\,\overline{\pi_{RR}}\,\tau_{\mathrm{ch}}^{-1}$; this determines one block of the odd tangent, a generator defined only up to the centraliser of the locked
     projector, not a unique carrier, the selection of the family and the localisation of the odd tangent onto that block
     remaining open there.
     Throughout this section $\Dchi(P)$ is this equivariance defect, its first-order coefficient being the defect rate,
@@ -861,7 +866,9 @@ Independent Researcher, France\\
 
     \begin{proposition}[Chart-independence of the first contact]
       \label{prop:contact-invariant}
-      Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{hyp:nondegenerate}.
+      Assume Hypotheses~\ref{hyp:lorentzian}, \ref{hyp:chiral-two-form} and~\ref{hyp:nondegenerate}; for the
+      statements on $u(s_*)$ assume also the premises of Lemma~\ref{lem:u-odd} ($\JPi$-covariance of the family and
+      the diagonal form of its $\Cgen$-reading).
       The first contact, the first $s_*>0$ with $\Dchi(s_*)=0$, defines a point $\Fchi(s_*)$ of the trajectory
       $\{\Fchi(s)\}$ that is independent of the chart, for increasing charts on $[0,s_*]$ (a decreasing chart sends it
       to the conjugate
@@ -1036,7 +1043,7 @@ Independent Researcher, France\\
       Schur modulus is not determined, and the quartic coefficient does not enter it intrinsically
       (Lemma~\ref{lem:gauge}).
       The numerical magnitude of the split routes through the upstream normalisations $\beta$ (the Born--Infeld scale),
-      $|\mathbf{E}_{\mathcal P}|$, and $\mathcal{N}_A$.
+      $|\mathbf{E}_{F_0}|$ (the affine-chart field, with $|\mathbf{E}_{\mathcal P}|=|\varphi'(0)|\,|\mathbf{E}_{F_0}|$ chart-dependent), and $\mathcal{N}_A$.
 
     \paragraph{Open.}
       The magnitude $|u|$ is not determined.
