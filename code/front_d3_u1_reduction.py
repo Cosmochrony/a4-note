@@ -12,7 +12,7 @@ diag(1, 1/2, 1/2) at C_2 = 2 (its Born--Infeld reading is not used), the E_0-dep
 single scalar factor.
 
 Three results.
-  (A) Block transport (chiral frame, tau = Pi_S = I): with the eliminated-block velocity
+  (A) Block transport (chiral frame, tau_ch = Pi_S = I): with the eliminated-block velocity
       \\dot Q(0) = [[pi_LL', pi_LR'], [pi_RL', pi_RR']], the residue first-order coefficient has chiral
       diagonal blocks E_{1,LL} = -Pi_S D_- pi_RR' D_+ Pi_S^*, E_{1,RR} = -Pi_S D_+ pi_LL' D_- Pi_S^*
       (PRS transport), and the J_Pi-odd diagonal of \\dot Q(0) is the transported defect rate
@@ -41,7 +41,7 @@ def is_zero(M):
     return sp.expand(sp.Matrix(M)) == sp.zeros(*M.shape)
 
 
-# ---- chiral frame on S_Pi = S_L (+) S_R (each C^2), tau = Pi_S = I -----------------------------------
+# ---- chiral frame on S_Pi = S_L (+) S_R (each C^2), tau_ch = Pi_S = I -----------------------------------
 I2, Z2 = sp.eye(2), sp.zeros(2, 2)
 
 
@@ -64,7 +64,7 @@ def part_A_block_transport():
     E1 = -D * dotQ * D
     checks["transport_E1_LL"] = is_zero(E1[0:2, 0:2] - (-Dm * pRR * Dp))
     checks["transport_E1_RR"] = is_zero(E1[2:4, 2:4] - (-Dp * pLL * Dm))
-    # J_Pi swaps L<->R (antilinear, tau=I): odd-diagonal of dotQ = (pi_LL' - conj(pi_RR'))/2 = (1/2) dDelta_chi.
+    # J_Pi swaps L<->R (antilinear, tau_ch=I): odd-diagonal of dotQ = (pi_LL' - conj(pi_RR'))/2 = (1/2) dDelta_chi.
     SWAP = block(Z2, I2, I2, Z2)
     odd = (dotQ - SWAP * dotQ.conjugate() * SWAP) / 2
     dDelta = pLL - pRR.conjugate()

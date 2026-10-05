@@ -6,7 +6,7 @@ hypothesis of the A4-Note paragraph 'Front D factorisation (conditional)'; the e
 eliminated-block note (Beau2026ebj, moving-embedding product rule) are not included, and the hypothesis is open.
 
 Bias-independent, exact symbolic verification (no sampling). The split rate reduced (front_d3_u1_reduction)
-to u_1 = sqrt(2) eta <J_3, E_1>/<J_3, J_3>, concentrating all non-trivial dependence in <J_3, E_1>. This
+to u_1 = sqrt(2) sgnE0 <J_3, E_1>/<J_3, J_3> (sgnE0 = -1 on the EBJ witness; with T defined on the defect, the TeX sign is eta = -sgnE0 = +1), concentrating all non-trivial dependence in <J_3, E_1>. This
 script evaluates that projection via the Sym^2 lift (the locked spin/chiral frame, modulo symbol
 compatibility Q14: the principal symbol equals the Clifford symbol, so the D^pm transport acts as the
 Sym^2 representation), answering the three tests.
@@ -18,7 +18,8 @@ R_mix = [[0,0,0],[0,0,1],[0,-1,0]].
 Tests.
   (1) Reduction to defect: <J_3, E_1> depends only on the J_Pi-odd defect, not on the J_Pi-even chiral sum.
   (2) Generation projection (convention of this script: T_{J_3} := <J_3, .>/<J_3, J_3>, the J_3-component; the TeX T is
-      <J_3, .>): the J_3-component of E_1 = T_{J_3}(defect) = the Cartan (H/J_3) component of the Sym^2-lifted
+      <J_3, .>): the J_3-component of the transported defect G_0 dotQ(0) G_0^* (= minus that of E_1^aux, since
+      E_1^aux = -G_0 dotQ(0) G_0^*) = T_{J_3}(defect) = the Cartan (H/J_3) component of the Sym^2-lifted
       transported defect -- a CLOSED linear functional (the E,F off-diagonal content drops under the J_3
       projection). So the projection closes as a map, independent of the explicit Pi_S, D^pm beyond
       symbol-compatibility.
@@ -116,7 +117,7 @@ def main():
         assert ok, name
 
     print()
-    print("(1)+(2)  J3-component of E1 = T_J3(defect) (T_J3 := <J3,.>/<J3,J3>) = Cartan/J3 component of the Sym^2-lifted transported defect")
+    print("(1)+(2)  T_J3(defect) (T_J3 := <J3,.>/<J3,J3>) = Cartan/J3 component of the Sym^2-lifted transported defect = -(J3-component of E1_aux)")
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
     print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
