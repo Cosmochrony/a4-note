@@ -6,7 +6,7 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Working paper, v3.0 (candidate, not deposited). DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
+Working paper, v3.0 (local candidate; last deposited version 2.1). DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
 
 ## Abstract
 
