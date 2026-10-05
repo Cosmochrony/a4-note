@@ -26,9 +26,9 @@ Results, each for a supplied two-form and under the hypotheses named in the pape
    weak-field expansion.
 
 3. **Genus reduction.** The second variation is
-   $\mu_\chi := \partial_s^2 \mathcal{B}_{\mathrm{sat}}(0) = \tfrac{1}{2}\,P_{\chi,\mu\nu} P_\chi^{\mu\nu}$, the
-   Lorentzian genus of the chiral polarisation $P_\chi$: $\mu_\chi > 0$ makes the symmetric point a strict local
-   minimum of $\mathcal{B}_{\mathrm{sat}}$ and $\mu_\chi < 0$ a strict local maximum. Under a local-minimum reading of
+   $\mu_\chi^2 := \partial_s^2 \mathcal{B}_{\mathrm{sat}}(0) = \tfrac{1}{2}\,P_{\chi,\mu\nu} P_\chi^{\mu\nu}$, the
+   Lorentzian genus of the chiral polarisation $P_\chi$: $\mu_\chi^2 > 0$ makes the symmetric point a strict local
+   minimum of $\mathcal{B}_{\mathrm{sat}}$ and $\mu_\chi^2 < 0$ a strict local maximum. Under a local-minimum reading of
    axiom A4, a negative genus means the symmetric point is not locked; the existence of a locked pair and the
    non-vanishing of $u$ there are hypotheses.
 
@@ -43,7 +43,7 @@ temporal in the co-metrics of the corpus (rank-three co-metric of Q5b with a zer
 of Q8, free temporal coefficient in Q11) and because no map from the generation operator to a two-form is available.
 
 The radicand is extended to quartic order. Its quartic coefficient depends on the parametrisation of the modulus
-(it shifts by $\omega\,P\cdot P$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
+(it shifts by $\omega\,P\cdot P/\beta^2$ under $s \to s + \omega s^3$), so it selects neither a boundary contact nor an
 interior stationary point. Under the construction hypothesis the carrier is one-dimensional, so the two-form trajectory
 is collinear and the cubic response is parallel to $P$. For a purely electric two-form the radicand is then exactly
 $1 - |E|^2 \varphi(s)^2/\beta^2$, a contact exists if and only if $|\varphi|$ reaches $\beta/|E|$, and in the chart

@@ -115,7 +115,7 @@ def main():
         assert ok, name
 
     print()
-    print("(1)+(2)  <J3,E1> = T_J3(defect) = 2 * (Cartan/J3 component of the Sym^2-lifted transported defect)")
+    print("(1)+(2)  J3-component of E1 = T_J3(defect) = (Cartan/J3 component of the Sym^2-lifted transported defect)")
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
     print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
