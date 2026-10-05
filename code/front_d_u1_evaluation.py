@@ -23,12 +23,12 @@ Tests.
       transported defect -- a CLOSED linear functional (the E,F off-diagonal content drops under the J_3
       projection). So the projection closes as a map, independent of the explicit Pi_S, D^pm beyond
       symbol-compatibility.
-  (3) Norm vs sign: T_{J_3} evaluated on the oriented cascade is the oriented symplectic AREA
-      alpha = ts r/sinh r, ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence an orientation
+  (3) Norm vs sign: T_{J_3} evaluated on the oriented cascade is the oriented SHEAR PRODUCT
+      alpha = ts r/sinh r (the J_3 source is the sl_2 commutator [E,F] = H), ORIENTATION-ODD (T_{J_3}(g) = -T_{J_3}(g^{-1}-ordered)), hence an orientation
       sign -- NOT a positive norm. This is the AAR angular observable, dictionary-bound to N_A.
 
 Conclusion (printed): conditional factorisation u_partial = sqrt(2) eta s_* T_{J_3}(d_s Delta_chi)
-(first order in s_*; T_{J_3} the J_3-component as above, = TeX T/<J_3,J_3>), with T_{J_3} the angular oriented area (dictionary-bound through N_A) and s_* the first contact of
+(first order in s_*; T_{J_3} the J_3-component as above, = TeX T/<J_3,J_3>), with T_{J_3} the angular oriented shear product (dictionary-bound through N_A) and s_* the first contact of
 the radicand. The localisation hypothesis itself is open. No figures. English.
 """
 
@@ -90,7 +90,7 @@ def main():
     # Schur audit: within the sl_2 image no generator populates R_mix (Q14 Prop. 6.5, Rem. 6.4).
     checks["Rmix_empty_phasefree"] = sp.simplify(hs(jpi_odd(sym2_lift(a * E + b * F + c * H)), Rmix)) == 0
 
-    # ---- (3) oriented cascade: T_J3 is the oriented symplectic area, orientation-ODD (sign of E_0 times the sign convention of T) ------
+    # ---- (3) oriented cascade: T_J3 is the oriented shear product, orientation-ODD (sign of E_0 times the sign convention of T) ------
     r = sp.symbols("r", positive=True)
     cosh_r = 1 + t * s / 2
     g1 = sp.exp(t * E) * sp.exp(s * F)                                            # = [[1+ts, t],[s, 1]]
@@ -105,12 +105,12 @@ def main():
     TJ3_g1 = sp.simplify(2 * cartan1)
     TJ3_g2 = sp.simplify(2 * cartan2)
     pref = r / sp.sinh(r)
-    checks["cascade_area_value"] = sp.simplify(TJ3_g1 - t * s * pref) == 0        # = ts r/sinh r (alpha)
+    checks["cascade_shear_value"] = sp.simplify(TJ3_g1 - t * s * pref) == 0        # = ts r/sinh r (alpha)
     checks["orientation_odd_VminusA"] = sp.simplify(TJ3_g1 + TJ3_g2) == 0          # T(g1) = -T(g2): not a norm
-    # leading term is the oriented symplectic area ts (Carnot-degree-2 increment), sign-carrying.
+    # leading term is the oriented shear product ts (J_3 source: the sl_2 commutator [E,F] = H), sign-carrying.
     u = sp.symbols("u", positive=True)
     area_lead = sp.series(u * sp.acosh(1 + u / 2) / sp.sinh(sp.acosh(1 + u / 2)), u, 0, 2).removeO()
-    checks["area_leading_is_ts"] = sp.simplify(area_lead - u) == 0
+    checks["shear_leading_is_ts"] = sp.simplify(area_lead - u) == 0
 
     for name, ok in checks.items():
         print(f"  [{'OK ' if ok else 'FAIL'}] {name}")
@@ -120,7 +120,7 @@ def main():
     print("(1)+(2)  T_J3(defect) (T_J3 := <J3,.>/<J3,J3>) = Cartan/J3 component of the Sym^2-lifted transported defect = -(J3-component of E1_aux)")
     print("         -> CLOSED linear functional: depends only on the J_Pi-odd Cartan part of d_s Delta_chi,")
     print("            independent of the E,F off-diagonal content and of the J_Pi-even chiral sum.")
-    print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented symplectic area), and")
+    print("(3)      on the oriented cascade T_J3 = ts*r/sinh r (oriented shear product), and")
     print("         T_J3(g1) = -T_J3(g2): ORIENTATION-ODD -> sign of E_0 times the sign convention of T, NOT a positive norm.")
     print("         This is the AAR angular observable, dictionary-bound to N_A.")
     print()
@@ -128,7 +128,7 @@ def main():
     print("  u_partial = sqrt(2) eta s_* T_J3(d_s Delta_chi),  T_J3 = <J3, .>/<J3,J3> (J_3-component), i.e. TeX T/<J3,J3>,")
     print("  factors: sqrt(2) eta (even block, algebraic (C_2 - J_3^2)/C_2; sign of E_0 times the sign convention of T) x s_* (radial"
           " saturation, A4 R_chi open)")
-    print("           x T_J3 (angular oriented area = N_A, dictionary-bound).")
+    print("           x T_J3 (angular oriented shear product = N_A, dictionary-bound).")
     print("  Under the hypothesis, no selector beyond s_* and N_A.")
     print("ALL EXACT CHECKS PASSED")
 
