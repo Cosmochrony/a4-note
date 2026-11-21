@@ -3,5 +3,6 @@
   "web_url": "https://cosmochrony.org/science/fermionic-matter/a4-note/",
   "main_tex": "tex/A4Note.tex",
   "zenodo_id": 20633931,
-  "doi": "10.5281/zenodo.20633931"
+  "doi": "10.5281/zenodo.20633931",
+  "notes": "Version 3.0.1. The bibliography entry for O22 carries its version-1.19 title, 'Projection Locking of the Saturation Depth: A Discrete Admissibility Theorem under Born-Infeld Saturation' (formerly 'Shell-Alignment from Projection Locking'). No other change."
 }
