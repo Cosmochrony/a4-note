@@ -7,9 +7,11 @@ eliminated-block note (Beau2026ebj, moving-embedding product rule) are not inclu
 
 Bias-independent, exact symbolic verification (no sampling). The split rate reduced (front_d3_u1_reduction)
 to u_1 = sqrt(2) sgnE0 <J_3, E_1>/<J_3, J_3> (sgnE0 = -1 on the EBJ witness; with T defined on the defect, the TeX sign is eta = -sgnE0 = +1), concentrating all non-trivial dependence in <J_3, E_1>. This
-script evaluates that projection via the Sym^2 lift (the locked spin/chiral frame, modulo symbol
-compatibility Q14: the principal symbol equals the Clifford symbol, so the D^pm transport acts as the
-Sym^2 representation), answering the three tests.
+script evaluates that projection via the Sym^2 lift (the locked spin/chiral frame). Q14's symbol
+compatibility fixes only the principal symbol (it equals the Clifford symbol); that the D^pm transport acts
+as the Sym^2 representation is an assumption of this script, part of the localisation hypothesis, not a
+consequence of Q14. The Sym^2(V) model on the soldered doublet is outside Q14's contract (Q14 requires a
+distinct generation carrier); only the abstract triplet data below are used. Answers the three tests.
 
 Convention frozen to schur_transversality_alpha.py: V = C^2 with sl_2 generators E,F,H ([X,Y]=H=2J_3);
 Sym^2(V) = C^3_gen = span(e_0,e_+,e_-); J_Pi^(2): e_0->-e_0, e_+ <-> e_-; J_3 = diag(0,1,-1);

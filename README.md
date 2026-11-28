@@ -6,7 +6,15 @@ J. Beau, Independent Researcher, France
 
 ## Status
 
-Working paper, v3.0. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
+Working paper, v3.1. DOI: [10.5281/zenodo.20633931](https://doi.org/10.5281/zenodo.20633931)
+
+Version 3.1 aligns the statements imported from Q14 with its current contract. The generation-triplet model built on
+the doublet soldered by [H-Spin] (the $\mathrm{Sym}^2(V)$ model of PRS) is stated to lie outside Q14's contract, which
+requires a distinct generation carrier; no substitute carrier is chosen, and the results use only the abstract
+generation data of PRS's [H-Gen](ii). The spinorial Born–Infeld lift is stated under [H-Spin] and its supplied datum, the
+Lichnerowicz form under [H-Spin] with the continuum hypotheses inherited by the connection, the operator on
+$C^3_{\mathrm{gen}}$ as a model operator, and its three-level deficit structure as supplied rather than derived. The statements, which use
+only the abstract data, are unchanged; the restriction concerns the model instance.
 
 ## Abstract
 
@@ -58,7 +66,7 @@ boundary contact and an interior stationary point is established. The magnitude 
 through the chiral-frontier normalisation
 $\mathcal{N}_A$, a dictionary-bound quantity.
 
-The even sector $\mathrm{diag}(1, \tfrac{1}{2}, \tfrac{1}{2})$ of $E_\Pi^2$ is the algebraic value of
+The even sector $\mathrm{diag}(1, \tfrac{1}{2}, \tfrac{1}{2})$ of the model operator on $C^3_{\mathrm{gen}}$ (read as $E_\Pi^2$ only under [H-Gen]) is the algebraic value of
 $(C_2 - J_3^2)/C_2$ at $C_2 = 2$; reading it as the Born–Infeld even sector would require an
 identification with the conditional $3 \times 3$ model of O30 on $\mathrm{Sym}^2(V_\rho)$ that is
 not available and is not used.
